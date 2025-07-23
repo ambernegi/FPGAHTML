@@ -1,0 +1,712 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="26.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="copyright" content="(C) Copyright 2025"/><meta name="generator" content="DITA-OT"/><meta name="description" content="Description &#34;SPM&#34; is a command tool used in configure_tool. To configure security using Tcl, you must use the configure_tool Tcl command to pass the SPM configuration parameters. Note: At least one ..."/>        
+      <title>6.19 SPM</title><!--  Generated with Oxygen version 26.1, build number 2024091616.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1-d4698e2362"/><meta name="wh-source-relpath" content="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1.xml"/><meta name="wh-out-relpath" content="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250723085923"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250723085923"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024091616"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+</head>
+
+    <body id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Tcl Command Reference Guide &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Tcl Command Reference Guide 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275"><div class="title"><a href="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Command Tools</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1"><div class="title"><a href="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.19</ph>
+SPM</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark header_title">
+    </h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem"><div data-tocid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d4698e11" class="topicref introduction" data-id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d4698e11-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19" class="topicref" data-id="GUID-57D1B766-9771-410F-B0F1-9199613DB164" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57D1B766-9771-410F-B0F1-9199613DB164.html" id="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Tcl Scripting Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291" class="topicref" data-id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81.html" id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Building a Libero Design Using Tcl</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396" class="topicref" data-id="GUID-CE445F8D-419D-434B-9288-A0005F280E89" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CE445F8D-419D-434B-9288-A0005F280E89.html" id="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Project Manager Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439" class="topicref" data-id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6.html" id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+SmartDesign Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048" class="topicref" data-id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4.html" id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+HDL Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155" class="topicref" data-id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275.html" id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Command Tools</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-13A86E86-473E-49D6-B217-D8B2F4437882-d4698e2163" class="topicref" data-id="GUID-13A86E86-473E-49D6-B217-D8B2F4437882" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-13A86E86-473E-49D6-B217-D8B2F4437882.html" id="GUID-13A86E86-473E-49D6-B217-D8B2F4437882-d4698e2163-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.1</ph>
+CONFIGURE_ACTIONS_PROCEDURES</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-B669BF93-0B47-4D26-9F3C-C3EC8F1B811E-d4698e2174" class="topicref" data-id="GUID-B669BF93-0B47-4D26-9F3C-C3EC8F1B811E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B669BF93-0B47-4D26-9F3C-C3EC8F1B811E.html" id="GUID-B669BF93-0B47-4D26-9F3C-C3EC8F1B811E-d4698e2174-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.2</ph>
+CONFIGURE_CHAIN</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-2D5482F6-148E-43E1-BE81-4B23589BBDDE-d4698e2185" class="topicref" data-id="GUID-2D5482F6-148E-43E1-BE81-4B23589BBDDE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2D5482F6-148E-43E1-BE81-4B23589BBDDE.html" id="GUID-2D5482F6-148E-43E1-BE81-4B23589BBDDE-d4698e2185-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.3</ph>
+CONFIGURE_PROG_OPTIONS</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-B01CFAF2-768E-46A6-B4D0-F3F3FC93E4D3-d4698e2196" class="topicref" data-id="GUID-B01CFAF2-768E-46A6-B4D0-F3F3FC93E4D3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B01CFAF2-768E-46A6-B4D0-F3F3FC93E4D3.html" id="GUID-B01CFAF2-768E-46A6-B4D0-F3F3FC93E4D3-d4698e2196-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.4</ph>
+EXPORTNETLIST</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-AEFF716D-B657-4552-ACA3-D6DDDD6A30C9-d4698e2207" class="topicref" data-id="GUID-AEFF716D-B657-4552-ACA3-D6DDDD6A30C9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AEFF716D-B657-4552-ACA3-D6DDDD6A30C9.html" id="GUID-AEFF716D-B657-4552-ACA3-D6DDDD6A30C9-d4698e2207-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.5</ph>
+EXPORTSDF</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-ACBBDE9A-877A-4CDA-BA0B-4FA35CF25272-d4698e2218" class="topicref" data-id="GUID-ACBBDE9A-877A-4CDA-BA0B-4FA35CF25272" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-ACBBDE9A-877A-4CDA-BA0B-4FA35CF25272.html" id="GUID-ACBBDE9A-877A-4CDA-BA0B-4FA35CF25272-d4698e2218-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.6</ph>
+FLASH_FREEZE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-7224024C-FBBA-4058-BE55-D6D522A1300F-d4698e2229" class="topicref" data-id="GUID-7224024C-FBBA-4058-BE55-D6D522A1300F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7224024C-FBBA-4058-BE55-D6D522A1300F.html" id="GUID-7224024C-FBBA-4058-BE55-D6D522A1300F-d4698e2229-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.7</ph>
+GENERATEDEBUGDATA</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-00629BED-7EA7-4D8F-9E0A-B2C3B6FA2DBC-d4698e2240" class="topicref" data-id="GUID-00629BED-7EA7-4D8F-9E0A-B2C3B6FA2DBC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-00629BED-7EA7-4D8F-9E0A-B2C3B6FA2DBC.html" id="GUID-00629BED-7EA7-4D8F-9E0A-B2C3B6FA2DBC-d4698e2240-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.8</ph>
+GENERATEPROGRAMMINGDATA</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-CBA30FF6-7297-4CF8-920B-4DA29AE11D30-d4698e2251" class="topicref" data-id="GUID-CBA30FF6-7297-4CF8-920B-4DA29AE11D30" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CBA30FF6-7297-4CF8-920B-4DA29AE11D30.html" id="GUID-CBA30FF6-7297-4CF8-920B-4DA29AE11D30-d4698e2251-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.9</ph>
+GENERATEPROGRAMMINGFILE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-95E0EB43-E78A-422F-83D0-24B75248492E-d4698e2262" class="topicref" data-id="GUID-95E0EB43-E78A-422F-83D0-24B75248492E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-95E0EB43-E78A-422F-83D0-24B75248492E.html" id="GUID-95E0EB43-E78A-422F-83D0-24B75248492E-d4698e2262-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.10</ph>
+INIT_LOCK</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-9627032D-A46D-4645-8A05-A83F26A88233-d4698e2274" class="topicref" data-id="GUID-9627032D-A46D-4645-8A05-A83F26A88233" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9627032D-A46D-4645-8A05-A83F26A88233.html" id="GUID-9627032D-A46D-4645-8A05-A83F26A88233-d4698e2274-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.11</ph>
+IO_PROGRAMMING_STATE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-8B58C353-2FF8-4C14-A062-C221A1C2DA29-d4698e2285" class="topicref" data-id="GUID-8B58C353-2FF8-4C14-A062-C221A1C2DA29" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8B58C353-2FF8-4C14-A062-C221A1C2DA29.html" id="GUID-8B58C353-2FF8-4C14-A062-C221A1C2DA29-d4698e2285-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.12</ph>
+PLACEROUTE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-CD29531C-1BAE-4BCE-8CDE-1843C2145A34-d4698e2296" class="topicref" data-id="GUID-CD29531C-1BAE-4BCE-8CDE-1843C2145A34" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD29531C-1BAE-4BCE-8CDE-1843C2145A34.html" id="GUID-CD29531C-1BAE-4BCE-8CDE-1843C2145A34-d4698e2296-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.13</ph>
+PROGRAMDEVICE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-CE8865FB-FDC2-4967-A029-5C3A72CDAF71-d4698e2307" class="topicref" data-id="GUID-CE8865FB-FDC2-4967-A029-5C3A72CDAF71" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CE8865FB-FDC2-4967-A029-5C3A72CDAF71.html" id="GUID-CE8865FB-FDC2-4967-A029-5C3A72CDAF71-d4698e2307-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.14</ph>
+PROGRAMMER_INFO</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-DB24D7C8-A164-47D7-81E8-2DC5F21E1D3A-d4698e2318" class="topicref" data-id="GUID-DB24D7C8-A164-47D7-81E8-2DC5F21E1D3A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DB24D7C8-A164-47D7-81E8-2DC5F21E1D3A.html" id="GUID-DB24D7C8-A164-47D7-81E8-2DC5F21E1D3A-d4698e2318-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.15</ph>
+PROGRAM_SPI_FLASH_IMAGE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-93A13D85-8F91-4030-A9E2-9880F586C0BE-d4698e2329" class="topicref" data-id="GUID-93A13D85-8F91-4030-A9E2-9880F586C0BE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-93A13D85-8F91-4030-A9E2-9880F586C0BE.html" id="GUID-93A13D85-8F91-4030-A9E2-9880F586C0BE-d4698e2329-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.16</ph>
+SIM_PRESYNTH</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-EE22F7B4-5424-4A8D-A850-A32610144372-d4698e2340" class="topicref" data-id="GUID-EE22F7B4-5424-4A8D-A850-A32610144372" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EE22F7B4-5424-4A8D-A850-A32610144372.html" id="GUID-EE22F7B4-5424-4A8D-A850-A32610144372-d4698e2340-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.17</ph>
+SIM_POSTSYNTH</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A838974B-5206-491C-8903-E4291338BD44-d4698e2351" class="topicref" data-id="GUID-A838974B-5206-491C-8903-E4291338BD44" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A838974B-5206-491C-8903-E4291338BD44.html" id="GUID-A838974B-5206-491C-8903-E4291338BD44-d4698e2351-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.18</ph>
+SIM_POSTLAYOUT</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1-d4698e2362" class="topicref" data-id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1.html" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1-d4698e2362-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.19</ph>
+SPM</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-406C95D8-AF78-4B0A-BB51-C10994DA2AFF-d4698e2373" class="topicref" data-id="GUID-406C95D8-AF78-4B0A-BB51-C10994DA2AFF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-406C95D8-AF78-4B0A-BB51-C10994DA2AFF.html" id="GUID-406C95D8-AF78-4B0A-BB51-C10994DA2AFF-d4698e2373-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.20</ph>
+SPM_OTP</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-3B2251F4-890A-4A09-AC29-32A0B17E88BA-d4698e2384" class="topicref" data-id="GUID-3B2251F4-890A-4A09-AC29-32A0B17E88BA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3B2251F4-890A-4A09-AC29-32A0B17E88BA.html" id="GUID-3B2251F4-890A-4A09-AC29-32A0B17E88BA-d4698e2384-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.21</ph>
+SYNTHESIZE</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5DD00811-2008-4F28-80E0-80DF7391C85D-d4698e2396" class="topicref" data-id="GUID-5DD00811-2008-4F28-80E0-80DF7391C85D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5DD00811-2008-4F28-80E0-80DF7391C85D.html" id="GUID-5DD00811-2008-4F28-80E0-80DF7391C85D-d4698e2396-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.22</ph>
+UPDATE_ENVM</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0697CB5C-07D4-4128-9ACE-F963DA3EC1C8-d4698e2407" class="topicref" data-id="GUID-0697CB5C-07D4-4128-9ACE-F963DA3EC1C8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0697CB5C-07D4-4128-9ACE-F963DA3EC1C8.html" id="GUID-0697CB5C-07D4-4128-9ACE-F963DA3EC1C8-d4698e2407-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.23</ph>
+USER_PROG_DATA</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-4F799424-79CE-4C14-B892-64C6475BB051-d4698e2418" class="topicref" data-id="GUID-4F799424-79CE-4C14-B892-64C6475BB051" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4F799424-79CE-4C14-B892-64C6475BB051.html" id="GUID-4F799424-79CE-4C14-B892-64C6475BB051-d4698e2418-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.24</ph>
+VERIFYPOWER</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-7E752D2B-5A8E-48CB-BAB9-A8192E78933B-d4698e2429" class="topicref" data-id="GUID-7E752D2B-5A8E-48CB-BAB9-A8192E78933B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7E752D2B-5A8E-48CB-BAB9-A8192E78933B.html" id="GUID-7E752D2B-5A8E-48CB-BAB9-A8192E78933B-d4698e2429-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6.25</ph>
+VERIFYTIMING</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440" class="topicref" data-id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F.html" id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+MSS Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489" class="topicref" data-id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670.html" id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+SmartTime Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239" class="topicref" data-id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-33C45F08-A467-4461-B5EF-8D86325E235A.html" id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+SmartPower Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884" class="topicref" data-id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641.html" id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Programming and Configuration Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155" class="topicref" data-id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08.html" id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+FlashPro Express Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445" class="topicref" data-id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A.html" id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+Configure JTAG Chain Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641" class="topicref" data-id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010.html" id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+SmartDebug Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559" class="topicref" data-id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D8832000-73FB-42DC-860F-FF30F05EE075.html" id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+System Builder Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688" class="topicref" data-id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527.html" id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Simultaneous Switching Noise Analyzer (SSNA) Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764" class="topicref" data-id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3.html" id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+HSM Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841" class="topicref" data-id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2.html" id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Derive Constraints Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9E675440-3F06-4118-A3E5-57F157F925C1-d4698e5947" class="topicref" data-id="GUID-9E675440-3F06-4118-A3E5-57F157F925C1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9E675440-3F06-4118-A3E5-57F157F925C1.html" id="GUID-9E675440-3F06-4118-A3E5-57F157F925C1-d4698e5947-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+Revision History</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d4698e5955" class="topicref backmatter" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d4698e5955-link">Microchip FPGA Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__COMMAND_TOOLS_SPM"><h1 class="- topic/title title topictitle1" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__COMMAND_TOOLS_SPM" style="display:inline-block">6.19 SPM</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-3D4C6B83-916E-4A35-8894-A0E1E63ED7CF&amp;pub_lang=en-US&amp;pub_ver=23&amp;pub_type=User%20Guide&amp;bu=fpga&amp;tpc_guid=GUID-3244BC55-245B-4C38-972C-A72336CEF2D1&amp;cover_title=Libero%20SoC%20Tcl%20Command%20Reference%20Guide&amp;tech_support_link=NA&amp;revision_letter=S&amp;source=Webhelp%20Responsive&amp;title=SPM">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p><section class="- topic/section section" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-88F0C063-DEED-48CF-8ED8-1BCCEA9AA3AC" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-88F0C063-DEED-48CF-8ED8-1BCCEA9AA3AC"><h2 class="- topic/title title sectiontitle">Description</h2><p class="- topic/p p">"SPM" is a command tool used in configure_tool. To configure security using Tcl, you must use the configure_tool Tcl command to pass the SPM configuration parameters.</p><div class="- topic/note note notype note_notype" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-6DB8504A-49D3-46EB-837A-71296902325E" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-6DB8504A-49D3-46EB-837A-71296902325E"><span class="note__title">Note:</span> At least one "parameter:value" must be specified. You can repeat <code class="+ topic/ph pr-d/codeph ph codeph">-params</code> argument for multiple parameters.</div><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>configure_tool -name {SPM} -params {parameter:value}</code></pre></section><section class="- topic/section section" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0C499C99-BBCD-409E-8604-72DB18E74438" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0C499C99-BBCD-409E-8604-72DB18E74438"><h2 class="- topic/title title sectiontitle">Arguments</h2><p class="- topic/p p">The following table list the "SPM" arguments for PolarFire.</p><div class="table-container"><table class="- topic/table table" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">Parameter</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">back_level_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">The possible value for this argument are: true, 1 , false or 0. Specify true or 1 to set back level protection; Update Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">debug_passkey</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Specify value of DPK, value must be 64 hex characters; Debug Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_authenticate_action</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables Authenticate action. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_autoprog_iap_services</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables Auto Programming and IAP Services. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_debug_jtag_boundary_scan</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables debug JTAG Boundary Scan. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_debug_read_temp_volt</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables reading temperature and voltage sensor (JTAG/SPI Slave). The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_debug_ujtag</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables debug; UJTAG. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_ext_zeroization</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables external zeroization through JTAG/SPI Slave. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_external_digest_check</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables external Fabric/sNVM digest requests through JTAG/SPI Slave. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_jtag</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables JTAG. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_program_action</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables Program action. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_puf_emulation</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables external access to PUF emulation through JTAG/SPI Slave The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_smartdebug_debug</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables user debug access and active probes. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_smartdebug_live_probe</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables SmartDebug Live Probe. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_smartdebug_snvm</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables SmartDebug sNVM. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_spi_slave</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables SPI Slave interface. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_user_encryption_key_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables UEK1; Key Mode Policy. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_user_encryption_key_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables UEK2; Key Mode Policy. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">disable_verify_action</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Disables Verify action. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">fabric_update_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Fabric update protection. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-AC791B29-98F0-4B24-AED4-80ADE3A0110A" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-AC791B29-98F0-4B24-AED4-80ADE3A0110A">open -
+                                        updates allowed using user defined encryption keys.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-14011230-F4B2-419A-95DE-E03292DA41FA" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-14011230-F4B2-419A-95DE-E03292DA41FA">disabled -
+                                        disables Erase/Write operations.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">security_factory_access</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Microchip factory test mode access. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-ED63BD18-5D45-470E-8E04-87D7E9FCF7E5" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-ED63BD18-5D45-470E-8E04-87D7E9FCF7E5">open -
+                                        factory test mode access allowed.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-B0587419-11DE-4382-9F78-481F3E4121A8" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-B0587419-11DE-4382-9F78-481F3E4121A8">disabled -
+                                        disables factory test mode access.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">security_key_mode</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Key mode access. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-CEA558A0-8230-408D-B8DF-A3D900052C20" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-CEA558A0-8230-408D-B8DF-A3D900052C20">custom -
+                                        custom security options.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69947A67-43B6-4D7D-A706-4672AE71CE9D" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69947A67-43B6-4D7D-A706-4672AE71CE9D">default - bit
+                                        stream encryption with default key.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">snvm_update_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">sNVM update protection. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4D38DCCC-D690-41D3-BE90-4090838E74C5" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4D38DCCC-D690-41D3-BE90-4090838E74C5">open -
+                                        updates allowed using user defined encryption keys.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E2313E7F-188B-40DE-873A-AF229F726847" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E2313E7F-188B-40DE-873A-AF229F726847">disable -
+                                        disables Write operations.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">user_encryption_key_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Specify value of UEK1, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">user_encryption_key_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Specify value of UEK2, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">user_passkey_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Specify value of Flashlock/UPK1, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__1">user_passkey_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-8D72FB7F-A976-41C8-ACB4-16583BAA4BE6__entry__3">Specify value of Flashlock/UPK2, value must be 64 hex characters.</td></tr></tbody></table></div><p class="- topic/p p">The following table list the "SPM" arguments for SmartFusion 2 and IGLOO 2.</p><div class="table-container"><table class="- topic/table table" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">Parameter</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">back_level_bypass</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1 , false or 0. Specify true or 1 to bypass
+                                the back level protection; Update Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">back_level_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1 , false or 0. Specify true or 1 to set
+                                back level protection; Update Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">back_level_update_version</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">integer</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify back level version value between 0 and 65535; Update Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">debug_cortex_m3</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1 , false or 0. Specify true or 1 to disable
+                                Cortex M3 debug. This lock bit is protected by DPK; Debug Policy;
+                                SmartFusion 2 only.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">debug_digest_request</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible value for this argument are: true, 1 , false or 0. Specify true or 1 to disable design digest check request via JTAG and SPI. Use FlashLock/UPK1 to allow digest check; Debug Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">debug_disable_jtag</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1 , false or 0. Specify true or 1 to disable
+                                JTAG (1149.1) test instructions (HIGHZ, EXTEST, INTEST, CLAMP,
+                                SAMPLE, and PRELOAD). I/Os will be tri-stated when in JTAG
+                                programming mode. Use FlashLock/UPK1 to unlock; Debug Policy. </td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">debug_passkey</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify value of DPK, value must be 64 hex characters; Debug Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">debug_ujtag_access</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1 , false or 0. Specify true or 1 to disable
+                                access to UJTAG. Use DPK to unlock; Debug Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">disable_user_encryption_key_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible value for this argument are: true, 1 , false or 0. Specify true or 1 to disable UEK1; Key Mode Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">disable_user_encryption_key_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible value for this argument are: true, 1 , false or 0. Specify true or 1 to disable UEK2; Key Mode Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">disable_user_encryption_key_3</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Disables UEK3; Key Mode Policy. The possible values for this argument are: true, 1, false or
+                                0. <div class="- topic/note note notype note_notype" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-C2AF788D-C2B8-48E9-887C-B31454574E66" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-C2AF788D-C2B8-48E9-887C-B31454574E66"><span class="note__title">Note:</span> UEK3 is only
+                                    available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and
+                                    M2GL150 devices. All other devices will set this to false by
+                                    default.</div></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">factory_access</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Sets Microchip factory test mode access level. The possible values for this argument are the
+                                following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-74975BC5-AEED-48DD-B0F9-59FDBFAFC0ED" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-74975BC5-AEED-48DD-B0F9-59FDBFAFC0ED">Open - All
+                                        Microchip factory test mode access without
+                                        FlashLock/UPK1.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-FAEE9B71-07F9-4F82-808B-886D6D4E70A1" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-FAEE9B71-07F9-4F82-808B-886D6D4E70A1">FlashLock(default) - Microchip factory test mode is
+                                        disabled. FlashLock/UPK1 is required to unlock.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-CE5F899B-0E88-40D5-9FD5-985A00102D7E" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-CE5F899B-0E88-40D5-9FD5-985A00102D7E">Permanent -
+                                        Permanently disable Microchip factory test mode access</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">iap_isp_services</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible value for this argument are: true, 1, false or 0. Specify true or 1 to disable access to IAP/ISP services; Update Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">security_key_mode</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Key mode access. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-EC4C471D-CDBC-43B8-89DA-A19E79669D4F" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-EC4C471D-CDBC-43B8-89DA-A19E79669D4F">Custom -
+                                        Custom security settings. Allows user encryption keys,
+                                        security policy settings, and Microchip factory test mode
+                                        access level.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-055800A8-F51D-43F5-B2AB-B8D54ACC5D1F" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-055800A8-F51D-43F5-B2AB-B8D54ACC5D1F">Default -
+                                        Bitstream encryption with default key. No security lock bits
+                                        are set.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">smartdebug_access</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Debug Policy. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4CCE50C8-CD6D-49B8-97D7-BC2D44271F2A" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4CCE50C8-CD6D-49B8-97D7-BC2D44271F2A">Full -
+                                        SmartDebug has full access to debug features.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0A7861F3-6708-4DC6-A2A3-01C9F8AA72D4" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0A7861F3-6708-4DC6-A2A3-01C9F8AA72D4">None -
+                                        Disable read/write access to SmartDebug architecture. DPK is
+                                        required for read/write access.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">update_auto_prog_lock</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Disables Auto Programming; Update Policy. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">update_envm_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Update Policy. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-308726B4-6723-40C9-95E3-D9A7506F8025" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-308726B4-6723-40C9-95E3-D9A7506F8025">Passkey -
+                                        eNVM updates are disabled. Use FlashLock/UPK1 to unlock
+                                        Write/Verify/Read operations.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-808DD0FA-FDE0-46FC-A2A6-C6F64FB6256E" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-808DD0FA-FDE0-46FC-A2A6-C6F64FB6256E">Open -
+                                        Updates to eNVM are allowed using UEK1 or UEK2;
+                                        FlashLock/UPK1 is NOT required for updates.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">update_fabric_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Update Policy. The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0E504445-C5A0-40DC-8561-D685855B80AD" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0E504445-C5A0-40DC-8561-D685855B80AD">Passkey -
+                                        Fabric updates are disabled. Use FlashLock/UPK1 to unlock
+                                        Erase/Write/Verify/ operations.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-6BBDBC2F-EEA7-47A9-B928-F0C5CADC9786" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-6BBDBC2F-EEA7-47A9-B928-F0C5CADC9786">Open -
+                                        Updates to Fabric are allowed using UEK1 or UEK2;
+                                        FlashLock/UPK1 is NOT required for updates.</li></ul></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">update_jtag_lock</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Disables access to JTAG programming. Use FLashLock/UPK1 to unlock; Update Policy. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">update_spi_slave_lock</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Disables access to SPI Slave. Use FLashLock/UPK1 to unlock; Update Policy. The possible value for this argument are: true, 1, false or 0.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">use_debug_policy</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1, false or 0. Specify true or 1 to used
+                                Debug Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">use_key_mode_policy</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1, false or 0. Specify true or 1 to used Key
+                                Mode Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">use_update_policy</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1, false or 0. Specify true or 1 to used
+                                Update Policy.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">use_user_key_set_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1, false or 0. Specify true or 1 to enable
+                                User Key Set 1.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">use_user_key_set_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1, false or 0. Specify true or 1 to enable
+                                User Key Set 2.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">use_user_key_set_3</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">boolean</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are: true, 1, false or 0. Specify true or 1 to enable
+                                User Key Set 3. <div class="- topic/note note notype note_notype" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-5362E03F-8AA5-433B-8B7D-832FD9723C88" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-5362E03F-8AA5-433B-8B7D-832FD9723C88"><span class="note__title">Note:</span> User Key Set 3 is only available for M2S060, M2GL060, M2S090,
+                                    M2GL090, M2S150, and M2GL150 devices.</div></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">user_encryption_key_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify value of UEK1, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">user_encryption_key_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify value of UEK2, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">user_encryption_key_3</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify value of UEK3, value must be 64 hex characters. <div class="- topic/note note notype note_notype" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E7CA93E0-928B-43E1-B233-756C3FDAB1C7" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E7CA93E0-928B-43E1-B233-756C3FDAB1C7"><span class="note__title">Note:</span> UEK3 is only available for M2S060, M2GL060, M2S090, M2GL090, M2S150, and M2GL150 devices. All other devices will set this to false by default.</div></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">user_passkey_1</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify value of Flashlock/UPK1, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">user_passkey_2</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">hexadecimal</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">Specify value of UPK2, value must be 64 hex characters.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__1">user_security_policy_protection</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__2">string</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-69A7086B-AF47-4544-B80A-07E516B7C98B__entry__3">The possible values for this argument are the following: <ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-AAC9801C-8CA6-4319-8777-A71B93DBE3C5" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-AAC9801C-8CA6-4319-8777-A71B93DBE3C5">FlashLock -
+                                        User keys and Security policies will be protected from
+                                        erase/write by FlashLock/UPK1.</li><li class="- topic/li li" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D77FF137-D1B5-4C05-930A-6248F1B27F8E" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D77FF137-D1B5-4C05-930A-6248F1B27F8E">Permanent -
+                                        Permanently protect UEK1, UEK2, Security Policies, and
+                                        Microchip factory test mode access level. <div class="- topic/note note notype note_notype" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-C7D6B580-70FE-4A80-80D7-A7D5B06BD358" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-C7D6B580-70FE-4A80-80D7-A7D5B06BD358"><span class="note__title">Note:</span> Once
+                                            programmed, these settings cannot be
+                                        changed.</div></li></ul></td></tr></tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D8A97572-5D9D-4D47-9881-7799C3DBF05D" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D8A97572-5D9D-4D47-9881-7799C3DBF05D" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D8A97572-5D9D-4D47-9881-7799C3DBF05D__entry__1">Return Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D8A97572-5D9D-4D47-9881-7799C3DBF05D__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D8A97572-5D9D-4D47-9881-7799C3DBF05D__entry__1">Integer</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-D8A97572-5D9D-4D47-9881-7799C3DBF05D__entry__2">Returns 0 on success and 1 on failure.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E90698B4-3139-419D-99A2-2AED16F807EE" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E90698B4-3139-419D-99A2-2AED16F807EE"><h2 class="- topic/title title sectiontitle">Error Codes</h2><div class="table-container"><table class="- topic/table table" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB__entry__1">Error Code</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB__entry__2">Required parameter 'params' is missing.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB__entry__1">None</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-4E60C1C5-FCF7-4323-86B0-E128BE15D8AB__entry__2">Key size is incorrect.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-2026DCBE-ADD9-4B31-8C37-4F3BAA6D68D4" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-2026DCBE-ADD9-4B31-8C37-4F3BAA6D68D4"><h2 class="- topic/title title sectiontitle">Supported Families</h2>
+            
+            <div class="table-container"><table class="- topic/table table frame-all" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345__entry__1">Supported Families</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345__entry__1"><span class="- topic/tm tm">PolarFire<span class="- topic/tmmark tmmark ">®</span></span></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345__entry__1">PolarFire SoC</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345__entry__1"><span class="- topic/tm tm">SmartFusion<span class="- topic/tmmark tmmark ">®</span></span> 2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-35279315-86EB-42B6-BF8F-ADEF1B6A1345__entry__1"><span class="- topic/tm tm">IGLOO<span class="- topic/tmmark tmmark ">®</span></span> 2</td></tr></tbody></table></div>
+        </section><section class="- topic/section section" id="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-BD4E688C-3B71-4B25-BC03-011A2F809750" data-ofbid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-BD4E688C-3B71-4B25-BC03-011A2F809750"><h2 class="- topic/title title sectiontitle">Example</h2><p class="- topic/p p">The following example configures SPM for PolarFire:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>configure_tool \
+         -name {SPM} \
+         -params {back_level_protection:false} \
+         -params {disable_smartdebug_live_probe:false} \
+         -params {disable_smartdebug_snvm:false} \
+         -params {disable_user_encryption_key_1:false} \
+         -params {disable_user_encryption_key_2:false}</code></pre><p class="- topic/p p">The following example configures SPM for SmartFusion 2:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>configure_tool \
+         -name {SPM} \
+         -params {back_level_bypass:false} \
+         -params {back_level_protection:false} \
+         -params {back_level_update_version: 32} \
+         -params {debug_cortex_m3:false} \
+         -params {debug_digest_request:false} \
+         -params {debug_disable_jtag:false} \
+         -params {debug_passkey:8A1081239567235A7453336CFBBC45668754SADDCAFA7010FA209F7396F3EA17} \
+         -params {debug_ujtag_access:false} \
+         -params {disable_user_encryption_key_1:false} \
+         -params {disable_user_encryption_key_2:false} \
+         -params {disable_user_encryption_key_3:false} \
+         -params {factory_access:flashlock} \
+         -params {iap_isp_services:true} \
+         -params {security_key_mode:custom} \
+         -params {smartdebug_access:full} \
+         -params {update_auto_prog_lock:true} \
+         -params {update_envm_protection:passkey} \
+         -params {update_fabric_protection:passkey} \
+         -params {update_jtag_lock:false} \
+         -params {update_spi_slave_lock:false} \
+         -params {use_debug_policy:false} \
+         -params {use_key_mode_policy:false} \
+         -params {use_update_policy:false} \
+         -params {use_user_key_set_1:true} \
+         -params {use_user_key_set_2:false} \
+         -params {use_user_key_set_3:false} \
+         -params {user_encryption_key_1:9E108123949848EC7453336DFBBC0CAE60C8541C2AFA7010FA209F7396F3EA17} \
+         -params {user_encryption_key_2:4D5656BA56541156C54E54563D2114BC45C854B456563010FA265F7396F3EA17} \
+         -params {user_encryption_key_3:CA5665B39498DAEC745355BDFB89535BA4A45DFC2AFA7010FA209F7396F3EA17} \
+         -params {user_passkey_1:252BED2AB1C4C5BAE13C4791CEDF7A069D940A6935629A0A9CE5B24E21C13D39} \
+         -params {user_passkey_2:B59EAD2356B66DAAE1654981BEA57A045653231CA5547A0A99AD254E234BCA39} \
+         -params {user_security_policy_protection:flashlock}</code></pre></section></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-88F0C063-DEED-48CF-8ED8-1BCCEA9AA3AC" data-tocid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-88F0C063-DEED-48CF-8ED8-1BCCEA9AA3AC">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0C499C99-BBCD-409E-8604-72DB18E74438" data-tocid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-0C499C99-BBCD-409E-8604-72DB18E74438">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E90698B4-3139-419D-99A2-2AED16F807EE" data-tocid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-E90698B4-3139-419D-99A2-2AED16F807EE">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-2026DCBE-ADD9-4B31-8C37-4F3BAA6D68D4" data-tocid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-2026DCBE-ADD9-4B31-8C37-4F3BAA6D68D4">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-BD4E688C-3B71-4B25-BC03-011A2F809750" data-tocid="GUID-3244BC55-245B-4C38-972C-A72336CEF2D1__GUID-BD4E688C-3B71-4B25-BC03-011A2F809750">Example</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

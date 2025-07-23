@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<keywords publicationid="GUID-3D4C6B83-916E-4A35-8894-A0E1E63ED7CF"
+          language="en-US"
+          version="23"
+          documenttitle="Libero SoC Tcl Command Reference Guide"
+          pubtype="170 User Guide"
+          pubsubtype=""
+          pdfheader=""
+          pubuserguidesubtype=""
+          pubproducthierarchy=""
+          devices=""
+          revisiondate="23/06/2025 00:00:00"
+          revisionletter="S"
+          isbn="979-8-3371-1642-6"
+          pubid="DS50003101"
+          reachid=""
+          description=""
+          lastmodified="23/07/2025 08:58:09"
+          covertitle="Libero SoC Tcl Command Reference Guide"
+          frontcover="">
+   <keyworditem topicid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28"
+                nocomponent="true"
+                parent="">
+      <device/>
+      <module/>
+      <component/>
+      <register>Introduction</register>
+      <title>Introduction</title>
+      <bitfield/>
+      <keyword>libero_tcl_cmd</keyword>
+   </keyworditem>
+</keywords>

@@ -1,0 +1,598 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="26.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="The distinction between braces ({ }) and quotes (&#34; &#34;) is significant when the list contains references to variables. When references are enclosed in quotes, they are substituted with values. However, ..."/><meta name="copyright" content="(C) Copyright 2025"/><meta name="generator" content="DITA-OT"/><title>1.7 Quotes and Braces</title><!--  Generated with Oxygen version 26.1, build number 2024091616.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F-d4698e142"/><meta name="wh-source-relpath" content="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F.xml"/><meta name="wh-out-relpath" content="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250723085923"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250723085923"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024091616"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+</head>
+
+    <body id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Tcl Command Reference Guide &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Tcl Command Reference Guide 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-57D1B766-9771-410F-B0F1-9199613DB164"><div class="title"><a href="GUID-57D1B766-9771-410F-B0F1-9199613DB164.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Tcl Scripting Overview</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F"><div class="title"><a href="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.7</ph>
+Quotes and Braces</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark header_title">
+    </h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem"><div data-tocid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d4698e11" class="topicref introduction" data-id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d4698e11-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19" class="topicref" data-id="GUID-57D1B766-9771-410F-B0F1-9199613DB164" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57D1B766-9771-410F-B0F1-9199613DB164.html" id="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Tcl Scripting Overview</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-8991A66F-7871-41C1-B4F4-D7C9C9B6A9E0-d4698e27" class="topicref" data-id="GUID-8991A66F-7871-41C1-B4F4-D7C9C9B6A9E0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8991A66F-7871-41C1-B4F4-D7C9C9B6A9E0.html" id="GUID-8991A66F-7871-41C1-B4F4-D7C9C9B6A9E0-d4698e27-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.1</ph>
+Tcl Commands and Supported Families</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E8508135-A677-4C49-9147-548CE809CE60-d4698e36" class="topicref" data-id="GUID-E8508135-A677-4C49-9147-548CE809CE60" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E8508135-A677-4C49-9147-548CE809CE60-d4698e36-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E8508135-A677-4C49-9147-548CE809CE60.html#GUID-E8508135-A677-4C49-9147-548CE809CE60" id="GUID-E8508135-A677-4C49-9147-548CE809CE60-d4698e36-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.2</ph>
+Tcl Command Documentation Conventions</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-DCB35E77-F92C-45FD-B564-B3E15B6CD3C6-d4698e77" class="topicref" data-id="GUID-DCB35E77-F92C-45FD-B564-B3E15B6CD3C6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-DCB35E77-F92C-45FD-B564-B3E15B6CD3C6-d4698e77-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-DCB35E77-F92C-45FD-B564-B3E15B6CD3C6.html#GUID-DCB35E77-F92C-45FD-B564-B3E15B6CD3C6" id="GUID-DCB35E77-F92C-45FD-B564-B3E15B6CD3C6-d4698e77-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.3</ph>
+Basic Syntax</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-90149FA0-8ED1-4B8C-83EB-7904C94B2807-d4698e102" class="topicref" data-id="GUID-90149FA0-8ED1-4B8C-83EB-7904C94B2807" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-90149FA0-8ED1-4B8C-83EB-7904C94B2807-d4698e102-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-90149FA0-8ED1-4B8C-83EB-7904C94B2807.html#GUID-90149FA0-8ED1-4B8C-83EB-7904C94B2807" id="GUID-90149FA0-8ED1-4B8C-83EB-7904C94B2807-d4698e102-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.4</ph>
+Types of Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A1D7F10A-DFF8-466A-92C7-F44265B2875C-d4698e126" class="topicref" data-id="GUID-A1D7F10A-DFF8-466A-92C7-F44265B2875C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A1D7F10A-DFF8-466A-92C7-F44265B2875C.html" id="GUID-A1D7F10A-DFF8-466A-92C7-F44265B2875C-d4698e126-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.5</ph>
+Variables</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D507266A-4104-4F21-BCE5-F28D891E7FB7-d4698e134" class="topicref" data-id="GUID-D507266A-4104-4F21-BCE5-F28D891E7FB7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D507266A-4104-4F21-BCE5-F28D891E7FB7.html" id="GUID-D507266A-4104-4F21-BCE5-F28D891E7FB7-d4698e134-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.6</ph>
+Command Substitution</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F-d4698e142" class="topicref" data-id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F.html" id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F-d4698e142-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.7</ph>
+Quotes and Braces</a></div></div></li><li role="treeitem"><div data-tocid="GUID-450BAFB8-3B6A-4CD5-AC5C-85E05067C93B-d4698e151" class="topicref" data-id="GUID-450BAFB8-3B6A-4CD5-AC5C-85E05067C93B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-450BAFB8-3B6A-4CD5-AC5C-85E05067C93B.html" id="GUID-450BAFB8-3B6A-4CD5-AC5C-85E05067C93B-d4698e151-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.8</ph>
+Filenames</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-512F2A73-EFF8-4EAC-9BEA-74515011EFF8-d4698e160" class="topicref" data-id="GUID-512F2A73-EFF8-4EAC-9BEA-74515011EFF8" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-512F2A73-EFF8-4EAC-9BEA-74515011EFF8-d4698e160-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-512F2A73-EFF8-4EAC-9BEA-74515011EFF8.html#GUID-512F2A73-EFF8-4EAC-9BEA-74515011EFF8" id="GUID-512F2A73-EFF8-4EAC-9BEA-74515011EFF8-d4698e160-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.9</ph>
+Lists and Arrays</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-586464A7-4CB5-405F-84F2-AC5B6B17F260-d4698e185" class="topicref" data-id="GUID-586464A7-4CB5-405F-84F2-AC5B6B17F260" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-586464A7-4CB5-405F-84F2-AC5B6B17F260-d4698e185-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-586464A7-4CB5-405F-84F2-AC5B6B17F260.html#GUID-586464A7-4CB5-405F-84F2-AC5B6B17F260" id="GUID-586464A7-4CB5-405F-84F2-AC5B6B17F260-d4698e185-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.10</ph>
+Control Structures</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-020F8BD3-CA11-4120-A0A6-191881252D03-d4698e226" class="topicref" data-id="GUID-020F8BD3-CA11-4120-A0A6-191881252D03" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-020F8BD3-CA11-4120-A0A6-191881252D03-d4698e226-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-020F8BD3-CA11-4120-A0A6-191881252D03.html#GUID-020F8BD3-CA11-4120-A0A6-191881252D03" id="GUID-020F8BD3-CA11-4120-A0A6-191881252D03-d4698e226-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.11</ph>
+Print Statement and Return Values</a></div></div></li><li role="treeitem"><div data-tocid="GUID-EC46CBCA-23C3-4F55-9E91-93F2FA742DBA-d4698e250" class="topicref" data-id="GUID-EC46CBCA-23C3-4F55-9E91-93F2FA742DBA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EC46CBCA-23C3-4F55-9E91-93F2FA742DBA.html" id="GUID-EC46CBCA-23C3-4F55-9E91-93F2FA742DBA-d4698e250-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.12</ph>
+Running Tcl Scripts from the Command Line</a></div></div></li><li role="treeitem"><div data-tocid="GUID-91795311-7E73-42E4-84A1-0F4797A5C57A-d4698e258" class="topicref" data-id="GUID-91795311-7E73-42E4-84A1-0F4797A5C57A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-91795311-7E73-42E4-84A1-0F4797A5C57A.html" id="GUID-91795311-7E73-42E4-84A1-0F4797A5C57A-d4698e258-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.13</ph>
+Exporting Tcl Scripts</a></div></div></li><li role="treeitem"><div data-tocid="GUID-15AAF951-BC04-4E80-9C4E-7EFD7F5F8FA6-d4698e266" class="topicref" data-id="GUID-15AAF951-BC04-4E80-9C4E-7EFD7F5F8FA6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-15AAF951-BC04-4E80-9C4E-7EFD7F5F8FA6.html" id="GUID-15AAF951-BC04-4E80-9C4E-7EFD7F5F8FA6-d4698e266-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.14</ph>
+extended_run_lib</a></div></div></li><li role="treeitem"><div data-tocid="GUID-A5AAB056-F651-454F-81E7-96B381EECACF-d4698e274" class="topicref" data-id="GUID-A5AAB056-F651-454F-81E7-96B381EECACF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A5AAB056-F651-454F-81E7-96B381EECACF.html" id="GUID-A5AAB056-F651-454F-81E7-96B381EECACF-d4698e274-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.15</ph>
+Sample Tcl Script - Project Manager</a></div></div></li><li role="treeitem"><div data-tocid="GUID-153F7AA7-6EDF-4EFC-9F17-283820572DA6-d4698e283" class="topicref" data-id="GUID-153F7AA7-6EDF-4EFC-9F17-283820572DA6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-153F7AA7-6EDF-4EFC-9F17-283820572DA6.html" id="GUID-153F7AA7-6EDF-4EFC-9F17-283820572DA6-d4698e283-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1.16</ph>
+How to Derive Required Part Information from A "Part Number"</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291" class="topicref" data-id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81.html" id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Building a Libero Design Using Tcl</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396" class="topicref" data-id="GUID-CE445F8D-419D-434B-9288-A0005F280E89" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CE445F8D-419D-434B-9288-A0005F280E89.html" id="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Project Manager Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439" class="topicref" data-id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6.html" id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+SmartDesign Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048" class="topicref" data-id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4.html" id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+HDL Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155" class="topicref" data-id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275.html" id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Command Tools</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440" class="topicref" data-id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F.html" id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+MSS Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489" class="topicref" data-id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670.html" id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+SmartTime Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239" class="topicref" data-id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-33C45F08-A467-4461-B5EF-8D86325E235A.html" id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+SmartPower Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884" class="topicref" data-id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641.html" id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Programming and Configuration Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155" class="topicref" data-id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08.html" id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+FlashPro Express Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445" class="topicref" data-id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A.html" id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+Configure JTAG Chain Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641" class="topicref" data-id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010.html" id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+SmartDebug Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559" class="topicref" data-id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D8832000-73FB-42DC-860F-FF30F05EE075.html" id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+System Builder Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688" class="topicref" data-id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527.html" id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Simultaneous Switching Noise Analyzer (SSNA) Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764" class="topicref" data-id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3.html" id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+HSM Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841" class="topicref" data-id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2.html" id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Derive Constraints Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9E675440-3F06-4118-A3E5-57F157F925C1-d4698e5947" class="topicref" data-id="GUID-9E675440-3F06-4118-A3E5-57F157F925C1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9E675440-3F06-4118-A3E5-57F157F925C1.html" id="GUID-9E675440-3F06-4118-A3E5-57F157F925C1-d4698e5947-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+Revision History</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d4698e5955" class="topicref backmatter" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d4698e5955-link">Microchip FPGA Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-33E1AF2F-DD83-4C53-8E5B-062AFFDF8DE9"><h1 class="- topic/title title topictitle1" id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-33E1AF2F-DD83-4C53-8E5B-062AFFDF8DE9" style="display:inline-block">1.7 Quotes and Braces</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-3D4C6B83-916E-4A35-8894-A0E1E63ED7CF&amp;pub_lang=en-US&amp;pub_ver=23&amp;pub_type=User%20Guide&amp;bu=fpga&amp;tpc_guid=GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F&amp;cover_title=Libero%20SoC%20Tcl%20Command%20Reference%20Guide&amp;tech_support_link=NA&amp;revision_letter=S&amp;source=Webhelp%20Responsive&amp;title=Quotes%20and%20Braces">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">The distinction between braces ({ }) and quotes (" ") is significant when the list
+                contains references to variables. When references are enclosed in quotes, they are
+                substituted with values. However, when references are enclosed in braces, they are
+                not substituted with values.</p><p class="- topic/p p">The following table lists an example code.</p><div class="table-container"><table class="- topic/table table" id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810" data-ofbid="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810" data-cols="0"><caption></caption><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__1"> With Braces </th><th class="- topic/entry entry colsep-0 rowsep-1" id="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__2"> With Double Quotes </th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__1">set b 2</td><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__2">set b 2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__1">set t { 1 $b 3 }</td><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__2">set t " 1 $b 3 "</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__1">set s { [ expr $b + $b ] }</td><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__2">set s " [ expr $b + $b ] "</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__1">puts stdout $t</td><td class="- topic/entry entry colsep-0 rowsep-1" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__2">puts stdout $t</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__1">puts stdout $s</td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-EB8BE95D-0C87-43E8-B1B4-9036234BE90F__GUID-7B5EF9A2-159C-44A6-98B3-CCD6BDE39810__entry__2">puts stdout $s</td></tr></tbody></table></div><p class="- topic/p p">The above example code will generate the following output:</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>1 $b 3 vs. 1 2 3
+[ expr $b + $b ] 4</code></pre></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

@@ -1,0 +1,681 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="26.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="copyright" content="(C) Copyright 2025"/><meta name="generator" content="DITA-OT"/><meta name="description" content="Description This tcl command calculates the frequency of any signal in the design that can be assigned to Live Probe channel A and displays the Frequency. The Frequency unit of measurement is in ..."/>        
+      <title>13.1.56 run_frequency_monitor</title><!--  Generated with Oxygen version 26.1, build number 2024091616.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E-d4698e5240"/><meta name="wh-source-relpath" content="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E.xml"/><meta name="wh-out-relpath" content="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250723085923"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250723085923"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024091616"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+</head>
+
+    <body id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="Libero SoC Tcl Command Reference Guide &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">Libero SoC Tcl Command Reference Guide 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010"><div class="title"><a href="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+SmartDebug Tcl Commands</a></div></div></li><li><div class="topicref"><div class="title"><a href="GUID-183D2C02-6B2B-433C-BB68-4CD6B882498E.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+Smart Debug Tcl Commands</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E"><div class="title"><a href="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.56</ph>
+run_frequency_monitor</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-7 col-md-7 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark header_title">
+    </h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem"><div data-tocid="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d4698e11" class="topicref introduction" data-id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28.html" id="GUID-E81358E3-CE5A-43CA-AD69-88CE30DD4E28-d4698e11-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19" class="topicref" data-id="GUID-57D1B766-9771-410F-B0F1-9199613DB164" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57D1B766-9771-410F-B0F1-9199613DB164.html" id="GUID-57D1B766-9771-410F-B0F1-9199613DB164-d4698e19-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Tcl Scripting Overview</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291" class="topicref" data-id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81.html" id="GUID-05F3AA42-6941-47FC-B42B-E644BD610E81-d4698e291-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Building a Libero Design Using Tcl</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396" class="topicref" data-id="GUID-CE445F8D-419D-434B-9288-A0005F280E89" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CE445F8D-419D-434B-9288-A0005F280E89.html" id="GUID-CE445F8D-419D-434B-9288-A0005F280E89-d4698e396-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Project Manager Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439" class="topicref" data-id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6.html" id="GUID-92BDB298-D736-4F37-87A0-3E5E1200BEE6-d4698e1439-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+SmartDesign Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048" class="topicref" data-id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4.html" id="GUID-3294E455-71CE-460F-8C72-F36BDE261EA4-d4698e2048-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+HDL Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155" class="topicref" data-id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275.html" id="GUID-57EC11A5-2069-4086-ADFB-D63113B3E275-d4698e2155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Command Tools</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440" class="topicref" data-id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F.html" id="GUID-5D50ABEC-E4A6-4880-B7B2-D5AFC655143F-d4698e2440-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+MSS Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489" class="topicref" data-id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670.html" id="GUID-96623DD0-9D90-4AFA-90C3-B2BAEEE15670-d4698e2489-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+SmartTime Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239" class="topicref" data-id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-33C45F08-A467-4461-B5EF-8D86325E235A.html" id="GUID-33C45F08-A467-4461-B5EF-8D86325E235A-d4698e3239-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+SmartPower Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884" class="topicref" data-id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641.html" id="GUID-B021E93C-650D-42F1-B90A-AE43EE93E641-d4698e3884-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Programming and Configuration Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155" class="topicref" data-id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08.html" id="GUID-4320979B-E17A-424D-ABEB-FC0D4BBACB08-d4698e4155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+FlashPro Express Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445" class="topicref" data-id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A.html" id="GUID-ABB3D62F-F2CF-49CC-9DC4-8C3B307A6A0A-d4698e4445-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">12</ph>
+Configure JTAG Chain Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641" class="topicref" data-id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010.html" id="GUID-5F0515FB-DC45-4C39-86E5-8B7DC659F010-d4698e4641-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13</ph>
+SmartDebug Tcl Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem" aria-expanded="true"><div data-tocid="tocId-d4698e4649" class="topicref" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action tocId-d4698e4649-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-183D2C02-6B2B-433C-BB68-4CD6B882498E.html" id="tocId-d4698e4649-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1</ph>
+Smart Debug Tcl Commands</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-183D2C02-6B2B-433C-BB68-4CD6B882498E-d4698e4653" class="topicref" data-id="GUID-183D2C02-6B2B-433C-BB68-4CD6B882498E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-183D2C02-6B2B-433C-BB68-4CD6B882498E.html" id="GUID-183D2C02-6B2B-433C-BB68-4CD6B882498E-d4698e4653-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.1</ph>
+add_probe_insertion_point</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DA254B1F-B197-469F-BAA3-686ED97AF2F9-d4698e4661" class="topicref" data-id="GUID-DA254B1F-B197-469F-BAA3-686ED97AF2F9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DA254B1F-B197-469F-BAA3-686ED97AF2F9.html" id="GUID-DA254B1F-B197-469F-BAA3-686ED97AF2F9-d4698e4661-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.2</ph>
+add_to_probe_group</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-097BAA8F-0C78-4A7D-9266-CFE58C3968A8-d4698e4672" class="topicref" data-id="GUID-097BAA8F-0C78-4A7D-9266-CFE58C3968A8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-097BAA8F-0C78-4A7D-9266-CFE58C3968A8.html" id="GUID-097BAA8F-0C78-4A7D-9266-CFE58C3968A8-d4698e4672-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.3</ph>
+check_flash_memory</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-1A222088-7DAB-4F4C-AA1F-BAFBD5A4E714-d4698e4683" class="topicref" data-id="GUID-1A222088-7DAB-4F4C-AA1F-BAFBD5A4E714" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1A222088-7DAB-4F4C-AA1F-BAFBD5A4E714.html" id="GUID-1A222088-7DAB-4F4C-AA1F-BAFBD5A4E714-d4698e4683-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.4</ph>
+close_project</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E737EECC-AAC8-4965-BDC2-61970BA53FDD-d4698e4694" class="topicref" data-id="GUID-E737EECC-AAC8-4965-BDC2-61970BA53FDD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E737EECC-AAC8-4965-BDC2-61970BA53FDD.html" id="GUID-E737EECC-AAC8-4965-BDC2-61970BA53FDD-d4698e4694-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.5</ph>
+complete_debug_job</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DD18AC84-D6ED-4681-BF70-A4D6DEB5B3F7-d4698e4702" class="topicref" data-id="GUID-DD18AC84-D6ED-4681-BF70-A4D6DEB5B3F7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DD18AC84-D6ED-4681-BF70-A4D6DEB5B3F7.html" id="GUID-DD18AC84-D6ED-4681-BF70-A4D6DEB5B3F7-d4698e4702-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.6</ph>
+create_probe_group</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-3CA536D7-12DF-44C9-B52B-82F6956E6673-d4698e4713" class="topicref" data-id="GUID-3CA536D7-12DF-44C9-B52B-82F6956E6673" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3CA536D7-12DF-44C9-B52B-82F6956E6673.html" id="GUID-3CA536D7-12DF-44C9-B52B-82F6956E6673-d4698e4713-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.7</ph>
+debug_ddr</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BEFF3C93-D03F-4699-835B-3B2836CD52FB-d4698e4724" class="topicref" data-id="GUID-BEFF3C93-D03F-4699-835B-3B2836CD52FB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BEFF3C93-D03F-4699-835B-3B2836CD52FB.html" id="GUID-BEFF3C93-D03F-4699-835B-3B2836CD52FB-d4698e4724-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.8</ph>
+debug_mss_ddr</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D35A1E50-A2BD-41A5-B4A2-681946742593-d4698e4732" class="topicref" data-id="GUID-D35A1E50-A2BD-41A5-B4A2-681946742593" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D35A1E50-A2BD-41A5-B4A2-681946742593.html" id="GUID-D35A1E50-A2BD-41A5-B4A2-681946742593-d4698e4732-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.9</ph>
+debug_iod</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-4E6FFB99-B0D7-47C0-976A-931DAA25DFA8-d4698e4743" class="topicref" data-id="GUID-4E6FFB99-B0D7-47C0-976A-931DAA25DFA8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4E6FFB99-B0D7-47C0-976A-931DAA25DFA8.html" id="GUID-4E6FFB99-B0D7-47C0-976A-931DAA25DFA8-d4698e4743-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.10</ph>
+ddr_read</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BD002FDB-8117-4E4B-9069-D1A96E03CEE0-d4698e4755" class="topicref" data-id="GUID-BD002FDB-8117-4E4B-9069-D1A96E03CEE0" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BD002FDB-8117-4E4B-9069-D1A96E03CEE0.html" id="GUID-BD002FDB-8117-4E4B-9069-D1A96E03CEE0-d4698e4755-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.11</ph>
+ddr_write</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-997AEA4F-A99C-4A33-9BBC-A531807A1669-d4698e4766" class="topicref" data-id="GUID-997AEA4F-A99C-4A33-9BBC-A531807A1669" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-997AEA4F-A99C-4A33-9BBC-A531807A1669.html" id="GUID-997AEA4F-A99C-4A33-9BBC-A531807A1669-d4698e4766-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.12</ph>
+delete_active_probe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-754E5FE0-21C0-47C4-A861-629D23901277-d4698e4777" class="topicref" data-id="GUID-754E5FE0-21C0-47C4-A861-629D23901277" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-754E5FE0-21C0-47C4-A861-629D23901277.html" id="GUID-754E5FE0-21C0-47C4-A861-629D23901277-d4698e4777-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.13</ph>
+load_live_probe_list*</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B665F389-6D5B-495D-9D49-EFF30B83561E-d4698e4785" class="topicref" data-id="GUID-B665F389-6D5B-495D-9D49-EFF30B83561E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B665F389-6D5B-495D-9D49-EFF30B83561E.html" id="GUID-B665F389-6D5B-495D-9D49-EFF30B83561E-d4698e4785-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.14</ph>
+eye_monitor_power</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-9764D7C8-6A85-4446-BC31-FBE02582C45B-d4698e4796" class="topicref" data-id="GUID-9764D7C8-6A85-4446-BC31-FBE02582C45B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9764D7C8-6A85-4446-BC31-FBE02582C45B.html" id="GUID-9764D7C8-6A85-4446-BC31-FBE02582C45B-d4698e4796-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.15</ph>
+event_counter</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-27773908-3BEA-4AAF-9250-B798BC167FC3-d4698e4807" class="topicref" data-id="GUID-27773908-3BEA-4AAF-9250-B798BC167FC3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-27773908-3BEA-4AAF-9250-B798BC167FC3.html" id="GUID-27773908-3BEA-4AAF-9250-B798BC167FC3-d4698e4807-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.16</ph>
+execute_dfe_calibration</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A828F21B-E707-4EC6-95EA-03F2A386C6E2-d4698e4818" class="topicref" data-id="GUID-A828F21B-E707-4EC6-95EA-03F2A386C6E2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A828F21B-E707-4EC6-95EA-03F2A386C6E2.html" id="GUID-A828F21B-E707-4EC6-95EA-03F2A386C6E2-d4698e4818-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.17</ph>
+export_ddr_training_data</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4579B423-8A5B-4FEF-AA7E-69603B421E46-d4698e4826" class="topicref" data-id="GUID-4579B423-8A5B-4FEF-AA7E-69603B421E46" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4579B423-8A5B-4FEF-AA7E-69603B421E46.html" id="GUID-4579B423-8A5B-4FEF-AA7E-69603B421E46-d4698e4826-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.18</ph>
+export_mss_ddr_training_data</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3F70E024-D645-45C6-9B95-6400CF20D7AC-d4698e4834" class="topicref" data-id="GUID-3F70E024-D645-45C6-9B95-6400CF20D7AC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3F70E024-D645-45C6-9B95-6400CF20D7AC.html" id="GUID-3F70E024-D645-45C6-9B95-6400CF20D7AC-d4698e4834-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.19</ph>
+fhb_control</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-F13ADC7C-30E8-44D7-9645-F5E62F9C8A87-d4698e4845" class="topicref" data-id="GUID-F13ADC7C-30E8-44D7-9645-F5E62F9C8A87" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F13ADC7C-30E8-44D7-9645-F5E62F9C8A87.html" id="GUID-F13ADC7C-30E8-44D7-9645-F5E62F9C8A87-d4698e4845-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.20</ph>
+get_programmer_info</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E8D22AA9-9A8E-48A3-B72B-1CA25E1A29AF-d4698e4856" class="topicref" data-id="GUID-E8D22AA9-9A8E-48A3-B72B-1CA25E1A29AF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E8D22AA9-9A8E-48A3-B72B-1CA25E1A29AF.html" id="GUID-E8D22AA9-9A8E-48A3-B72B-1CA25E1A29AF-d4698e4856-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.21</ph>
+get_user_clock_frequencies</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-CD8F3042-4D3F-4045-8927-2B7547891D77-d4698e4868" class="topicref" data-id="GUID-CD8F3042-4D3F-4045-8927-2B7547891D77" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD8F3042-4D3F-4045-8927-2B7547891D77.html" id="GUID-CD8F3042-4D3F-4045-8927-2B7547891D77-d4698e4868-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.22</ph>
+import_ddc_file</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5FAA7586-E2AD-48E9-B6BF-70FF47249D57-d4698e4879" class="topicref" data-id="GUID-5FAA7586-E2AD-48E9-B6BF-70FF47249D57" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5FAA7586-E2AD-48E9-B6BF-70FF47249D57.html" id="GUID-5FAA7586-E2AD-48E9-B6BF-70FF47249D57-d4698e4879-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.23</ph>
+load_active_probe_list</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-51BC8D30-EB58-4AA0-86B1-D558A9A91BF5-d4698e4890" class="topicref" data-id="GUID-51BC8D30-EB58-4AA0-86B1-D558A9A91BF5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-51BC8D30-EB58-4AA0-86B1-D558A9A91BF5.html" id="GUID-51BC8D30-EB58-4AA0-86B1-D558A9A91BF5-d4698e4890-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.24</ph>
+load_SI_design_defaults</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E0F2CCEF-6F9E-4C30-B6A8-566F97567B3A-d4698e4901" class="topicref" data-id="GUID-E0F2CCEF-6F9E-4C30-B6A8-566F97567B3A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E0F2CCEF-6F9E-4C30-B6A8-566F97567B3A.html" id="GUID-E0F2CCEF-6F9E-4C30-B6A8-566F97567B3A-d4698e4901-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.25</ph>
+loopback_mode</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-C5F40B72-A3D5-4C39-A746-DA9DB6067355-d4698e4912" class="topicref" data-id="GUID-C5F40B72-A3D5-4C39-A746-DA9DB6067355" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C5F40B72-A3D5-4C39-A746-DA9DB6067355.html" id="GUID-C5F40B72-A3D5-4C39-A746-DA9DB6067355-d4698e4912-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.26</ph>
+loopback_test</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-97F66AE7-9FC3-4526-B677-4DE7D1996B23-d4698e4923" class="topicref" data-id="GUID-97F66AE7-9FC3-4526-B677-4DE7D1996B23" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-97F66AE7-9FC3-4526-B677-4DE7D1996B23.html" id="GUID-97F66AE7-9FC3-4526-B677-4DE7D1996B23-d4698e4923-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.27</ph>
+move_to_probe_group</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0AD3144F-962F-4D86-BF69-A6E04B0BE220-d4698e4934" class="topicref" data-id="GUID-0AD3144F-962F-4D86-BF69-A6E04B0BE220" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0AD3144F-962F-4D86-BF69-A6E04B0BE220.html" id="GUID-0AD3144F-962F-4D86-BF69-A6E04B0BE220-d4698e4934-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.28</ph>
+mss_add_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-133153E6-12FD-444C-94A1-C8DB6E3591A1-d4698e4945" class="topicref" data-id="GUID-133153E6-12FD-444C-94A1-C8DB6E3591A1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-133153E6-12FD-444C-94A1-C8DB6E3591A1.html" id="GUID-133153E6-12FD-444C-94A1-C8DB6E3591A1-d4698e4945-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.29</ph>
+mss_read_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-40D295B5-9535-4278-8A45-369EA6963474-d4698e4956" class="topicref" data-id="GUID-40D295B5-9535-4278-8A45-369EA6963474" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-40D295B5-9535-4278-8A45-369EA6963474.html" id="GUID-40D295B5-9535-4278-8A45-369EA6963474-d4698e4956-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.30</ph>
+mss_write_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-B658DA08-2084-4C0A-84F9-319CCCA8CB0E-d4698e4967" class="topicref" data-id="GUID-B658DA08-2084-4C0A-84F9-319CCCA8CB0E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B658DA08-2084-4C0A-84F9-319CCCA8CB0E.html" id="GUID-B658DA08-2084-4C0A-84F9-319CCCA8CB0E-d4698e4967-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.31</ph>
+mss_import_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-338D688E-8A33-4700-8E98-7AF52DAF29B8-d4698e4978" class="topicref" data-id="GUID-338D688E-8A33-4700-8E98-7AF52DAF29B8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-338D688E-8A33-4700-8E98-7AF52DAF29B8.html" id="GUID-338D688E-8A33-4700-8E98-7AF52DAF29B8-d4698e4978-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.32</ph>
+mss_export_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A5E56B0F-5783-4B06-BF5A-70AF6CFF3EB2-d4698e4990" class="topicref" data-id="GUID-A5E56B0F-5783-4B06-BF5A-70AF6CFF3EB2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A5E56B0F-5783-4B06-BF5A-70AF6CFF3EB2.html" id="GUID-A5E56B0F-5783-4B06-BF5A-70AF6CFF3EB2-d4698e4990-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.33</ph>
+new_project</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-9D34CA72-2124-4CDA-B92D-F67A6B7B51EC-d4698e5001" class="topicref" data-id="GUID-9D34CA72-2124-4CDA-B92D-F67A6B7B51EC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9D34CA72-2124-4CDA-B92D-F67A6B7B51EC.html" id="GUID-9D34CA72-2124-4CDA-B92D-F67A6B7B51EC-d4698e5001-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.34</ph>
+open_project</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-49902E1A-5058-4351-B4CC-40D5BC7BEA19-d4698e5012" class="topicref" data-id="GUID-49902E1A-5058-4351-B4CC-40D5BC7BEA19" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-49902E1A-5058-4351-B4CC-40D5BC7BEA19.html" id="GUID-49902E1A-5058-4351-B4CC-40D5BC7BEA19-d4698e5012-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.35</ph>
+optimize_dfe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-24B94AA8-E01B-43C4-94F4-CFA3B15677D4-d4698e5023" class="topicref" data-id="GUID-24B94AA8-E01B-43C4-94F4-CFA3B15677D4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-24B94AA8-E01B-43C4-94F4-CFA3B15677D4.html" id="GUID-24B94AA8-E01B-43C4-94F4-CFA3B15677D4-d4698e5023-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.36</ph>
+optimize_receiver</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-D97A4907-32F9-450F-9893-685508608A25-d4698e5034" class="topicref" data-id="GUID-D97A4907-32F9-450F-9893-685508608A25" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D97A4907-32F9-450F-9893-685508608A25.html" id="GUID-D97A4907-32F9-450F-9893-685508608A25-d4698e5034-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.37</ph>
+pcie_config_space</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-1E4C9994-9398-4604-A46B-0EDBD83CD309-d4698e5045" class="topicref" data-id="GUID-1E4C9994-9398-4604-A46B-0EDBD83CD309" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1E4C9994-9398-4604-A46B-0EDBD83CD309.html" id="GUID-1E4C9994-9398-4604-A46B-0EDBD83CD309-d4698e5045-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.38</ph>
+pcie_ltssm_status</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BA5B7CB7-A98D-4702-8AFD-3E001FEC2FC1-d4698e5056" class="topicref" data-id="GUID-BA5B7CB7-A98D-4702-8AFD-3E001FEC2FC1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BA5B7CB7-A98D-4702-8AFD-3E001FEC2FC1.html" id="GUID-BA5B7CB7-A98D-4702-8AFD-3E001FEC2FC1-d4698e5056-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.39</ph>
+plot_eye</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5BE4165B-A2CB-46E5-B11E-5AFF3EB84450-d4698e5067" class="topicref" data-id="GUID-5BE4165B-A2CB-46E5-B11E-5AFF3EB84450" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5BE4165B-A2CB-46E5-B11E-5AFF3EB84450.html" id="GUID-5BE4165B-A2CB-46E5-B11E-5AFF3EB84450-d4698e5067-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.40</ph>
+prbs_test</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-0D21B9C2-13C9-4F71-899A-89DB41A9CB77-d4698e5078" class="topicref" data-id="GUID-0D21B9C2-13C9-4F71-899A-89DB41A9CB77" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0D21B9C2-13C9-4F71-899A-89DB41A9CB77.html" id="GUID-0D21B9C2-13C9-4F71-899A-89DB41A9CB77-d4698e5078-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.41</ph>
+process_job_request</a></div></div></li><li role="treeitem"><div data-tocid="GUID-2A99AF23-E0CC-407A-A51D-C565667CAE87-d4698e5086" class="topicref" data-id="GUID-2A99AF23-E0CC-407A-A51D-C565667CAE87" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2A99AF23-E0CC-407A-A51D-C565667CAE87.html" id="GUID-2A99AF23-E0CC-407A-A51D-C565667CAE87-d4698e5086-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.42</ph>
+program_probe_insertion</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-110D159C-3673-4728-AC2C-841360352BBB-d4698e5097" class="topicref" data-id="GUID-110D159C-3673-4728-AC2C-841360352BBB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-110D159C-3673-4728-AC2C-841360352BBB.html" id="GUID-110D159C-3673-4728-AC2C-841360352BBB-d4698e5097-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.43</ph>
+read_active_probe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-1AC2F4FB-E4D3-4E1C-8DE7-6C50EB9AE332-d4698e5109" class="topicref" data-id="GUID-1AC2F4FB-E4D3-4E1C-8DE7-6C50EB9AE332" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1AC2F4FB-E4D3-4E1C-8DE7-6C50EB9AE332.html" id="GUID-1AC2F4FB-E4D3-4E1C-8DE7-6C50EB9AE332-d4698e5109-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.44</ph>
+read_envm_memory</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-5C97337B-9311-424A-8965-039B6CFEDAA5-d4698e5120" class="topicref" data-id="GUID-5C97337B-9311-424A-8965-039B6CFEDAA5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5C97337B-9311-424A-8965-039B6CFEDAA5.html" id="GUID-5C97337B-9311-424A-8965-039B6CFEDAA5-d4698e5120-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.45</ph>
+read_id_code</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E16BB1CB-273C-4105-A824-2A340C2FE0BA-d4698e5131" class="topicref" data-id="GUID-E16BB1CB-273C-4105-A824-2A340C2FE0BA" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E16BB1CB-273C-4105-A824-2A340C2FE0BA.html" id="GUID-E16BB1CB-273C-4105-A824-2A340C2FE0BA-d4698e5131-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.46</ph>
+read_device_status</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-1B9D3568-C3F5-4A16-A3A3-8A1C5053F0B3-d4698e5142" class="topicref" data-id="GUID-1B9D3568-C3F5-4A16-A3A3-8A1C5053F0B3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1B9D3568-C3F5-4A16-A3A3-8A1C5053F0B3.html" id="GUID-1B9D3568-C3F5-4A16-A3A3-8A1C5053F0B3-d4698e5142-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.47</ph>
+read_lsram</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-6BEC664A-F2AB-4278-A7D1-FE5A520190D9-d4698e5153" class="topicref" data-id="GUID-6BEC664A-F2AB-4278-A7D1-FE5A520190D9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6BEC664A-F2AB-4278-A7D1-FE5A520190D9.html" id="GUID-6BEC664A-F2AB-4278-A7D1-FE5A520190D9-d4698e5153-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.48</ph>
+read_usram</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-BF7FF89C-2622-4E5B-8253-AE8F57A7B1B5-d4698e5164" class="topicref" data-id="GUID-BF7FF89C-2622-4E5B-8253-AE8F57A7B1B5" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-BF7FF89C-2622-4E5B-8253-AE8F57A7B1B5.html" id="GUID-BF7FF89C-2622-4E5B-8253-AE8F57A7B1B5-d4698e5164-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.49</ph>
+read_snvm_memory</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E05BAC23-1114-4E00-A760-7A49FB484C49-d4698e5174" class="topicref" data-id="GUID-E05BAC23-1114-4E00-A760-7A49FB484C49" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E05BAC23-1114-4E00-A760-7A49FB484C49.html" id="GUID-E05BAC23-1114-4E00-A760-7A49FB484C49-d4698e5174-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.50</ph>
+read_uprom_memory</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-6F247D21-61E7-427C-A368-BE47ABF57D82-d4698e5184" class="topicref" data-id="GUID-6F247D21-61E7-427C-A368-BE47ABF57D82" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6F247D21-61E7-427C-A368-BE47ABF57D82.html" id="GUID-6F247D21-61E7-427C-A368-BE47ABF57D82-d4698e5184-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.51</ph>
+read_flash_memory</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-779F74E6-B8C1-46AB-95F6-C0B5D7A1994F-d4698e5195" class="topicref" data-id="GUID-779F74E6-B8C1-46AB-95F6-C0B5D7A1994F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-779F74E6-B8C1-46AB-95F6-C0B5D7A1994F.html" id="GUID-779F74E6-B8C1-46AB-95F6-C0B5D7A1994F-d4698e5195-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.52</ph>
+record_actions</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A01383AA-20DC-41D5-A7B3-87F60429FD18-d4698e5206" class="topicref" data-id="GUID-A01383AA-20DC-41D5-A7B3-87F60429FD18" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A01383AA-20DC-41D5-A7B3-87F60429FD18.html" id="GUID-A01383AA-20DC-41D5-A7B3-87F60429FD18-d4698e5206-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.53</ph>
+remove_from_probe_group</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-DC0236A6-78BC-453D-B665-072BFD41BACF-d4698e5217" class="topicref" data-id="GUID-DC0236A6-78BC-453D-B665-072BFD41BACF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DC0236A6-78BC-453D-B665-072BFD41BACF.html" id="GUID-DC0236A6-78BC-453D-B665-072BFD41BACF-d4698e5217-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.54</ph>
+remove_probe_insertion_point</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-85BFC6FB-E580-4A7D-B2AB-BAEAF8FE1EEC-d4698e5229" class="topicref" data-id="GUID-85BFC6FB-E580-4A7D-B2AB-BAEAF8FE1EEC" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-85BFC6FB-E580-4A7D-B2AB-BAEAF8FE1EEC.html" id="GUID-85BFC6FB-E580-4A7D-B2AB-BAEAF8FE1EEC-d4698e5229-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.55</ph>
+rescan_programmer</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E-d4698e5240" class="topicref" data-id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E.html" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E-d4698e5240-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.56</ph>
+run_frequency_monitor</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-6D0A3D2D-DB6D-470C-9C93-C87D4F0EE599-d4698e5251" class="topicref" data-id="GUID-6D0A3D2D-DB6D-470C-9C93-C87D4F0EE599" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6D0A3D2D-DB6D-470C-9C93-C87D4F0EE599.html" id="GUID-6D0A3D2D-DB6D-470C-9C93-C87D4F0EE599-d4698e5251-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.57</ph>
+save_active_probe_list</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-6120EA74-D0A3-433D-A0A8-B3E48D434E5E-d4698e5262" class="topicref" data-id="GUID-6120EA74-D0A3-433D-A0A8-B3E48D434E5E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6120EA74-D0A3-433D-A0A8-B3E48D434E5E.html" id="GUID-6120EA74-D0A3-433D-A0A8-B3E48D434E5E-d4698e5262-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.58</ph>
+save_live_probe_list</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-FCBA20EE-B499-4149-8CF6-DF92AC2EFA8C-d4698e5273" class="topicref" data-id="GUID-FCBA20EE-B499-4149-8CF6-DF92AC2EFA8C" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FCBA20EE-B499-4149-8CF6-DF92AC2EFA8C.html" id="GUID-FCBA20EE-B499-4149-8CF6-DF92AC2EFA8C-d4698e5273-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.59</ph>
+scan_ecc_memories</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-8729C5CD-090F-4F2F-AAF5-91E001F140B1-d4698e5284" class="topicref" data-id="GUID-8729C5CD-090F-4F2F-AAF5-91E001F140B1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-8729C5CD-090F-4F2F-AAF5-91E001F140B1.html" id="GUID-8729C5CD-090F-4F2F-AAF5-91E001F140B1-d4698e5284-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.60</ph>
+select_active_probe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-2B44E002-D135-429A-BD08-2AAA753B540E-d4698e5295" class="topicref" data-id="GUID-2B44E002-D135-429A-BD08-2AAA753B540E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2B44E002-D135-429A-BD08-2AAA753B540E.html" id="GUID-2B44E002-D135-429A-BD08-2AAA753B540E-d4698e5295-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.61</ph>
+serdes_lane_reset</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-7229437A-BBBD-45B5-B9A4-F6A2C87F3440-d4698e5306" class="topicref" data-id="GUID-7229437A-BBBD-45B5-B9A4-F6A2C87F3440" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7229437A-BBBD-45B5-B9A4-F6A2C87F3440.html" id="GUID-7229437A-BBBD-45B5-B9A4-F6A2C87F3440-d4698e5306-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.62</ph>
+serdes_read_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-D9903AAD-F9D9-435D-B916-D721E8C3DD10-d4698e5317" class="topicref" data-id="GUID-D9903AAD-F9D9-435D-B916-D721E8C3DD10" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D9903AAD-F9D9-435D-B916-D721E8C3DD10.html" id="GUID-D9903AAD-F9D9-435D-B916-D721E8C3DD10-d4698e5317-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.63</ph>
+serdes_write_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-AA099118-2872-4E99-B783-2976BDA414DE-d4698e5328" class="topicref" data-id="GUID-AA099118-2872-4E99-B783-2976BDA414DE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-AA099118-2872-4E99-B783-2976BDA414DE.html" id="GUID-AA099118-2872-4E99-B783-2976BDA414DE-d4698e5328-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.64</ph>
+set_debug_device</a></div></div></li><li role="treeitem"><div data-tocid="GUID-256FB2ED-1F91-49DA-9FAC-D97D376D9F8D-d4698e5336" class="topicref" data-id="GUID-256FB2ED-1F91-49DA-9FAC-D97D376D9F8D" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-256FB2ED-1F91-49DA-9FAC-D97D376D9F8D.html" id="GUID-256FB2ED-1F91-49DA-9FAC-D97D376D9F8D-d4698e5336-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.65</ph>
+set_debug_programmer</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E529C933-4188-422F-BBEF-292579E29E71-d4698e5348" class="topicref" data-id="GUID-E529C933-4188-422F-BBEF-292579E29E71" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E529C933-4188-422F-BBEF-292579E29E71.html" id="GUID-E529C933-4188-422F-BBEF-292579E29E71-d4698e5348-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.66</ph>
+set_hsm_params</a></div></div></li><li role="treeitem"><div data-tocid="GUID-5FFE00D3-801B-46FB-A333-F134F90D2108-d4698e5356" class="topicref" data-id="GUID-5FFE00D3-801B-46FB-A333-F134F90D2108" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-5FFE00D3-801B-46FB-A333-F134F90D2108.html" id="GUID-5FFE00D3-801B-46FB-A333-F134F90D2108-d4698e5356-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.67</ph>
+set_live_probe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-E8680F52-120C-42C1-B739-348CBCFFC1EF-d4698e5366" class="topicref" data-id="GUID-E8680F52-120C-42C1-B739-348CBCFFC1EF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-E8680F52-120C-42C1-B739-348CBCFFC1EF.html" id="GUID-E8680F52-120C-42C1-B739-348CBCFFC1EF-d4698e5366-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.68</ph>
+signal_integrity_export</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-6B61A580-B130-40D9-B85F-F83E1686F8C8-d4698e5377" class="topicref" data-id="GUID-6B61A580-B130-40D9-B85F-F83E1686F8C8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6B61A580-B130-40D9-B85F-F83E1686F8C8.html" id="GUID-6B61A580-B130-40D9-B85F-F83E1686F8C8-d4698e5377-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.69</ph>
+signal_integrity_import</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-92930EEC-A47B-49FE-86D9-A3CAAD008386-d4698e5388" class="topicref" data-id="GUID-92930EEC-A47B-49FE-86D9-A3CAAD008386" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-92930EEC-A47B-49FE-86D9-A3CAAD008386.html" id="GUID-92930EEC-A47B-49FE-86D9-A3CAAD008386-d4698e5388-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.70</ph>
+signal_integrity_write</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-43D9D676-C8A2-4800-BA3B-0AEE3EA63BB2-d4698e5399" class="topicref" data-id="GUID-43D9D676-C8A2-4800-BA3B-0AEE3EA63BB2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-43D9D676-C8A2-4800-BA3B-0AEE3EA63BB2.html" id="GUID-43D9D676-C8A2-4800-BA3B-0AEE3EA63BB2-d4698e5399-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.71</ph>
+smartbert_test</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-B8B51B9E-E616-4A0E-BE23-01CA7A779891-d4698e5410" class="topicref" data-id="GUID-B8B51B9E-E616-4A0E-BE23-01CA7A779891" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B8B51B9E-E616-4A0E-BE23-01CA7A779891.html" id="GUID-B8B51B9E-E616-4A0E-BE23-01CA7A779891-d4698e5410-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.72</ph>
+static_pattern_transmit</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-EB41F700-494D-4446-AD6E-2ABCBF19C229-d4698e5421" class="topicref" data-id="GUID-EB41F700-494D-4446-AD6E-2ABCBF19C229" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-EB41F700-494D-4446-AD6E-2ABCBF19C229.html" id="GUID-EB41F700-494D-4446-AD6E-2ABCBF19C229-d4698e5421-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.73</ph>
+transceiver_lane_reset</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-100B5CCD-A3B5-49A1-9B74-4293990ABCA2-d4698e5432" class="topicref" data-id="GUID-100B5CCD-A3B5-49A1-9B74-4293990ABCA2" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-100B5CCD-A3B5-49A1-9B74-4293990ABCA2.html" id="GUID-100B5CCD-A3B5-49A1-9B74-4293990ABCA2-d4698e5432-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.74</ph>
+tvs_monitor</a></div></div></li><li role="treeitem"><div data-tocid="GUID-7E57C59B-6D9C-4728-8119-9F7C87C902E9-d4698e5440" class="topicref" data-id="GUID-7E57C59B-6D9C-4728-8119-9F7C87C902E9" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7E57C59B-6D9C-4728-8119-9F7C87C902E9.html" id="GUID-7E57C59B-6D9C-4728-8119-9F7C87C902E9-d4698e5440-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.75</ph>
+ungroup</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-DFAB63C0-2FDB-42AE-AE17-EB10A36BB096-d4698e5451" class="topicref" data-id="GUID-DFAB63C0-2FDB-42AE-AE17-EB10A36BB096" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DFAB63C0-2FDB-42AE-AE17-EB10A36BB096.html" id="GUID-DFAB63C0-2FDB-42AE-AE17-EB10A36BB096-d4698e5451-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.76</ph>
+unset_live_probe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-D257EE74-C529-417D-ADEF-C1DF0F196DF8-d4698e5463" class="topicref" data-id="GUID-D257EE74-C529-417D-ADEF-C1DF0F196DF8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D257EE74-C529-417D-ADEF-C1DF0F196DF8_2.html" id="GUID-D257EE74-C529-417D-ADEF-C1DF0F196DF8-d4698e5463-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.77</ph>
+update_fp6_programmers</a></div></div></li><li role="treeitem"><div data-tocid="GUID-826D17A3-1F1F-4DC1-A585-AF408131D56F-d4698e5471" class="topicref" data-id="GUID-826D17A3-1F1F-4DC1-A585-AF408131D56F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-826D17A3-1F1F-4DC1-A585-AF408131D56F.html" id="GUID-826D17A3-1F1F-4DC1-A585-AF408131D56F-d4698e5471-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.78</ph>
+write_active_probe</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-CD8E0222-DB08-421E-9154-2F74DD2A9D0A-d4698e5482" class="topicref" data-id="GUID-CD8E0222-DB08-421E-9154-2F74DD2A9D0A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD8E0222-DB08-421E-9154-2F74DD2A9D0A.html" id="GUID-CD8E0222-DB08-421E-9154-2F74DD2A9D0A-d4698e5482-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.79</ph>
+write_lsram</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-22BC87AB-A4D6-404D-8650-2389F696709A-d4698e5493" class="topicref" data-id="GUID-22BC87AB-A4D6-404D-8650-2389F696709A" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-22BC87AB-A4D6-404D-8650-2389F696709A.html" id="GUID-22BC87AB-A4D6-404D-8650-2389F696709A-d4698e5493-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.80</ph>
+write_usram</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-41BADD8D-9B6D-445B-9288-9F379C57A911-d4698e5504" class="topicref" data-id="GUID-41BADD8D-9B6D-445B-9288-9F379C57A911" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-41BADD8D-9B6D-445B-9288-9F379C57A911.html" id="GUID-41BADD8D-9B6D-445B-9288-9F379C57A911-d4698e5504-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.81</ph>
+xcvr_add_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-955D6D2F-2CAE-4332-BC2C-6683E6D48BE6-d4698e5515" class="topicref" data-id="GUID-955D6D2F-2CAE-4332-BC2C-6683E6D48BE6" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-955D6D2F-2CAE-4332-BC2C-6683E6D48BE6.html" id="GUID-955D6D2F-2CAE-4332-BC2C-6683E6D48BE6-d4698e5515-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.82</ph>
+xcvr_export_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-2B09B54B-A235-4AFF-8AA9-854834916A87-d4698e5526" class="topicref" data-id="GUID-2B09B54B-A235-4AFF-8AA9-854834916A87" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-2B09B54B-A235-4AFF-8AA9-854834916A87.html" id="GUID-2B09B54B-A235-4AFF-8AA9-854834916A87-d4698e5526-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.83</ph>
+xcvr_import_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-A8F9AABC-3379-48E5-9326-4685DF8DAAC7-d4698e5537" class="topicref" data-id="GUID-A8F9AABC-3379-48E5-9326-4685DF8DAAC7" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-A8F9AABC-3379-48E5-9326-4685DF8DAAC7.html" id="GUID-A8F9AABC-3379-48E5-9326-4685DF8DAAC7-d4698e5537-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.84</ph>
+xcvr_read_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem"><div data-tocid="GUID-30C243E8-C6A0-4227-ACA0-ABAEAB3AA353-d4698e5548" class="topicref" data-id="GUID-30C243E8-C6A0-4227-ACA0-ABAEAB3AA353" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-30C243E8-C6A0-4227-ACA0-ABAEAB3AA353.html" id="GUID-30C243E8-C6A0-4227-ACA0-ABAEAB3AA353-d4698e5548-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">13.1.85</ph>
+xcvr_write_register</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li></ul></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559" class="topicref" data-id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-D8832000-73FB-42DC-860F-FF30F05EE075.html" id="GUID-D8832000-73FB-42DC-860F-FF30F05EE075-d4698e5559-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">14</ph>
+System Builder Tcl Commands</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688" class="topicref" data-id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527.html" id="GUID-6974B6B6-2F4C-426D-AF6B-A4FC5791C527-d4698e5688-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">15</ph>
+Simultaneous Switching Noise Analyzer (SSNA) Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764" class="topicref" data-id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3.html" id="GUID-CD881DBA-BED9-4BE7-B7B4-5359C305F0A3-d4698e5764-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">16</ph>
+HSM Tcl Commands</a><div class="wh-tooltip"><p class="shortdesc"></p></div></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841" class="topicref" data-id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2.html" id="GUID-EF4215C4-4E60-4551-BFBD-C4A85BEC13C2-d4698e5841-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">17</ph>
+Derive Constraints Tcl Commands</a></div></div></li><li role="treeitem"><div data-tocid="GUID-9E675440-3F06-4118-A3E5-57F157F925C1-d4698e5947" class="topicref" data-id="GUID-9E675440-3F06-4118-A3E5-57F157F925C1" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-9E675440-3F06-4118-A3E5-57F157F925C1.html" id="GUID-9E675440-3F06-4118-A3E5-57F157F925C1-d4698e5947-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">18</ph>
+Revision History</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d4698e5955" class="topicref backmatter" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d4698e5955-link">Microchip FPGA Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d4698e5963-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-7 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        <button id="wh_close_topic_toc_button" class="close-toc-button d-none" aria-label="Toggle topic table of content" aria-controls="wh_topic_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__SMART_DEBUG_RUN_FREQUENCY_MONITOR"><h1 class="- topic/title title topictitle1" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__SMART_DEBUG_RUN_FREQUENCY_MONITOR" style="display:inline-block">13.1.56 run_frequency_monitor</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-3D4C6B83-916E-4A35-8894-A0E1E63ED7CF&amp;pub_lang=en-US&amp;pub_ver=23&amp;pub_type=User%20Guide&amp;bu=fpga&amp;tpc_guid=GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E&amp;cover_title=Libero%20SoC%20Tcl%20Command%20Reference%20Guide&amp;tech_support_link=NA&amp;revision_letter=S&amp;source=Webhelp%20Responsive&amp;title=run_frequency_monitor">(Ask a Question)</a><div class="- topic/body reference/refbody body refbody"><p class="- topic/shortdesc shortdesc"></p><section class="- topic/section section" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-80931957-082B-4CE5-8083-7783F9E90B0B" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-80931957-082B-4CE5-8083-7783F9E90B0B"><h2 class="- topic/title title sectiontitle">Description</h2><p class="- topic/p p">This tcl command calculates the frequency of any signal in the design that can be assigned to Live Probe channel A and displays the Frequency. The Frequency unit of measurement is in Megahertz (MHz).</p><p class="- topic/p p">It is run after setting the live probe signal to channel A.</p><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>run_frequency_monitor [-deviceName "device name"] \
+                      -signal "signal name" \
+                      -time "time in seconds to delay before calculate"</code></pre></section><section class="- topic/section section" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-747E533B-66F9-4FB9-9085-F784F03A24ED" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-747E533B-66F9-4FB9-9085-F784F03A24ED"><h2 class="- topic/title title sectiontitle">Arguments</h2><div class="table-container"><table class="- topic/table table" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3" data-cols="3"><caption></caption><colgroup><col style="width:28.57142857142857%"/><col style="width:14.285714285714285%"/><col style="width:57.14285714285714%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__1">Parameter</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__2">Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__3">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__1"><p class="- topic/p p">deviceName</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__2"><p class="- topic/p p">string</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__3"><p class="- topic/p p">Specify device name. This parameter is optional if only one device is available in the current configuration.</p></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__1"><p class="- topic/p p">signal</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__2"><p class="- topic/p p">string</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__3"><p class="- topic/p p">Specifies the signal name assigned to Live Probe channel A. This parameter must be specified with the -time parameter.</p></td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__1"><p class="- topic/p p">time</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__2"><p class="- topic/p p">integer or double</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-230D8721-EE9A-474E-829D-0F3C5C993ED3__entry__3"><p class="- topic/p p">Specifies the duration in seconds to run frequency monitor. The value can be 0.1, 1, 5, 8, or 10.</p></td></tr></tbody></table></div><div class="table-container"><table class="- topic/table table" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-74398C01-88CD-4600-8989-CE2AFF92333B" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-74398C01-88CD-4600-8989-CE2AFF92333B" data-cols="2"><caption></caption><colgroup><col style="width:100%"/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-74398C01-88CD-4600-8989-CE2AFF92333B__entry__1">Return Type</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-74398C01-88CD-4600-8989-CE2AFF92333B__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-74398C01-88CD-4600-8989-CE2AFF92333B__entry__1"><p class="- topic/p p">String</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-74398C01-88CD-4600-8989-CE2AFF92333B__entry__2">Displays the Frequency with value-property format.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-49167673-6AF5-4924-B69A-E4CC7F06AEAE" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-49167673-6AF5-4924-B69A-E4CC7F06AEAE"><h2 class="- topic/title title sectiontitle">Error Codes</h2><div class="table-container"><table class="- topic/table table frame-none" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F" data-cols="2"><caption></caption><colgroup><col style="width:33.33333333333333%"/><col style="width:66.66666666666666%"/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1">Error Code</th><th class="- topic/entry entry colsep-0 rowsep-0" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">Description</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1"><p class="- topic/p p">None</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">No recognized device 'device_name' is available for debugging.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1"><p class="- topic/p p">None</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">Parameters are missing.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1"><p class="- topic/p p">None</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">Parameter '-signal' is missing.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1"><p class="- topic/p p">None</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">Parameter '-time' is missing.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1"><p class="- topic/p p">None</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">Invalid monitor time specified. The values can be either 0.1, 1, 5, 8 or 10.</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__1"><p class="- topic/p p">None</p></td><td class="- topic/entry entry colsep-0 rowsep-0" headers="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-4DDCD943-8E90-49C0-AF84-8B1BC978AE7F__entry__2">Parameter 'param_name' is not defined. Valid command formatting is'run_frequency_monitor [-deviceName "device name"] [-signal "signal"] [-time "time"]'.</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-A4777288-6DB6-4D42-8056-B46BD0142E3C" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-A4777288-6DB6-4D42-8056-B46BD0142E3C"><h2 class="- topic/title title sectiontitle">Supported Families</h2><div class="table-container"><table class="- topic/table table frame-none" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-F7B66A6B-D074-42CB-9B9C-361C33FC50D5" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-F7B66A6B-D074-42CB-9B9C-361C33FC50D5" data-cols="1"><caption></caption><colgroup><col style="width:100%"/></colgroup><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">PolarFire</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">PolarFire SoC</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">SmartFusion 2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">IGLOO 2</td></tr><tr class="- topic/row"><td class="- topic/entry entry colsep-0 rowsep-0">RTG4</td></tr></tbody></table></div></section><section class="- topic/section section" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-3DDECE9E-5736-4259-BD81-1E8B9AD99C71" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-3DDECE9E-5736-4259-BD81-1E8B9AD99C71"><h2 class="- topic/title title sectiontitle">Example</h2><pre class="+ topic/pre pr-d/codeblock pre codeblock"><code>set_live_probe -probeA {Q_c:DFN1_0:Q} -probeB {}
+run_frequency_monitor -signal {Q_c:DFN1_0:Q} -time {0.1}</code></pre></section><section class="- topic/section section" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7AD27155-2849-4C09-A908-D9E04003AD33" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7AD27155-2849-4C09-A908-D9E04003AD33"><h2 class="- topic/title title sectiontitle">See Also</h2><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7EFC0B51-1A09-40E9-97FE-E21443C8F2D5" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7EFC0B51-1A09-40E9-97FE-E21443C8F2D5"><p class="- topic/p p">fhb_control</p></li><li class="- topic/li li" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7EFC0B51-1A09-40E9-97FE-E21443C8F2D5" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7EFC0B51-1A09-40E9-97FE-E21443C8F2D5"><p class="- topic/p p">set_live_probe</p></li><li class="- topic/li li" id="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7EFC0B51-1A09-40E9-97FE-E21443C8F2D5" data-ofbid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7EFC0B51-1A09-40E9-97FE-E21443C8F2D5"><p class="- topic/p p">event_counter</p></li></ul></section></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                        <nav role="navigation" id="wh_topic_toc" aria-label="On this page" class="col-lg-2 d-none d-lg-block navbar d-print-none"> 
+                            <div id="wh_topic_toc_content">
+		                        
+	                            <div class=" wh_topic_toc "><div class="wh_topic_label">On this page</div><ul><li class="section-item"><div class="section-title"><a href="#GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-80931957-082B-4CE5-8083-7783F9E90B0B" data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-80931957-082B-4CE5-8083-7783F9E90B0B">Description</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-747E533B-66F9-4FB9-9085-F784F03A24ED" data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-747E533B-66F9-4FB9-9085-F784F03A24ED">Arguments</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-49167673-6AF5-4924-B69A-E4CC7F06AEAE" data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-49167673-6AF5-4924-B69A-E4CC7F06AEAE">Error Codes</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-A4777288-6DB6-4D42-8056-B46BD0142E3C" data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-A4777288-6DB6-4D42-8056-B46BD0142E3C">Supported Families</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-3DDECE9E-5736-4259-BD81-1E8B9AD99C71" data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-3DDECE9E-5736-4259-BD81-1E8B9AD99C71">Example</a></div></li><li class="section-item"><div class="section-title"><a href="#GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7AD27155-2849-4C09-A908-D9E04003AD33" data-tocid="GUID-DD8B58DA-C6C7-4DC1-A151-ED9D4AF7223E__GUID-7AD27155-2849-4C09-A908-D9E04003AD33">See Also</a></div></li></ul></div>
+	                        	
+                        	</div>
+                        </nav>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

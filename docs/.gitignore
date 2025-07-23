@@ -1,0 +1,11 @@
+# Ignore CMS output if not editing manually
+oxygen-webhelp/
+
+# Ignore logs, OS clutter
+*.log
+.DS_Store
+Thumbs.db
+
+# Ignore IDE folders
+.vscode/
+.idea/
