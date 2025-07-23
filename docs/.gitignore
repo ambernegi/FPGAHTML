@@ -1,5 +1,3 @@
-# Ignore CMS output if not editing manually
-oxygen-webhelp/
 
 # Ignore logs, OS clutter
 *.log
