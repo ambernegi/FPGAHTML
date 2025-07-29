@@ -1,0 +1,570 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="26.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="After establishing the connection between the client and server through the OPC UA channel, perform the following steps to start or stop the streaming on the Video Kit. From the Address Space pane, ..."/><meta name="copyright" content="(C) Copyright 2025"/><meta name="generator" content="DITA-OT"/><title>8 Sending OPC Commands to PolarFire SoC Video Kit</title><!--  Generated with Oxygen version 26.1, build number 2024091616.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB-d408e411"/><meta name="wh-source-relpath" content="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB.xml"/><meta name="wh-out-relpath" content="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250729095646"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250729095646"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024091616"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+</head>
+
+    <body id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="OPC UA Industrial Edge Demo &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">OPC UA Industrial Edge Demo 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li class="active"><div class="topicref" data-id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB"><div class="title"><a href="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+Sending OPC Commands to PolarFire SoC Video Kit</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark header_title">
+    </h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem"><div data-tocid="GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67-d408e33" class="topicref introduction" data-id="GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67.html" id="GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67-d408e33-link">Introduction</a></div></div></li><li role="treeitem"><div data-tocid="GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE-d408e60" class="topicref" data-id="GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE.html" id="GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE-d408e60-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Design Overview</a></div></div></li><li role="treeitem"><div data-tocid="GUID-F3E14450-DD14-4457-AF23-4ED4490FD356-d408e87" class="topicref" data-id="GUID-F3E14450-DD14-4457-AF23-4ED4490FD356" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F3E14450-DD14-4457-AF23-4ED4490FD356.html" id="GUID-F3E14450-DD14-4457-AF23-4ED4490FD356-d408e87-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Demo Requirements</a></div></div></li><li role="treeitem"><div data-tocid="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4-d408e114" class="topicref" data-id="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4.html" id="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4-d408e114-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Demo Prerequisites</a></div></div></li><li role="treeitem"><div data-tocid="GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E-d408e141" class="topicref" data-id="GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E.html" id="GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E-d408e141-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+OPC Unified Architecture</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168" class="topicref" data-id="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C.html" id="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+Setting Up the Industrial Edge Demo</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303" class="topicref" data-id="GUID-E9AD5125-B5BE-4520-8A38-024F33661340" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-E9AD5125-B5BE-4520-8A38-024F33661340.html" id="GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Starting the OPC UA Server</a></div></div></li><li role="treeitem"><div data-tocid="GUID-207A8C64-6963-46C3-BE32-5D870797EB5F-d408e384" class="topicref" data-id="GUID-207A8C64-6963-46C3-BE32-5D870797EB5F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-207A8C64-6963-46C3-BE32-5D870797EB5F.html" id="GUID-207A8C64-6963-46C3-BE32-5D870797EB5F-d408e384-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+Establishing a Connection Between OPC UA and Client/Server</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB-d408e411" class="topicref" data-id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB.html" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB-d408e411-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">8</ph>
+Sending OPC Commands to PolarFire SoC Video Kit</a></div></div></li><li role="treeitem"><div data-tocid="GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF-d408e439" class="topicref" data-id="GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF.html" id="GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF-d408e439-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">9</ph>
+Sending OPC Commands to Stepper Motor (ICICLE Kit)</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466" class="topicref" data-id="GUID-CAC0D090-46B3-4883-882F-778C24832E57" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-CAC0D090-46B3-4883-882F-778C24832E57.html" id="GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">10</ph>
+Running OPC UA Demo Application</a></div></div></li><li role="treeitem"><div data-tocid="GUID-C5AB829E-5321-4D96-B14F-520D297ADC09-d408e547" class="topicref" data-id="GUID-C5AB829E-5321-4D96-B14F-520D297ADC09" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-C5AB829E-5321-4D96-B14F-520D297ADC09.html" id="GUID-C5AB829E-5321-4D96-B14F-520D297ADC09-d408e547-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">11</ph>
+Revision History</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d408e574" class="topicref backmatter" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d408e574-link">Microchip FPGA Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-61E390E3-92BA-4115-98B5-6C7AABFE3283"><h1 class="- topic/title title topictitle1" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-61E390E3-92BA-4115-98B5-6C7AABFE3283" style="display:inline-block">8 Sending OPC Commands to PolarFire SoC Video Kit</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-29E638E8-7A70-43A6-97C1-D990DC9AEEBD&amp;pub_lang=en-US&amp;pub_ver=4&amp;pub_type=Application%20Note&amp;bu=fpga&amp;tpc_guid=GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB&amp;cover_title=OPC%20UA%20Industrial%20Edge%20Demo&amp;tech_support_link=NA&amp;revision_letter=C&amp;source=Webhelp%20Responsive&amp;title=Sending%20OPC%20Commands%20to%20PolarFire%20SoC%20Video%20Kit">(Ask a Question)</a><div class="- topic/body body"><p class="- topic/p p">After establishing the connection between the client and server through the OPC UA channel, perform the following steps to start or stop the streaming on the Video Kit.</p><ol class="- topic/ol ol" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-BEB75E60-31DA-4223-8FE0-C2B2655A3655" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-BEB75E60-31DA-4223-8FE0-C2B2655A3655"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-A86E4747-E2CA-4C05-ACAD-9B7E498CBB04" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-A86E4747-E2CA-4C05-ACAD-9B7E498CBB04">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Address Space</span> pane, drag and drop the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera Controls</span> object into the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Data Access View</span> pane as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-460C08C6-E486-41D0-9B84-FCD0BA8C5599" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-460C08C6-E486-41D0-9B84-FCD0BA8C5599"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 8-1. <span id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-DF9CE293-4172-47BA-AF06-33C55C2817F8" class="fig--title">UAExpert Window</span></span></figcaption><div class="imagecenter"><div class="imagecenter break break"><img class="- topic/image image imagecenter break break" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__IMAGE_YLP_31D_SXB" src="GUID-A73B4C72-13CE-4D7E-BD00-303AD51839C0-high.png"/></div></div></figure><div class="- topic/note note important note_important" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__NOTE_GQG_2X3_SXB" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__NOTE_GQG_2X3_SXB"><span class="note__title">Important:</span> A <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Recursive Add Notes</span> dialog appears. Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Yes</span> and continue with the next steps.</div></li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-3D62EC92-31DE-4144-826D-B3C71A9AC4A7" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-3D62EC92-31DE-4144-826D-B3C71A9AC4A7">All the functionality exported by the Video Kit such as video streaming start, video streaming stop, and so on are made visible in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Data Access View</span> pane as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-FB66B915-C566-49D0-BE4B-8A649F26207B" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-FB66B915-C566-49D0-BE4B-8A649F26207B"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 8-2. <span id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-DC14E378-E6D7-408D-8A66-F15BED9BDC7F" class="fig--title">Data Access View</span></span></figcaption><div class="imagecenter"><div class="imagecenter break break"><img class="- topic/image image imagecenter break break" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__IMAGE_WQB_CX3_SXB" src="GUID-DAB6583B-A79F-498B-A132-0FE8013E05EF-high.svg"/></div></div></figure></li></ol><p class="- topic/p p">The following table lists the Video OPC UA exported APIs and features.</p><div class="table-container"><table class="- topic/table table frame-all" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 8-1. </span></span><span class="table--title" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-25DB032A-1A0E-4BCE-A125-EA4D49BED6BE">OPC UA Exported APIs and Features</span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead"><tr class="- topic/row"><th class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1">Display Name</th><th class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Valid Values</th></tr></thead><tbody class="- topic/tbody tbody"><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Streaming Start</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Set the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Streaming Start</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code> to start the streaming. The default is <code class="+ topic/ph pr-d/codeph ph codeph">0</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Streaming Stop</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Set the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Streaming Stop</span> to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code> to stop the streaming. The default is <code class="+ topic/ph pr-d/codeph ph codeph">0</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Vision Command Control</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Set the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Vision Command Control</span> to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code> to update everything else. The default is <code class="+ topic/ph pr-d/codeph ph codeph">0</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Green Gain [0-255]</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Any value between <code class="+ topic/ph pr-d/codeph ph codeph">0-255</code>. The default is <code class="+ topic/ph pr-d/codeph ph codeph">102</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Red Gain [0-255]</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Any value between <code class="+ topic/ph pr-d/codeph ph codeph">0-255</code>. The default is <code class="+ topic/ph pr-d/codeph ph codeph">122</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Blue Gain [0-255]</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Any value between <code class="+ topic/ph pr-d/codeph ph codeph">0-255</code>. The default is <code class="+ topic/ph pr-d/codeph ph codeph">138</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Contrast Control [0-255]</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Any value between <code class="+ topic/ph pr-d/codeph ph codeph">0-255</code>. The default is <code class="+ topic/ph pr-d/codeph ph codeph">154</code>.</td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Brightness Control [0-255]</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Any value between <code class="+ topic/ph pr-d/codeph ph codeph">0-255</code>. The default value is <code class="+ topic/ph pr-d/codeph ph codeph">137</code>. </td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera Gain - Horizontal Resolution</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">The valid possible screen resolutions are: <code class="+ topic/ph pr-d/codeph ph codeph">432, 640, 960, 1280 or 1920</code></td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Vertical Resolution</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-1" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">The valid possible screen resolutions are: <code class="+ topic/ph pr-d/codeph ph codeph">240, 480, 544, 720 or 1072</code></td></tr><tr class="- topic/row"><td class="- topic/entry entry align-left colsep-1 rowsep-0" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__1"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Camera - Quality Factor</span></td><td class="- topic/entry entry align-left colsep-0 rowsep-0" headers="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2C63CECA-D8F2-4464-94E9-BA5220AFEF19__entry__2">Any value between <code class="+ topic/ph pr-d/codeph ph codeph">25-50</code>. The default is <code class="+ topic/ph pr-d/codeph ph codeph">30</code>.</td></tr></tbody></table></div><section class="- topic/section section" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__SECTION_GHR_QG3_GXB" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__SECTION_GHR_QG3_GXB"><h2 class="- topic/title title sectiontitle">Examples</h2><ol class="- topic/ol ol" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-043EEF37-B68F-4F3B-8C16-39D7BB5C073A" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-043EEF37-B68F-4F3B-8C16-39D7BB5C073A"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-75C018F0-D5EA-43F7-8A21-CAE830000ED6" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-75C018F0-D5EA-43F7-8A21-CAE830000ED6">To start the streaming in the VLC media player running on a machine with the IP address <code class="+ topic/ph pr-d/codeph ph codeph">192.168.2.100</code>. <ol class="- topic/ol ol lower-alpha" type="a" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-D7ED1D81-88FF-45B8-8DF5-7694E661AABF" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-D7ED1D81-88FF-45B8-8DF5-7694E661AABF"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-571ACC42-A0A4-402C-8556-1DE300FB3AFD" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-571ACC42-A0A4-402C-8556-1DE300FB3AFD">Change the IP address in the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Data Access View</span> pane to <code class="+ topic/ph pr-d/codeph ph codeph">192.168.2.100</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-F972518B-4892-4DE6-952D-C6067F0D0E89" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-F972518B-4892-4DE6-952D-C6067F0D0E89">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Stream Start</span> value from <code class="+ topic/ph pr-d/codeph ph codeph">0</code> to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code>. Streaming starts on the Video Kit for the IP Address <code class="+ topic/ph pr-d/codeph ph codeph">192.168.2.100</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-A7B3F45A-1D56-4EFC-BDD5-5E1303F1809C" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-A7B3F45A-1D56-4EFC-BDD5-5E1303F1809C">Open the VLC media player and load the <code class="+ topic/ph pr-d/codeph ph codeph">video.sdp</code> file. For more information on downloading the files, see <a class="- topic/xref xref" href="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4.html"><span><span>Demo Prerequisites</span></span></a>. The live video stream is displayed in the VLC media player.</li></ol></li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-885831DC-8616-4A47-BEFC-77C5E9EC87B3" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-885831DC-8616-4A47-BEFC-77C5E9EC87B3">To stop the live stream, change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Stream Stop</span> value from <code class="+ topic/ph pr-d/codeph ph codeph">0</code> to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code>. The video stream from the Video Kit is stopped.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-E195C50B-241A-4BC7-88F9-0F8B75B9D7EB" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-E195C50B-241A-4BC7-88F9-0F8B75B9D7EB">To change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Red Gain</span> value from <code class="+ topic/ph pr-d/codeph ph codeph">122</code> to <code class="+ topic/ph pr-d/codeph ph codeph">222</code> and the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contrast</span> value from <code class="+ topic/ph pr-d/codeph ph codeph">154</code> to <code class="+ topic/ph pr-d/codeph ph codeph">254</code>.<ol class="- topic/ol ol lower-alpha" type="a" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2E94A99C-F053-4C1E-B145-18E15A3EC1EB" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-2E94A99C-F053-4C1E-B145-18E15A3EC1EB"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-727CC1E6-E37E-467D-87CF-D3E6309E4290" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-727CC1E6-E37E-467D-87CF-D3E6309E4290">Ensure that the live stream is running.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-F803F9F8-808C-4007-947E-E14A9803C789" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-F803F9F8-808C-4007-947E-E14A9803C789">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contrast Control</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">254</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-A6A2FED2-B180-42BA-963B-339BA99030FD" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-A6A2FED2-B180-42BA-963B-339BA99030FD">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Red Gain</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">222</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-7C5290D5-F286-4E5A-9A8E-8E497129A6A7" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-7C5290D5-F286-4E5A-9A8E-8E497129A6A7">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Vision Command Control</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code>. The contrast and red gain values are restored in the live video steam and is displayed in the VLC media player.</li></ol></li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-37A45BDD-1194-4DB3-B104-A7E464FE9714" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-37A45BDD-1194-4DB3-B104-A7E464FE9714">To restore the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Red Gain</span> value from <code class="+ topic/ph pr-d/codeph ph codeph">222</code> to <code class="+ topic/ph pr-d/codeph ph codeph">122</code> and the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contrast</span> value from <code class="+ topic/ph pr-d/codeph ph codeph">254</code> to <code class="+ topic/ph pr-d/codeph ph codeph">154</code>.<ol class="- topic/ol ol lower-alpha" type="a" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-62B2343A-0EB3-4337-BEBB-3B17F978DB1D" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-62B2343A-0EB3-4337-BEBB-3B17F978DB1D"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-C854D485-2BBE-46D9-8959-0FE12C7FA9A4" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-C854D485-2BBE-46D9-8959-0FE12C7FA9A4">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Contrast Control</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">154</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-6CDD2383-3B95-4B44-B780-1492F33754B4" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-6CDD2383-3B95-4B44-B780-1492F33754B4">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Red Gain</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">122</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-B186BBC5-A2B4-4ECC-880F-B53F3763172F" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-B186BBC5-A2B4-4ECC-880F-B53F3763172F">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Vision Command Control</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code>. The new contrast and red gain changes are applied in the live stream and is displayed in the VLC media player.</li></ol></li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-C1DCD4A1-812B-40B7-B6E4-9E9F691FEAE9" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-C1DCD4A1-812B-40B7-B6E4-9E9F691FEAE9">To change the video <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Resolution</span> to <code class="+ topic/ph pr-d/codeph ph codeph">640x480</code>.<ol class="- topic/ol ol lower-alpha" type="a" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-FD50D3AF-F339-4A87-8697-E5CAF3BDD5D2" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-FD50D3AF-F339-4A87-8697-E5CAF3BDD5D2"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-E6107066-F91D-4E16-A659-9814C3CC6DB2" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-E6107066-F91D-4E16-A659-9814C3CC6DB2">Ensure that the live stream is running.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-3EA3FEDB-3F19-4A7F-94A9-86484DA4E21A" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-3EA3FEDB-3F19-4A7F-94A9-86484DA4E21A">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Horizontal Resolution</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">640</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-640DAA64-37B7-48D9-A7E0-8CC6361DEDF4" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-640DAA64-37B7-48D9-A7E0-8CC6361DEDF4">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Vertical Resolution</span> value to <code class="+ topic/ph pr-d/codeph ph codeph">480</code>.</li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-AAA131B1-C7F2-4AEC-8BDC-33211D139D43" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-AAA131B1-C7F2-4AEC-8BDC-33211D139D43">Change the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Vision Command Control</span> to <code class="+ topic/ph pr-d/codeph ph codeph">1111</code>. The new video resolution changes are applied to the live stream and is displayed in the VLC media player.</li></ol></li></ol><div class="- topic/note note important note_important" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-FC8A9EDD-D0B2-49B6-B04D-E0061C47FD4E" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-FC8A9EDD-D0B2-49B6-B04D-E0061C47FD4E"><span class="note__title">Important:</span> <ul class="- topic/ul ul" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__UL_NTQ_YJ3_GXB" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__UL_NTQ_YJ3_GXB"><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-DE0396CE-4594-42E4-BAE0-D967A1B60291" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-DE0396CE-4594-42E4-BAE0-D967A1B60291">The VLC media player <code class="+ topic/ph pr-d/codeph ph codeph">video.sdp</code> file can be downloaded from the website. </li><li class="- topic/li li" id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-B37F5F10-FF43-4263-B64D-6C13B8278F30" data-ofbid="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB__GUID-B37F5F10-FF43-4263-B64D-6C13B8278F30">Ensure to change the IP Address mentioned in the SDP file with the local computer’s IP address where the VLC media player is installed.</li></ul></div></section></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

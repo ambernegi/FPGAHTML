@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publication>
+   <title>OPC UA Industrial Edge Demo</title>
+   <urls>
+      <url>
+         <loc>GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67.html</loc>
+         <lastmod>2024-03-26T08:52:28</lastmod>
+         <title> Introduction</title>
+         <description>This application note describes the Open Platform Communications Unified Architecture (OPC UA) based Industrial Edge demonstration. This solution runs on PolarFire SoC, which is configured as an OPC ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE.html</loc>
+         <lastmod>2024-03-26T08:21:38</lastmod>
+         <title>1 Design Overview</title>
+         <description>The design demonstrates the basic functionality of the PolarFire SoC Video Kit, the PolarFire SoC ICICLE Kit, the Stepper Motor, and their communication with each other over the OPC UA protocol. OPC ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-F3E14450-DD14-4457-AF23-4ED4490FD356.html</loc>
+         <lastmod>2024-03-26T10:10:24</lastmod>
+         <title>2 Demo Requirements</title>
+         <description>The following table lists the necessary hardware and software for running this demo.Demo RequirementsRequirementsDescriptionHardware and AccessoriesPolarFire SoC Video KitMPFS250-VIDEO-KITKit ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4.html</loc>
+         <lastmod>2024-03-26T08:52:39</lastmod>
+         <title>3 Demo Prerequisites</title>
+         <description>Before you begin, ensure that the following components are in place:Download the programming job file, Linux .wic image, and video.sdp file from the following link: .Download the free version of ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E.html</loc>
+         <lastmod>2024-03-05T05:59:16</lastmod>
+         <title>4 OPC Unified Architecture</title>
+         <description>Open Platform Communications Unified Architecture (OPC UA) is a machine-to-machine communication protocol that has become increasingly popular in industrial automation. The protocol is designed to ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C.html</loc>
+         <lastmod>2024-03-05T06:07:51</lastmod>
+         <title>5 Setting Up the Industrial Edge Demo</title>
+         <description>The demonstration involves the following steps:Setting up the PolarFire SoC Video and ICICLE KitSetting up the Serial TerminalProgramming the DeviceThe following figure shows the board setup. Board ...</description>
+         <urls>
+            <url>
+               <loc>GUID-4EA2FB6C-0FBC-4898-8648-E01F3C5B68EA.html</loc>
+               <lastmod>2024-03-26T06:12:59</lastmod>
+               <title>5.1 Setting Up the PolarFire SoC Video and ICICLE Kit</title>
+               <description>Before running the demo, perform the following steps:Do not connect any Ethernet cable from the Windows Host PC to the Video Kit or ICICLE Kit. On the Windows Host PC, open the command prompt in ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-29C69369-A0E6-44DC-8579-2EED315AE511.html</loc>
+               <lastmod>2024-03-26T08:21:38</lastmod>
+               <title>5.2 Setting Up the Serial Terminal</title>
+               <description>The PolarFire SoC Video Kit includes the CP2108 USB to UART chip to interact with on-board Linux OS. After installing the CP2018 driver, perform the following steps:Connect the USB cable at the J12 ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-650B9685-A5AF-4C37-A0B4-B963FDE105DD.html</loc>
+               <lastmod>2024-03-26T08:21:38</lastmod>
+               <title>5.3 Programming the Device</title>
+               <description>To program the PolarFire SoC device with the job file using FlashPro Express, perform the following steps.Connect a micro-USB to the ICICLE Kit (J33) or Video Kit (J5) from the host PC and launch the ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-377A8E3E-9025-4CB8-BF03-CAFE0542BF30.html</loc>
+               <lastmod>2024-03-26T08:21:38</lastmod>
+               <title>5.4 Flashing Linux .wic Image in eMMC Mode</title>
+               <description>The Linux .wic image is packaged with all demo applications. Extract the contents of the.wic file to a folder of your choice. The extracted wic image can be flashed either in an eMMC or a SD card. ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-E9AD5125-B5BE-4520-8A38-024F33661340.html</loc>
+         <lastmod>2024-03-05T06:29:49</lastmod>
+         <title>6 Starting the OPC UA Server</title>
+         <description>Follow the steps outlined, to ensure the proper utilization of the kits provided.Video KitICICLE</description>
+         <urls>
+            <url>
+               <loc>GUID-5E1F8C86-1EEE-4793-82B0-79E24659202B.html</loc>
+               <lastmod>2024-03-26T08:26:15</lastmod>
+               <title>6.1 Video Kit</title>
+               <description>To start the OPC UA server on the Video Kit, perform the following steps:Program the job file on the Video Kit. For more information on installing the job file, see .Install the wic image on the ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-538133A4-CDEF-4BFE-9210-399AB55FEA1F.html</loc>
+               <lastmod>2024-03-26T08:53:56</lastmod>
+               <title>6.2 ICICLE Kit</title>
+               <description>To start the OPC UA server on the ICICLE Kit, perform the following steps:Program the job file on the ICICLE Kit. For more information on installing the job file, see .Install the wic image on the ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-207A8C64-6963-46C3-BE32-5D870797EB5F.html</loc>
+         <lastmod>2024-03-26T05:59:26</lastmod>
+         <title>7 Establishing a Connection Between OPC UA and Client/Server</title>
+         <description>The following steps establishes a connection between the OPC UA and Client/Server.Launch the UAExpert OPC UA client.UAExpert OPC UA Client WindowConnect to the ICICLE or Video Kit using the IP ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB.html</loc>
+         <lastmod>2024-03-26T08:26:15</lastmod>
+         <title>8 Sending OPC Commands to PolarFire SoC Video Kit</title>
+         <description>After establishing the connection between the client and server through the OPC UA channel, perform the following steps to start or stop the streaming on the Video Kit.From the Address Space pane, ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF.html</loc>
+         <lastmod>2024-03-26T09:15:39</lastmod>
+         <title>9 Sending OPC Commands to Stepper Motor (ICICLE Kit)</title>
+         <description>After establishing the connection between client and server through the OPC UA channel, perform the following steps to start or stop the stepper motor that is connected to the ICICLE Kit Mikrobus ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-CAC0D090-46B3-4883-882F-778C24832E57.html</loc>
+         <lastmod>2024-03-26T08:21:38</lastmod>
+         <title>10 Running OPC UA Demo Application</title>
+         <description>The demo can be run with any of the following scenarios: To control Video Kit and ICICLE Kit individually from UAExpert OPC UA client.To control Video Kit through ICICLE Kit – OPC UA</description>
+         <urls>
+            <url>
+               <loc>GUID-0E1B9DD9-9C26-4D08-95C9-AF4DD435E2E5.html</loc>
+               <lastmod>2024-03-22T10:13:22</lastmod>
+               <title>10.1 Scenario 1: OPC Client UAExpert Connecting Directly to Video Kit OPC Server and ICICLE Kit (Stepper Motor) OPC Server</title>
+               <description>Objective: Demonstrate the server capabilities for the ICICLE Kit and the Video Kit.In this scenario, the UAExpert software which acts as an OPC UA client, connects directly to the OPC server running ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-BB56CC2C-4FCC-4B42-81F4-7A5550CABB1E.html</loc>
+               <lastmod>2024-03-22T10:03:59</lastmod>
+               <title>10.2 Scenario 2: OPC Client UAExpert Connecting to Video Kit OPC Server through ICICLE Kit OPC Client</title>
+               <description>Objective : Demonstrate the client and server capabilities for the ICICLE Kit. In this scenario, the UAExpert software which acts as an OPC UA client connects to the OPC server running on the ICICLE ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-C5AB829E-5321-4D96-B14F-520D297ADC09.html</loc>
+         <lastmod>2024-03-26T06:39:12</lastmod>
+         <title>11 Revision History</title>
+         <description>The revision history describes the changes that were implemented in the document. The changes are listed by revision, starting with the most current publication.Revision ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html</loc>
+         <lastmod>2022-12-12T04:56:29</lastmod>
+         <title> Microchip FPGA Support</title>
+         <description>Microchip FPGA products group backs its products with various support services, including Customer Service, Customer Technical Support Center, a website, and worldwide sales offices. Customers are ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html</loc>
+         <lastmod>2022-04-04T12:20:47</lastmod>
+         <title> Microchip Information</title>
+         <description/>
+         <urls>
+            <url>
+               <loc>GUID-7551DC67-D79D-4F0C-B56F-7B17E12400E0.html</loc>
+               <lastmod>2022-07-05T07:23:16</lastmod>
+               <title> The Microchip Website</title>
+               <description>Microchip provides online support via our website at . This website is used to make files and information easily available to customers. Some of the content available includes:Product Support – Data ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-CDA512D8-0DE4-4672-8716-04CAC681CB38.html</loc>
+               <lastmod>2022-07-05T07:27:49</lastmod>
+               <title> Product Change Notification Service</title>
+               <description>Microchip’s product change notification service helps keep customers current on Microchip products. Subscribers will receive email notification whenever there are changes, updates, revisions or ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-F05182E4-B102-4775-A746-1FF37F465312.html</loc>
+               <lastmod>2022-07-05T07:29:30</lastmod>
+               <title> Customer Support</title>
+               <description>Users of Microchip products can receive assistance through several channels:Distributor or RepresentativeLocal Sales OfficeEmbedded Solutions Engineer (ESE)Technical Support Customers should contact ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-E8251634-7B15-4073-A103-5A5F128B8699.html</loc>
+               <lastmod>2021-09-15T14:48:25</lastmod>
+               <title> Microchip Devices Code Protection Feature</title>
+               <description>Note the following details of the code protection feature on Microchip products:Microchip products meet the specifications contained in their particular Microchip Data Sheet.Microchip believes that ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-125F1A93-76CC-4BD7-BACA-01844FBD5F4F.html</loc>
+               <lastmod>2021-09-14T20:44:40</lastmod>
+               <title> Legal Notice</title>
+               <description>This publication and the information herein may be used only with Microchip products, including to design, test, and integrate Microchip products with your application. Use of this information in any ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-21750586-F9F2-4E33-87FB-8F2994BF4744.html</loc>
+               <lastmod>2023-08-23T20:11:43</lastmod>
+               <title> Trademarks</title>
+               <description>The Microchip name and logo, the Microchip logo, Adaptec, AVR, AVR logo, AVR Freaks, BesTime, BitCloud, CryptoMemory, CryptoRF, dsPIC, flexPWR, HELDO, IGLOO, JukeBlox, KeeLoq, Kleer, LANCheck, ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-07985EED-D525-413B-AEFE-78B563328687.html</loc>
+               <lastmod>2022-07-05T07:33:24</lastmod>
+               <title> Quality Management System</title>
+               <description>For information regarding Microchip’s Quality Management Systems, please visit</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-02A694CF-88A5-4ADA-8785-7EEEC62D66EA.html</loc>
+               <lastmod>2022-07-05T07:34:52</lastmod>
+               <title> Worldwide Sales and Service</title>
+               <description>AMERICASASIA/PACIFICASIA/PACIFICEUROPE Corporate Office 2355 West Chandler Blvd. Chandler, AZ 85224-6199 Tel: 480-792-7200 Fax: 480-792-7277 Technical Support: Web Address: Atlanta Duluth, GA Tel: ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+   </urls>
+</publication>

@@ -5,6 +5,14 @@
         "Application Notes": {
           "documents": [
             {
+              "title": "OPC UA Industrial Edge Demo",
+              "filename": "index.html",
+              "format": "HTML",
+              "version": "1.0",
+              "updated_on": "2025-07-29",
+              "path": "Hardware/Application Notes/OPC UA Industrial Edge Demo/index.html"
+            },
+            {
               "title": "PolarFire FPGA Building a Mi-V Processor Subsystem Application Note",
               "filename": "index.html",
               "format": "HTML",

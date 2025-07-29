@@ -1,0 +1,534 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" data-whc_version="26.1" lang="en-US" dir="ltr">
+    <script src="mchp-context-help.js"></script><head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="wh-path2root" content=""/><title>OPC UA Industrial Edge Demo 
+    </title>
+        
+        
+                
+        
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/main.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250729095646"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250729095646"></script>
+    <script src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/main.js?buildId=2024091616"></script>
+
+    
+
+        <link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+        
+        
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+
+        
+    </head>
+    <body class="wh_main_page">
+        <a href="#content" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="OPC UA Industrial Edge Demo &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">OPC UA Industrial Edge Demo 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+                
+        
+        <div class=" wh_search_input navbar-form wh_main_page_search search " role="form">
+            
+            
+            
+            
+            <div class="wh_welcome"></div>          
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+            
+            
+        </div>
+        
+        <span></span>
+        
+        
+        <div class="wh_content_area " id="content">
+            
+            <div class="container-fluid wh_content_flex_container">
+                
+                <div class=" wh_main_page_toc "><div class=" wh_main_page_toc_entry "><span class="topicref introduction"><a href="GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67.html" data-id="GUID-237C1865-370F-4D78-8A9D-06AAEBAA6C67">Introduction</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE.html" data-id="GUID-3868E049-508A-464D-9CDD-77D5C0EE63AE"><ph xmlns="">1</ph>
+Design Overview</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-F3E14450-DD14-4457-AF23-4ED4490FD356.html" data-id="GUID-F3E14450-DD14-4457-AF23-4ED4490FD356"><ph xmlns="">2</ph>
+Demo Requirements</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4.html" data-id="GUID-7ECD8D6F-44A0-4C23-8B8D-D91791CFEAD4"><ph xmlns="">3</ph>
+Demo Prerequisites</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E.html" data-id="GUID-20D03B5A-56A7-4FAC-8A20-2D64A4D2874E"><ph xmlns="">4</ph>
+OPC Unified Architecture</a></span></div><div class=" wh_main_page_toc_accordion_header "><span role="heading" aria-level="1" id="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168-heading"><span role="button" aria-expanded="false" class="header-button" aria-controls="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168-entries" tabindex="0"></span><span class="topicref"><a href="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C.html" data-id="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C"><ph xmlns="">5</ph>
+Setting Up the Industrial Edge Demo</a></span></span></div><div class=" wh_main_page_toc_accordion_entries " id="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168-entries" role="region" aria-labelledby="GUID-CF5C53CD-6127-4310-A89D-D6B68BD3E61C-d408e168-heading"><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-4EA2FB6C-0FBC-4898-8648-E01F3C5B68EA.html" data-id="GUID-4EA2FB6C-0FBC-4898-8648-E01F3C5B68EA"><ph xmlns="">5.1</ph>
+Setting Up the PolarFire SoC Video and ICICLE Kit</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-29C69369-A0E6-44DC-8579-2EED315AE511.html" data-id="GUID-29C69369-A0E6-44DC-8579-2EED315AE511"><ph xmlns="">5.2</ph>
+Setting Up the Serial Terminal</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-650B9685-A5AF-4C37-A0B4-B963FDE105DD.html" data-id="GUID-650B9685-A5AF-4C37-A0B4-B963FDE105DD"><ph xmlns="">5.3</ph>
+Programming the Device</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-377A8E3E-9025-4CB8-BF03-CAFE0542BF30.html" data-id="GUID-377A8E3E-9025-4CB8-BF03-CAFE0542BF30"><ph xmlns="">5.4</ph>
+Flashing Linux .wic Image in eMMC Mode</a></span></div></div><div class=" wh_main_page_toc_accordion_header "><span role="heading" aria-level="1" id="GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303-heading"><span role="button" aria-expanded="false" class="header-button" aria-controls="GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303-entries" tabindex="0"></span><span class="topicref"><a href="GUID-E9AD5125-B5BE-4520-8A38-024F33661340.html" data-id="GUID-E9AD5125-B5BE-4520-8A38-024F33661340"><ph xmlns="">6</ph>
+Starting the OPC UA Server</a></span></span></div><div class=" wh_main_page_toc_accordion_entries " id="GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303-entries" role="region" aria-labelledby="GUID-E9AD5125-B5BE-4520-8A38-024F33661340-d408e303-heading"><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-5E1F8C86-1EEE-4793-82B0-79E24659202B.html" data-id="GUID-5E1F8C86-1EEE-4793-82B0-79E24659202B"><ph xmlns="">6.1</ph>
+Video Kit</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-538133A4-CDEF-4BFE-9210-399AB55FEA1F.html" data-id="GUID-538133A4-CDEF-4BFE-9210-399AB55FEA1F"><ph xmlns="">6.2</ph>
+ICICLE Kit</a></span></div></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-207A8C64-6963-46C3-BE32-5D870797EB5F.html" data-id="GUID-207A8C64-6963-46C3-BE32-5D870797EB5F"><ph xmlns="">7</ph>
+Establishing a Connection Between OPC UA and Client/Server</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB.html" data-id="GUID-FA8CFF9C-6E7E-4A57-8482-F62B7730FEDB"><ph xmlns="">8</ph>
+Sending OPC Commands to PolarFire SoC Video Kit</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF.html" data-id="GUID-D4A1A559-8C3F-4D6C-BDA2-46C57AF880DF"><ph xmlns="">9</ph>
+Sending OPC Commands to Stepper Motor (ICICLE Kit)</a></span></div><div class=" wh_main_page_toc_accordion_header "><span role="heading" aria-level="1" id="GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466-heading"><span role="button" aria-expanded="false" class="header-button" aria-controls="GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466-entries" tabindex="0"></span><span class="topicref"><a href="GUID-CAC0D090-46B3-4883-882F-778C24832E57.html" data-id="GUID-CAC0D090-46B3-4883-882F-778C24832E57"><ph xmlns="">10</ph>
+Running OPC UA Demo Application</a></span></span></div><div class=" wh_main_page_toc_accordion_entries " id="GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466-entries" role="region" aria-labelledby="GUID-CAC0D090-46B3-4883-882F-778C24832E57-d408e466-heading"><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-0E1B9DD9-9C26-4D08-95C9-AF4DD435E2E5.html" data-id="GUID-0E1B9DD9-9C26-4D08-95C9-AF4DD435E2E5"><ph xmlns="">10.1</ph>
+Scenario 1: OPC Client UAExpert Connecting Directly to Video Kit OPC Server and ICICLE Kit (Stepper Motor) OPC Server</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-BB56CC2C-4FCC-4B42-81F4-7A5550CABB1E.html" data-id="GUID-BB56CC2C-4FCC-4B42-81F4-7A5550CABB1E"><ph xmlns="">10.2</ph>
+Scenario 2: OPC Client UAExpert Connecting to Video Kit OPC Server through ICICLE Kit OPC Client</a></span></div></div><div class=" wh_main_page_toc_entry "><span class="topicref"><a href="GUID-C5AB829E-5321-4D96-B14F-520D297ADC09.html" data-id="GUID-C5AB829E-5321-4D96-B14F-520D297ADC09"><ph xmlns="">11</ph>
+Revision History</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286">Microchip FPGA Support</a></span></div><div class=" wh_main_page_toc_accordion_header "><span role="heading" aria-level="1" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601-heading"><span role="button" aria-expanded="false" class="header-button" aria-controls="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601-entries" tabindex="0"></span><span class="topicref backmatter backmatter_parent"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B">Microchip Information</a></span></span></div><div class=" wh_main_page_toc_accordion_entries " id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601-entries" role="region" aria-labelledby="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d408e601-heading"><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-7551DC67-D79D-4F0C-B56F-7B17E12400E0.html" data-id="GUID-7551DC67-D79D-4F0C-B56F-7B17E12400E0">The Microchip Website</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-CDA512D8-0DE4-4672-8716-04CAC681CB38.html" data-id="GUID-CDA512D8-0DE4-4672-8716-04CAC681CB38">Product Change Notification Service</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-F05182E4-B102-4775-A746-1FF37F465312.html" data-id="GUID-F05182E4-B102-4775-A746-1FF37F465312">Customer Support</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-E8251634-7B15-4073-A103-5A5F128B8699.html" data-id="GUID-E8251634-7B15-4073-A103-5A5F128B8699">Microchip Devices Code Protection Feature</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-125F1A93-76CC-4BD7-BACA-01844FBD5F4F.html" data-id="GUID-125F1A93-76CC-4BD7-BACA-01844FBD5F4F">Legal Notice</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-21750586-F9F2-4E33-87FB-8F2994BF4744.html" data-id="GUID-21750586-F9F2-4E33-87FB-8F2994BF4744">Trademarks</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref backmatter"><a href="GUID-07985EED-D525-413B-AEFE-78B563328687.html" data-id="GUID-07985EED-D525-413B-AEFE-78B563328687">Quality Management System</a></span></div><div class=" wh_main_page_toc_entry "><span class="topicref salessection"><a href="GUID-02A694CF-88A5-4ADA-8785-7EEEC62D66EA.html" data-id="GUID-02A694CF-88A5-4ADA-8785-7EEEC62D66EA">Worldwide Sales and Service</a></span></div></div></div>
+                
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        
+        
+    </body>
+</html>
