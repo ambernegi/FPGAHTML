@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<publication>
+   <title>PolarFire FPGA Building a Mi-V Processor Subsystem Application Note</title>
+   <urls>
+      <url>
+         <loc>GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F.html</loc>
+         <lastmod>2025-07-02T08:42:44</lastmod>
+         <title> Introduction</title>
+         <description>Microchip offers the Mi-V processor IP and software toolchain free of cost to develop RISC-V® processor-based designs. RISC-V, a standard open Instruction Set Architecture (ISA) under the governance ...</description>
+         <urls>
+            <url>
+               <loc>GUID-38DD2B4B-7FA0-446E-BDFE-FADD280D29FC.html</loc>
+               <lastmod>2025-06-20T06:25:34</lastmod>
+               <title> Design Requirements</title>
+               <description>The following table lists the application notes requirements for building a Mi-V processor subsystem.Design RequirementsRequirementVersionHardwareHost PCWindows 10 and 11POLARFIRE-EVAL-KIT ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-A44CAA3F-7890-458B-8802-FCAA1872EFF5.html</loc>
+               <lastmod>2024-11-12T05:35:42</lastmod>
+               <title> Prerequisites</title>
+               <description>Before you start, perform the following steps:Download the design files from The design files folder contains the following subfolders:Programming_files: Two programming files (.job) one each for Rev ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C.html</loc>
+         <lastmod>2024-04-16T09:34:25</lastmod>
+         <title>1 Design Description</title>
+         <description>The application notes describes how to create a Mi-V subsystem for executing user applications. The user application can be stored in µPROM, sNVM, or an external SPI flash. At device power-up, the ...</description>
+         <urls>
+            <url>
+               <loc>GUID-EFA310D7-CD2A-4773-8F02-556A701D410F.html</loc>
+               <lastmod>2023-06-16T12:56:33</lastmod>
+               <title>1.1 Fabric RAMs Initialization</title>
+               <description>Each logical RAM instance in the design is initialized from a different source– sNVM, µPROM, or SPI-Flash. The initialization client storage location is configurable. Generate the initialization data ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-EE94C957-B350-409F-8642-12DAB4A9E286.html</loc>
+         <lastmod>2023-05-01T21:45:52</lastmod>
+         <title>2 Creating a Mi-V Processor Subsystem</title>
+         <description>Creating a Mi-V processor subsystem involves:This section describes all of the steps required to create a Mi-V processor subsystem on a new SmartDesign</description>
+         <urls>
+            <url>
+               <loc>GUID-6E970175-2940-4557-AF5A-CF6EEA9D58D8.html</loc>
+               <lastmod>2024-11-12T05:37:32</lastmod>
+               <title>2.1 Creating a Libero Project</title>
+               <description>To create a Libero project, follow these steps:On the Libero menu bar, click ProjectNew ProjectEnter the following details, and click Next.Project name: PF_Mi_V_TutProject location: For example, ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-4C2A8308-6E03-4CD3-B326-89560A091818.html</loc>
+               <lastmod>2023-05-25T11:24:35</lastmod>
+               <title>2.2 Creating a New SmartDesign Component</title>
+               <description>To create a new SmartDesign component:In Libero, select File New SmartDesign.In the Create New SmartDesign dialog box, enter top as the name of the new SmartDesign project, as shown in the following ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-A1861753-3831-498C-B76D-F50D448A5B80.html</loc>
+               <lastmod>2023-05-01T21:46:07</lastmod>
+               <title>2.3 Instantiating IP Cores in SmartDesign</title>
+               <description>When an IP core is dragged from the Catalog to SmartDesign, Libero prompts you to name the component, and if applicable, to configure the IP core. After the core is configured, Libero generates the ...</description>
+               <urls>
+                  <url>
+                     <loc>GUID-B0830827-31C4-4847-8B98-20ED81D9738A.html</loc>
+                     <lastmod>2024-06-28T04:39:28</lastmod>
+                     <title>2.3.1 Instantiating Mi-V Processor IP</title>
+                     <description>To instantiate the Mi-V Processor IP, perform the following steps:From the Catalog, drag the MIV_RV32 to SmartDesign.In the Create Component dialog box, enter MiV_RV32_C0 as the component name, and ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-311601A3-9E22-42C0-B786-83D65E15413F.html</loc>
+                     <lastmod>2024-12-09T04:39:09</lastmod>
+                     <title>2.3.2 Instantiating AXI Interconnect Bus IP</title>
+                     <description>The AXI interconnect bus must be configured to connect the Mi-V core with memory. Also, the AXI4Interconnect is needed for converting the Mi-V processor’s AXI4 32-bit data to the DDR3 AXI4 64-bit ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-2B5158D8-BA76-4637-89AC-460A28DAEC1C.html</loc>
+                     <lastmod>2025-06-13T08:24:07</lastmod>
+                     <title>2.3.3 Instantiating DDR3 Memory Controller</title>
+                     <description>This application notes demonstrates how to build and debug an application from DDR3 memory. Executing an application from DDR3 memory in the release mode requires a bootloader. The bootloader use ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-9D8B6BD4-8338-4449-BDCF-29877731C3CB.html</loc>
+                     <lastmod>2025-06-23T06:37:13</lastmod>
+                     <title>2.3.4 Instantiating PolarFire Clock Conditioning Circuitry (CCC)</title>
+                     <description>The PolarFire Clock Conditioning Circuitry (CCC) block generates a 83.333 MHz clock to the processor subsystem, which is used as a reference clock to the PF_DDR3_C0_0 PLL. To instantiate the CCC ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-14DE5CD9-78E6-4972-AF0D-5AF812D8F9FA.html</loc>
+                     <lastmod>2025-06-23T06:35:37</lastmod>
+                     <title>2.3.5 Instantiating PolarFire Initialization Monitor</title>
+                     <description>The PolarFire Initialization Monitor is used to get the status of device initialization including the TCM initialization. To instantiate the PolarFire Initialization Monitor:From the Catalog, drag ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-741F6FFE-70C9-427A-BDC0-C7CD64C26C9E.html</loc>
+                     <lastmod>2024-06-28T04:45:42</lastmod>
+                     <title>2.3.6 Instantiating CORERESET_PF</title>
+                     <description>Two instances of the CORERESET_PF IP are required in this design.From the Catalog, drag the CORERESET_PF IP.In the Component Name dialog box, enter CORERESET_PF_C0 as the name of this component, and ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-B243F7AA-BF46-4B7C-A627-F7951F7266D5.html</loc>
+                     <lastmod>2024-04-16T11:29:31</lastmod>
+                     <title>2.3.7 Instantiating CoreJTAGDebug</title>
+                     <description>The CoreJTAGDebug IP connects the Mi-V soft processor to the JTAG header for debugging. To instantiate CoreJTAGDebug:From the Catalog, drag the CoreJTAGDebug IP core to SmartDesign.In the Create ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-DB79305E-66C4-42D5-A72B-31A30F9AD753.html</loc>
+                     <lastmod>2024-07-02T13:25:45</lastmod>
+                     <title>2.3.8 Instantiating MiV ESS Core</title>
+                     <description>To instantiate the MiV ESS core, perform the following steps:From the Catalog, drag the MiV_ESS IP core to SmartDesign.In the Create Component dialog box, enter MIV_ESS_C1 as the component name, and ...</description>
+                     <urls/>
+                  </url>
+               </urls>
+            </url>
+            <url>
+               <loc>GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708.html</loc>
+               <lastmod>2024-07-01T08:09:58</lastmod>
+               <title>2.4 Connecting IP Instances in SmartDesign</title>
+               <description>Connect the IP blocks in SmartDesign using any of the following methods:Using the Smart Search and Connect icon: You can initiate the connection mode in SmartDesign by clicking the Smart Search and ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-95A3451C-F8EB-4CEB-A619-C453B308318B.html</loc>
+               <lastmod>2024-06-13T08:05:02</lastmod>
+               <title>2.5 Generating SmartDesign Component</title>
+               <description>To generate the SmartDesign component, perform the following steps:In Design Hierarchy, right-click top, and select Set As Root.Save the project.Click the Generate Component icon (shown in the ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-75F68635-D7F9-435D-8BE0-FD55AE977D03.html</loc>
+               <lastmod>2023-05-01T21:46:12</lastmod>
+               <title>2.6 Managing Timing Constraints</title>
+               <description>Before running the Libero design flow, you must derive the timing constraints and import the JTAG and asynchronous clocking</description>
+               <urls>
+                  <url>
+                     <loc>GUID-6D8F95A0-A19B-44F6-94F1-7C98E6D48219.html</loc>
+                     <lastmod>2025-07-02T11:25:23</lastmod>
+                     <title>2.6.1 Deriving Constraints</title>
+                     <description>To derive constraints, perform the following steps:Double-click Manage Constraints on the Design Flow tab.In the Manage Constraints window, select the Timing tab, and click Derive Constraints, as ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-5EEB17BE-7122-4FBF-BFEC-CB2CB379ED30.html</loc>
+                     <lastmod>2024-11-12T05:40:16</lastmod>
+                     <title>2.6.2 Importing Other Constraint Files</title>
+                     <description>The JTAG clock constraint and the asynchronous clocks constraint must be imported. These constraints (.sdc) files are available in the DesignFiles_directory\HW\src\constraints folder.To import and ...</description>
+                     <urls/>
+                  </url>
+               </urls>
+            </url>
+            <url>
+               <loc>GUID-89101F57-6885-421D-9881-42CA23E71A1B.html</loc>
+               <lastmod>2024-06-13T08:06:05</lastmod>
+               <title>2.7 Running the Libero Design Flow</title>
+               <description>This section describes the Libero design flow, which involves the following steps:After each step is completed, a green tick mark appears next to the step on the Design Flow tab.To initialize the TCM ...</description>
+               <urls>
+                  <url>
+                     <loc>GUID-AEF649A5-D8E4-48F0-955F-E6BF46E8FB1F.html</loc>
+                     <lastmod>2023-06-16T09:17:48</lastmod>
+                     <title>2.7.1 Synthesis</title>
+                     <description>To synthesize the design, perform the following steps:Right-click Synthesis, select Configure Options and disable the Enable automatic compile point checkbox.Double-click Synthesis on the Design Flow ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-DBB4CB87-EBC0-4CA6-9416-8A018E03DB33.html</loc>
+                     <lastmod>2024-11-12T05:44:32</lastmod>
+                     <title>2.7.2 Place and Route</title>
+                     <description>The place and route process requires the following steps to be completed:Selecting the already imported io_constraints.pdc filePlacing the PF_DDR3_C0_0 block using the I/O EditorEnsuring all the I/Os ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-3BCC0BA2-C9C3-482B-9DA6-2B9955FA376F.html</loc>
+                     <lastmod>2023-06-16T09:24:10</lastmod>
+                     <title>2.7.3 Verify Timing</title>
+                     <description>To verify timing reports, perform the following steps:Double-click Verify Timing on the Design Flow tab.When the design successfully meets the timing requirements, a green tick mark appears next to ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-F92C3316-2695-45E8-A174-DE8A5F36F189.html</loc>
+                     <lastmod>2023-06-16T09:24:49</lastmod>
+                     <title>2.7.4 Generate FPGA Array Data</title>
+                     <description>Double-click Generate FPGA Array Data on the Design Flow tab.When the FPGA array data is generated, a green tick mark appears next to Generate FPGA Array</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-D7546C2C-BCB6-4C95-80B9-52FBC50E4CA7.html</loc>
+                     <lastmod>2024-11-14T03:40:44</lastmod>
+                     <title>2.7.5 Configure Design Initialization Data and Memories</title>
+                     <description>The Configure Design Initialization Data and Memories step in the Libero design flow is used to configure the TCM initialization data and storage location. User can use µPROM, sNVM, or SPI Flash as ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-6654584B-3A5A-45E1-8EBE-9D69894A5144.html</loc>
+                     <lastmod>2023-06-16T10:04:38</lastmod>
+                     <title>2.7.6 Generate Design Initialization Data</title>
+                     <description>Double-click Generate Design Initialization Data on the Design Flow tab.When the design initialization data is generated successfully, a green tick mark appears next to Generate Design Initialization ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-A2136ECF-E04D-40F5-A15A-1A80F9035231.html</loc>
+                     <lastmod>2023-06-16T10:05:55</lastmod>
+                     <title>2.7.7 Generate Bitstream</title>
+                     <description>To generate the programming bitstream:Double-click Generate Bitstream on the Design Flow tab. When the bitstream is generated, a green tick mark appears next to Generate</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-F1F4BAD9-BDD2-4B06-B35A-6CFC4360792A.html</loc>
+                     <lastmod>2023-05-01T21:46:24</lastmod>
+                     <title>2.7.8 Run PROGRAM Action</title>
+                     <description>After generating the bitstream, the PolarFire Evaluation Board must be set up so the device is ready to be programmed. Also, the serial terminal emulation program (PuTTY) must be set up to view the ...</description>
+                     <urls>
+                        <url>
+                           <loc>GUID-64096F65-6A84-4B97-A532-8A57CBF867A3.html</loc>
+                           <lastmod>2023-06-16T10:08:01</lastmod>
+                           <title>2.7.8.1 Board Setup</title>
+                           <description>To set up the board, perform the following steps:Ensure that the jumper settings on the board are as listed in the following table.Jumper SettingsJumperDescriptionJ18, J19, J20, J21, J22Short pins 2 ...</description>
+                           <urls/>
+                        </url>
+                        <url>
+                           <loc>GUID-1BD8BCF9-1049-4D3E-8A1A-EA9C38080389.html</loc>
+                           <lastmod>2024-06-28T04:54:04</lastmod>
+                           <title>2.7.8.2 Serial Terminal Emulation Program (PuTTY) Setup</title>
+                           <description>The user application (MiV_uart_blinky.hex file) prints the string "Hello World!" on the serial terminal through the UART interface.To set up the serial terminal, perform the following steps :Start ...</description>
+                           <urls/>
+                        </url>
+                        <url>
+                           <loc>GUID-8F63DA13-4BD5-4361-814D-475488D0B1DF.html</loc>
+                           <lastmod>2023-06-16T10:09:14</lastmod>
+                           <title>2.7.8.3 Programming the PolarFire Device</title>
+                           <description>To program the PolarFire device:Double-click Run PROGRAM Action on the Design Flow tab. When the device is programmed, a green tick mark appears next to Run PROGRAM</description>
+                           <urls/>
+                        </url>
+                     </urls>
+                  </url>
+                  <url>
+                     <loc>GUID-D152521E-DB9E-4409-8802-4040CC12EBDD.html</loc>
+                     <lastmod>2023-06-16T10:10:47</lastmod>
+                     <title>2.7.9 Generate SPI Flash Image</title>
+                     <description>To generate the SPI flash image, perform the following step:Double-click Generate SPI Flash Image on the Design Flow tab. When the SPI file image is successfully generated, a green tick mark appears ...</description>
+                     <urls/>
+                  </url>
+                  <url>
+                     <loc>GUID-31695BB5-FC89-4ED8-9C21-4722A81255EE.html</loc>
+                     <lastmod>2024-04-10T10:23:26</lastmod>
+                     <title>2.7.10 Run PROGRAM_SPI_IMAGE Action</title>
+                     <description>To program the SPI image:Double-click Run PROGRAM_SPI_IMAGE on the Design Flow tab. In the dialog box that appears, click Yes.When the SPI image is successfully programmed on to the device, a green ...</description>
+                     <urls/>
+                  </url>
+               </urls>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-C680D538-D263-4D33-B37A-DB0AD0011184.html</loc>
+         <lastmod>2023-06-16T10:13:54</lastmod>
+         <title>3 Building the User Application Using SoftConsole</title>
+         <description>This section describes how to build a RISC-V user application executable (.hex) file and debug it using SoftConsole.Building the user application involves the following</description>
+         <urls>
+            <url>
+               <loc>GUID-25CAC333-37B6-4286-84BD-B1D609186830.html</loc>
+               <lastmod>2024-04-10T10:25:19</lastmod>
+               <title>3.1 Creating a Mi-V SoftConsole Project</title>
+               <description>To create a Mi-V SoftConsole project, perform the following steps:Create a SoftConsole workspace folder on the host PC for storing SoftConsole projects. For example, D:\Tutorial\MiV_Workspace.Start ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-B2BBAE37-85B7-42AD-BAD3-99D783DB13BB.html</loc>
+               <lastmod>2024-06-13T08:12:02</lastmod>
+               <title>3.2 Downloading the Firmware Drivers</title>
+               <description>The empty Mi-V project requires the MIV_RV32 Hardware Abstraction Layer (HAL) files and the following peripheral drivers:CoreGPIOCoreUARTapbCoreSPIDownload the MIV_RV32 HAL files and drivers from ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-093789E0-82C7-4A53-81F3-DE5FF84993F4.html</loc>
+               <lastmod>2024-06-13T08:14:18</lastmod>
+               <title>3.3 Importing the Firmware Drivers</title>
+               <description>After the driver files are downloaded, they must be imported into the empty project.To import the drivers, perform the following steps:In SoftConsole, right-click the MiV_uart_blinky project, and ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-6E206005-E33A-4A00-B81D-4AEB0B678C6E.html</loc>
+               <lastmod>2024-11-12T05:49:05</lastmod>
+               <title>3.4 Creating the main.c File</title>
+               <description>To update the main.c file, perform the following steps:On the SoftConsole menu, click File New Source File.In the New Source File dialog box, enter main.c in the Source file field, and then click ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-0E61D50E-3777-4BD0-AB54-924659A209BE.html</loc>
+               <lastmod>2024-06-13T08:22:13</lastmod>
+               <title>3.5 Mapping Firmware Drivers and the Linker Script</title>
+               <description>At this stage, the drivers and the MIV_RV32 HAL files are not mapped. Therefore, the corresponding header files in the main.c file are unresolved, as shown in the following figure.Unresolved Header ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-1AF7360F-8A3A-49AC-B5D7-3315098E1D11.html</loc>
+               <lastmod>2024-06-28T04:54:49</lastmod>
+               <title>3.6 Mapping Memory and Peripheral Addresses</title>
+               <description>In the Libero design flow, the Mi-V processor execution memory address is mapped to 0x80000000, and its size is set to 64 KB. This information must be checked in the linker script before building the ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-DFDF2617-3822-40A6-A2F0-0A55E76EE9BD.html</loc>
+               <lastmod>2024-04-16T11:01:15</lastmod>
+               <title>3.7 Setting the UART Baud Rate</title>
+               <description>The value of the BAUD_VALUE_115200 macro in the hw_platform.h file must be defined according to the system clock frequency to achieve the UART baud rate of 115200. The baud value is calculated using ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-98F10170-E9DD-4516-85B3-508C40083504.html</loc>
+               <lastmod>2024-07-02T03:33:18</lastmod>
+               <title>3.8 Building the Mi-V Project</title>
+               <description>To build the Mi-V project, right-click the MiV_uart_blinky project in SoftConsole, and select Build Project.The project is built successfully, and the HEX file is generated in the Debug folder, as ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135.html</loc>
+               <lastmod>2024-07-01T08:15:17</lastmod>
+               <title>3.9 Debugging the User Application Using SoftConsole</title>
+               <description>Before debugging, the board and the serial terminal must be set up. For more information about the board and serial terminal setup, see and .To debug the application, perform the following steps:From ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-22A91B14-4BFD-413A-B911-7E56A8A30063.html</loc>
+               <lastmod>2024-04-16T06:30:39</lastmod>
+               <title>3.10 Debugging the User Application from DDR3 Memory</title>
+               <description>The SoftConsole debugger loads the application to the memory-mapped RAM based on the RAM start address specified in the miv-rv32-ram.ld linker file. The following figure shows the RAM Start Address ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+      <url>
+         <loc>GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B.html</loc>
+         <lastmod>2024-11-12T05:56:45</lastmod>
+         <title>4 Appendix 1: Programming the Device using FlashPro Express</title>
+         <description>This chapter describes how to program the PolarFire device with the Job programming file using a FlashPro programmer. The default location of the .job file is: mpf_an4997_df\Programming_filesTo ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3.html</loc>
+         <lastmod>2025-06-13T08:25:09</lastmod>
+         <title>5 Appendix 2 - DDR3 Configuration</title>
+         <description>If you are using Rev F kit, the following are the configurations for DDR3 controller with the initialization and timing parameters for MT41K512M8DA-107: P part present on the Rev F PolarFire ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F.html</loc>
+         <lastmod>2025-01-02T04:24:56</lastmod>
+         <title>6 Appendix 3 - References</title>
+         <description>This section lists documents that provide more information about RISC-V and other IP cores used to build the RISC-V subsystem.For more information about MIV_RV32, see MIV_RV32 Handbook from the ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B.html</loc>
+         <lastmod>2025-06-30T05:52:20</lastmod>
+         <title>7 Revision History</title>
+         <description>The revision history describes the changes that were implemented in the document. The changes are listed by revision, starting with the current publication.Revision ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html</loc>
+         <lastmod>2022-12-12T04:56:29</lastmod>
+         <title> Microchip FPGA Support</title>
+         <description>Microchip FPGA products group backs its products with various support services, including Customer Service, Customer Technical Support Center, a website, and worldwide sales offices. Customers are ...</description>
+         <urls/>
+      </url>
+      <url>
+         <loc>GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html</loc>
+         <lastmod>2022-04-04T12:20:47</lastmod>
+         <title> Microchip Information</title>
+         <description/>
+         <urls>
+            <url>
+               <loc>GUID-21750586-F9F2-4E33-87FB-8F2994BF4744.html</loc>
+               <lastmod>2024-10-22T09:29:46</lastmod>
+               <title> Trademarks</title>
+               <description>The “Microchip” name and logo, the “M” logo, and other names, logos, and brands are registered and unregistered trademarks of Microchip Technology Incorporated or its affiliates and/or subsidiaries ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-125F1A93-76CC-4BD7-BACA-01844FBD5F4F.html</loc>
+               <lastmod>2024-06-13T17:02:57</lastmod>
+               <title> Legal Notice</title>
+               <description>This publication and the information herein may be used only with Microchip products, including to design, test, and integrate Microchip products with your application. Use of this information in any ...</description>
+               <urls/>
+            </url>
+            <url>
+               <loc>GUID-E8251634-7B15-4073-A103-5A5F128B8699.html</loc>
+               <lastmod>2024-10-22T09:23:41</lastmod>
+               <title> Microchip Devices Code Protection Feature</title>
+               <description>Note the following details of the code protection feature on Microchip products:Microchip products meet the specifications contained in their particular Microchip Data Sheet.Microchip believes that ...</description>
+               <urls/>
+            </url>
+         </urls>
+      </url>
+   </urls>
+</publication>

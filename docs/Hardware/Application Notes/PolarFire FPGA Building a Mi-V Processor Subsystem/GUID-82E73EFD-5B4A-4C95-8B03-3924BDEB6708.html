@@ -1,0 +1,574 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="26.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Connect the IP blocks in SmartDesign using any of the following methods: Using the Smart Search and Connect icon: You can initiate the connection mode in SmartDesign by clicking the Smart Search and ..."/><meta name="copyright" content="(C) Copyright 2025"/><meta name="generator" content="DITA-OT"/><title>2.4 Connecting IP Instances in SmartDesign</title><!--  Generated with Oxygen version 26.1, build number 2024091616.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708-d680e147"/><meta name="wh-source-relpath" content="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708.xml"/><meta name="wh-out-relpath" content="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250729055237"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250729055237"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024091616"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+</head>
+
+    <body id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="PolarFire FPGA Building a Mi-V Processor Subsystem Application Note &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">PolarFire FPGA Building a Mi-V Processor Subsystem Application Note 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-EE94C957-B350-409F-8642-12DAB4A9E286"><div class="title"><a href="GUID-EE94C957-B350-409F-8642-12DAB4A9E286.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Creating a Mi-V Processor Subsystem</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708"><div class="title"><a href="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.4</ph>
+Connecting IP Instances in SmartDesign</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark header_title">
+    </h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F-d680e11" class="topicref introduction" data-id="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F-d680e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F.html" id="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F-d680e11-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C-d680e35" class="topicref" data-id="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C-d680e35-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C.html" id="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C-d680e35-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Design Description</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-EE94C957-B350-409F-8642-12DAB4A9E286-d680e51" class="topicref" data-id="GUID-EE94C957-B350-409F-8642-12DAB4A9E286" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-EE94C957-B350-409F-8642-12DAB4A9E286-d680e51-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EE94C957-B350-409F-8642-12DAB4A9E286.html" id="GUID-EE94C957-B350-409F-8642-12DAB4A9E286-d680e51-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Creating a Mi-V Processor Subsystem</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-6E970175-2940-4557-AF5A-CF6EEA9D58D8-d680e59" class="topicref" data-id="GUID-6E970175-2940-4557-AF5A-CF6EEA9D58D8" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6E970175-2940-4557-AF5A-CF6EEA9D58D8.html" id="GUID-6E970175-2940-4557-AF5A-CF6EEA9D58D8-d680e59-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.1</ph>
+Creating a Libero Project</a></div></div></li><li role="treeitem"><div data-tocid="GUID-4C2A8308-6E03-4CD3-B326-89560A091818-d680e67" class="topicref" data-id="GUID-4C2A8308-6E03-4CD3-B326-89560A091818" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-4C2A8308-6E03-4CD3-B326-89560A091818.html" id="GUID-4C2A8308-6E03-4CD3-B326-89560A091818-d680e67-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.2</ph>
+Creating a New SmartDesign Component</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-A1861753-3831-498C-B76D-F50D448A5B80-d680e75" class="topicref" data-id="GUID-A1861753-3831-498C-B76D-F50D448A5B80" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-A1861753-3831-498C-B76D-F50D448A5B80-d680e75-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-A1861753-3831-498C-B76D-F50D448A5B80.html" id="GUID-A1861753-3831-498C-B76D-F50D448A5B80-d680e75-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.3</ph>
+Instantiating IP Cores in SmartDesign</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708-d680e147" class="topicref" data-id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708.html" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708-d680e147-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.4</ph>
+Connecting IP Instances in SmartDesign</a></div></div></li><li role="treeitem"><div data-tocid="GUID-95A3451C-F8EB-4CEB-A619-C453B308318B-d680e155" class="topicref" data-id="GUID-95A3451C-F8EB-4CEB-A619-C453B308318B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-95A3451C-F8EB-4CEB-A619-C453B308318B.html" id="GUID-95A3451C-F8EB-4CEB-A619-C453B308318B-d680e155-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.5</ph>
+Generating SmartDesign Component</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-75F68635-D7F9-435D-8BE0-FD55AE977D03-d680e163" class="topicref" data-id="GUID-75F68635-D7F9-435D-8BE0-FD55AE977D03" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-75F68635-D7F9-435D-8BE0-FD55AE977D03-d680e163-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-75F68635-D7F9-435D-8BE0-FD55AE977D03.html" id="GUID-75F68635-D7F9-435D-8BE0-FD55AE977D03-d680e163-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.6</ph>
+Managing Timing Constraints</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-89101F57-6885-421D-9881-42CA23E71A1B-d680e187" class="topicref" data-id="GUID-89101F57-6885-421D-9881-42CA23E71A1B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-89101F57-6885-421D-9881-42CA23E71A1B-d680e187-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-89101F57-6885-421D-9881-42CA23E71A1B.html" id="GUID-89101F57-6885-421D-9881-42CA23E71A1B-d680e187-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2.7</ph>
+Running the Libero Design Flow</a></div></div></li></ul></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-C680D538-D263-4D33-B37A-DB0AD0011184-d680e299" class="topicref" data-id="GUID-C680D538-D263-4D33-B37A-DB0AD0011184" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-C680D538-D263-4D33-B37A-DB0AD0011184-d680e299-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C680D538-D263-4D33-B37A-DB0AD0011184.html" id="GUID-C680D538-D263-4D33-B37A-DB0AD0011184-d680e299-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Building the User Application Using SoftConsole</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B-d680e387" class="topicref" data-id="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B.html" id="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B-d680e387-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Appendix 1: Programming the Device using FlashPro Express</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3-d680e395" class="topicref" data-id="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3.html" id="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3-d680e395-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+Appendix 2 - DDR3 Configuration</a></div></div></li><li role="treeitem"><div data-tocid="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F-d680e403" class="topicref" data-id="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F.html" id="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F-d680e403-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Appendix 3 - References</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B-d680e411" class="topicref" data-id="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B.html" id="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B-d680e411-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+Revision History</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d680e420" class="topicref backmatter" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d680e420-link">Microchip FPGA Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d680e428" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d680e428-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d680e428-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-687F4C4E-8559-4B5A-B351-13EA896FC042"><h1 class="- topic/title title topictitle1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-687F4C4E-8559-4B5A-B351-13EA896FC042" style="display:inline-block">2.4 Connecting IP Instances in SmartDesign</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-5CFFA5D2-0480-4AB2-BEA3-8BA574C9A732&amp;pub_lang=en-US&amp;pub_ver=5&amp;pub_type=Application%20Note&amp;bu=fpga&amp;tpc_guid=GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708&amp;cover_title=PolarFire%20FPGA%20Building%20a%20Mi-V%20Processor%20Subsystem%20Application%20Note&amp;tech_support_link=NA&amp;revision_letter=D&amp;source=Webhelp%20Responsive&amp;title=Connecting%20IP%20Instances%20in%20SmartDesign">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><p class="- topic/p p" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BE8" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BE8">Connect the IP blocks in SmartDesign using any of the following methods:</p><ul class="- topic/ul ul"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-A9A7C615-EA35-4FEA-9A07-4F6FE13A5CA6" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-A9A7C615-EA35-4FEA-9A07-4F6FE13A5CA6">Using the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Smart Search and Connect</span> icon: You can initiate the connection mode in SmartDesign by clicking the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Smart Search and Connect</span> icon in the SmartDesign toolbar, as shown in the following figure. You can search and select multiple ports and connect or disconnect them at once.<figure class="- topic/fig fig fignone" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__FIG_EFY_3VN_1BC" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__FIG_EFY_3VN_1BC"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 2-22. <span id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-27DA35EE-2217-4017-AFFE-525544D0ECC8" class="fig--title">Smart Search and Connect Method</span></span></figcaption><span class="imagecenter"><img class="- topic/image image" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__IMAGE_YYP_ZVN_1BC" src="GUID-4A71B865-B5DD-4C4F-9532-2B2D6B81EE54-high.svg" width="450"/></span></figure></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BF1" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BF1">Using the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connect</span> option in the Context menu: You can also connect pins by selecting the pins, and then selecting <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connect</span> from the context menu. To connect multiple pins, hold down the Ctrl key while selecting the pins. Right-click the input source signal, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Connect</span>. To disconnect signals, right-click the input source signal, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Disconnect</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-A152FA82-7BF3-4711-9A19-162406573D5E" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-A152FA82-7BF3-4711-9A19-162406573D5E">You can select the source pin, click and drag the wire to the destination pin until you see a ‘+’ sign. The pins will be automatically connected after you release the button of the mouse.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BF9" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BF9">Right-clicking on a pin provides a list of options like Mark Unused, Edit Slice, Tie Low, Promote to Top-Level, and Tie High. Use these options for individual pins settings.</li></ul><p class="- topic/p p" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BFB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000BFB">The following figure shows the Mi-V subsystem in SmartDesign with all IP blocks connected and top-level I/Os.</p><figure class="- topic/fig fig fignone" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__FIG_JL1_TST_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__FIG_JL1_TST_4XB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 2-23. <span id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-BEBFB0E3-87EE-46A6-98C9-05BB7E16D2C7" class="fig--title">Mi-V Subsystem Connected</span></span></figcaption><span class="imagecenter"><img class="- topic/image image" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__IMAGE_E43_DM2_CBC" src="GUID-DBD1D574-14AC-48EF-9E71-0D59754109C2-high.svg" width="550"/></span></figure><div class="- topic/note note important note_important" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C02" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C02"><span class="note__title">Important:</span> Grayed out pins are marked unused, green pins are tied Low, and red pins are tied High. Ensure that unused, tied Low, and tied High pins are strictly set as per preceding figure.</div><p class="- topic/p p" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C09" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C09">To connect the IP blocks, perform the following steps:</p><ol class="- topic/ol ol" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__OL_JTP_STT_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__OL_JTP_STT_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-4684593A-487A-4056-BEE2-6CD51CA0204E" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-4684593A-487A-4056-BEE2-6CD51CA0204E">Set the pins as follows on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">INIT_MONITOR_0</span>:<ol class="- topic/ol ol" type="a" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_WHY_STT_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_WHY_STT_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-6274E24D-3FD0-4977-BB33-2194326A1EDA" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-6274E24D-3FD0-4977-BB33-2194326A1EDA">Select PCIE_INIT_DONE, USRAM_INIT_DONE, SRAM_INIT_DONE, XCVR_INIT_DONE, USRAM_INIT_FROM_SNVM_DONE, USRAM_INIT_FROM_UPROM_DONE, USRAM_INIT_FROM_SPI_DONE, SRAM_INIT_FROM_SNVM_DONE, SRAM_INIT_FROM_UPROM_DONE, SRAM_INIT_FROM_SPI_DONE, and AUTOCALIB_DONE pins.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-28F47B79-B130-460B-8D8E-6EFF0709ECE7" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-28F47B79-B130-460B-8D8E-6EFF0709ECE7">Right-click the pins, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Mark Unused</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-F10A9D43-39D7-426D-BA76-6F2A792ABD71" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-F10A9D43-39D7-426D-BA76-6F2A792ABD71">Connect the FABRIC_POR_N pin to FPGA_POR_N pin of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CORERESET_PF_C0_0</span> and <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CORERESET_PF_C1_0</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-5B0AD130-FAE8-459C-B590-E91F6F38F460" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-5B0AD130-FAE8-459C-B590-E91F6F38F460">Connect the DEVICE_INIT_DONE pin to CORERESET_PF_C0_0:INIT_DONE.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-425D5D65-05D6-4AA1-B607-3F426C6B4730" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-425D5D65-05D6-4AA1-B607-3F426C6B4730">Connect the BANK_1_CALIB_STATUS pin to CORERESET_PF_C1_0:INIT_DONE.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9FE05B5E-02F7-4BED-A731-11BD89250DFA" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9FE05B5E-02F7-4BED-A731-11BD89250DFA">Connect the BANK_6_VDDI_STATUS pin to CORERESET_PF_C0_0:BANK_x_VDDI_STATUS, CORERESET_PF_C0_0:BANK_y_VDDI_STATUS, CORERESET_PF_C1_0:BANK_x_VDDI_STATUS, and CORERESET_PF_C1_0:BANK_y_VDDI_STATUS.</li></ol></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-FAFE4D39-EB4F-461C-8C1F-384BA5B9F3E6" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-FAFE4D39-EB4F-461C-8C1F-384BA5B9F3E6">Set the pins as follows on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">PF_CCC_C0_0</span>:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_K2J_15T_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_K2J_15T_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-F2730D44-D982-442F-9955-B2717B7D2B4D" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-F2730D44-D982-442F-9955-B2717B7D2B4D">Right-click the REF_CLK_0 pin, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top Level</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-EFE065C0-9812-413D-BD6F-BF8F80C5971D" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-EFE065C0-9812-413D-BD6F-BF8F80C5971D">Connect the other pins as specified in the following table.</li></ul><div class="table-container"><table class="- topic/table table frame-all" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C22" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C22" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 2-1. </span></span><span class="table--title" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C24">PF_CCC_C0_0 Pin Connections </span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2B"><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2C"><th class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2D">Connect From</th><th class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">Connect To</th></tr></thead><tbody class="- topic/tbody tbody" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C31"><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C32"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C33" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2D">PLL_LOCK_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C35" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">CORERESET_PF_C0_0: PLL_LOCK and CORERESET_PF_C1_0: PLL_LOCK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C37"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C38" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2D" rowspan="5">OUT0_FABCLK_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C3A" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">CORERESET_PF_C0_0: CLK and CORERESET_PF_C1_0:CLK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C3C"><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C3D" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">MIV_RV32_C0_0: CLK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C3F"><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C40" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">PF_DDR3_C0_0: PLL_REF_CLK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C45"><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C46" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">MIV_ESS_C1_0: PCLK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C48"><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C49" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F"><p class="- topic/p p" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C4B" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C4B">COREAXI4INTERCONNECT_C0_0: ACLK</p></td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C4C"><td class="- topic/entry entry align-left colsep-1 rowsep-0" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C4D" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2D">PLL_POWERDOWN_N_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-0" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C4F" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C2F">CORERESET_PF_C0_0: PLL_POWERDOWN_B</td></tr></tbody></table></div></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-C41B691A-33C4-402A-BD7C-0F4E256D8770" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-C41B691A-33C4-402A-BD7C-0F4E256D8770">Set the pins of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CORERESET_PF_C0_0</span> as follows:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_UVD_P5T_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_UVD_P5T_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C53" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C53">Connect EXT_RST_N pin to PF_DDR3_C0_0:CTRLR_READY.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C55" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C55">Right-click SS_BUSY and FF_US_RESTORE pins and tie them low.</li></ul></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-72F5CD49-7E16-42C3-B1FA-D5AC5B4ACBFF" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-72F5CD49-7E16-42C3-B1FA-D5AC5B4ACBFF">Connect the CORERESET_PF_C0_0: FABRIC_RESET_N to the following pins.<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_CF3_R5T_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_CF3_R5T_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-D77E5249-6988-4851-9BCD-27C60F7AFD22" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-D77E5249-6988-4851-9BCD-27C60F7AFD22">MIV_RV32_C0_0: RESETN</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-0F79E50C-5A48-4374-B27B-4CB8E8933CDB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-0F79E50C-5A48-4374-B27B-4CB8E8933CDB">COREAXI4INTERCONNECT_C0_0: ARESETN</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-C013462E-B41E-426E-B68B-DCFACF13C579" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-C013462E-B41E-426E-B68B-DCFACF13C579">MIV_ESS_C1_0: PRESETN</li></ul><div class="- topic/note note important note_important" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__NOTE_KFF_3VQ_5XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__NOTE_KFF_3VQ_5XB"><span class="note__title">Important:</span> As PF_DDR3_C0_0:CTRL_READY pin is connected to CORERESET_PF_C0_0:EXT_RST_N, the Mi-V processor is held in reset until the DDR3 controller is ready. The rest of the system is out of reset as soon as device initialization is done.</div></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-0569A2EC-AADA-42ED-8A4B-7D22CF4C5A72" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-0569A2EC-AADA-42ED-8A4B-7D22CF4C5A72">Set the pins of <span class="+ topic/ph ui-d/uicontrol ph uicontrol">CORERESET_PF_C1_0</span> as follows:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_FKS_W5T_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_FKS_W5T_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-905FC217-1EDD-4E84-B1B0-5CE290321778" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-905FC217-1EDD-4E84-B1B0-5CE290321778">Right-click SS_BUSY and FF_US_RESTORE pins and tie them low using the Tie Low option.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-8B1DDE1B-4F2E-4376-BC76-042DC359EC7B" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-8B1DDE1B-4F2E-4376-BC76-042DC359EC7B">Select the EXT_RST_N pin and promote it to top level and rename it to resetn.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-ABF4195E-DB67-490D-89F8-81EDF3F1EEC1" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-ABF4195E-DB67-490D-89F8-81EDF3F1EEC1">Connect the FABRIC_RESET_N pin to PF_DDR3_C0_0: SYS_RESET_N.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-A3E3F63D-D0DE-4E71-994E-39BB9BAA8C81" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-A3E3F63D-D0DE-4E71-994E-39BB9BAA8C81">Right-click the PLL_POWERDOWN_B pin and mark it unused.</li></ul></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C6D" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C6D">Set the pins as follows on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">COREJTAGDEBUG_C0_0</span>:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_DKH_Y5T_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_DKH_Y5T_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9542B32E-E43D-40BB-A2F8-5127C5156C01" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9542B32E-E43D-40BB-A2F8-5127C5156C01">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">JTAG HEADER</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-BA97C881-E8E4-4445-9360-35EDBEDD2BCF" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-BA97C881-E8E4-4445-9360-35EDBEDD2BCF">Right-click the TDI, TCK, TMS, and TRSTB pins, and select Promote to Top Level.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-6E670983-7965-4673-B496-8EB6972B6C1D" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-6E670983-7965-4673-B496-8EB6972B6C1D">Expand <span class="+ topic/ph ui-d/uicontrol ph uicontrol">JTAG HEADER</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-C9EC24D6-A1F6-474D-9DA1-0D7D778DEFE8" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-C9EC24D6-A1F6-474D-9DA1-0D7D778DEFE8">Right-click the TDO pin, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top Level</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-4277CDD0-8531-400E-861B-5E1CA6A6000A" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-4277CDD0-8531-400E-861B-5E1CA6A6000A">Connect the other pins as specified in the following table.</li></ul><div class="table-container"><table class="- topic/table table frame-all" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C7F" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C7F" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 2-2. </span></span><span class="table--title" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C81">DEBUG_TARGET Pin Connections </span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C88"><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C89"><th class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8A">Connect From</th><th class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8C">Connect to</th></tr></thead><tbody class="- topic/tbody tbody" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8E"><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8F"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C90" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8A">COREJTAGDEBUG_C0_0:TGT_TCK_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C92" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8C">MIV_RV32_C0_0:JTAG_TCK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C94"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C95" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8A">COREJTAGDEBUG_C0_0:TGT_TRSTN_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C97" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8C">MIV_RV32_C0_0:JTAG_TRSTN</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C99"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C9A" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8A">COREJTAGDEBUG_C0_0:TGT_TMS_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C9C" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8C">MIV_RV32_C0_0:JTAG_TMS</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C9E"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C9F" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8A">COREJTAGDEBUG_C0_0:TGT_TDI_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CA1" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8C">MIV_RV32_C0_0:JTAG_TDI</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CA3"><td class="- topic/entry entry align-left colsep-1 rowsep-0" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CA4" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8A">COREJTAGDEBUG_C0_0:TGT_TDO_0</td><td class="- topic/entry entry align-left colsep-0 rowsep-0" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CA6" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000C8C">MIV_RV32_C0_0:JTAG_TDO</td></tr></tbody></table></div></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9A882B69-98A3-4D00-9059-84E73901DA3C" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9A882B69-98A3-4D00-9059-84E73901DA3C">Set the pins as follows on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">MIV_RV32_C0_0</span>:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_K3B_CVT_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_K3B_CVT_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-5454119F-EE0C-4CC2-9505-358C12530ECF" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-5454119F-EE0C-4CC2-9505-358C12530ECF">Right-click EXT_RESETN pin, and select Mark Unused.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-4A333418-0270-4811-B16A-9F5DE8FE8B73" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-4A333418-0270-4811-B16A-9F5DE8FE8B73">Right-click on TIME_COUNT_IN[63:0] and tie it low.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9F5D056A-477D-4BEB-A726-F248170C3B4A" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9F5D056A-477D-4BEB-A726-F248170C3B4A">Connect the APB_INITIATOR to MIV_ESS_C1_0: APB_0_mINITIATOR.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-FEE32AA4-AD7C-4A54-B9EE-2B92EB6376DF" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-FEE32AA4-AD7C-4A54-B9EE-2B92EB6376DF">Connect the AXI4_INITIATOR to COREAXI4INTERCONNECT_C0_0: AXI4mmaster0.</li></ul></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-650018E1-D076-485D-A8E6-3BCC6CDE5F8E" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-650018E1-D076-485D-A8E6-3BCC6CDE5F8E">Connect the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">COREAXI4INTERCONNECT_C0_0</span> pins as specified in the following table.<div class="table-container"><table class="- topic/table table frame-all" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CB6" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CB6" data-cols="2"><caption class="- topic/title title tablecap" data-caption-side="top" data-is-repeated="true"><span class="table--title-label"><span class="table--title-label">Table 2-3. </span></span><span class="table--title" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CB8">COREAXI4INTERCONNECT_C0_0 Pin Connections </span></caption><colgroup><col/><col/></colgroup><thead class="- topic/thead thead" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CBF"><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC0"><th class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC1">COREAXI4INTERCONNECT_C0_0 Pin Name</th><th class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC3">Connect To</th></tr></thead><tbody class="- topic/tbody tbody" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC5"><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC6"><td class="- topic/entry entry align-left colsep-1 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC7" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC1">S_CLK0</td><td class="- topic/entry entry align-left colsep-0 rowsep-1" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC9" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC3">PF_DDR3_C0_0:SYS_CLK</td></tr><tr class="- topic/row" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CCB"><td class="- topic/entry entry align-left colsep-1 rowsep-0" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CCC" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC1">AXI4mslave0</td><td class="- topic/entry entry align-left colsep-0 rowsep-0" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CCE" headers="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000CC3">PF_DDR3_C0_0:AXI4slave0</td></tr></tbody></table></div></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-857F0194-FC34-4927-B250-6AC76BBE412F" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-857F0194-FC34-4927-B250-6AC76BBE412F">Set the pins as follows on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">PF_DDR3_C0_0</span>:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_GPX_3VT_4XB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_GPX_3VT_4XB"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9925A260-421A-4A59-9ABA-105FB774C2FD" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9925A260-421A-4A59-9ABA-105FB774C2FD">Right-click the PLL_LOCK output pin, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Mark Unused</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-050AEDF4-F9C4-42A8-8E3B-AFB662ED0A9F" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-050AEDF4-F9C4-42A8-8E3B-AFB662ED0A9F">Right-click the CTRLR_READY pin, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top Level</span> for debug purpose. The CTRLR_READY signal is used to monitor the status of the DDR controller.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-F59DB79A-F58E-44D0-A60C-229C667FAC12" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-F59DB79A-F58E-44D0-A60C-229C667FAC12">Ensure that the other pins are promoted to top level.</li></ul></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-DA4E366A-DB4C-4A2A-A92A-D98B030005B2" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-DA4E366A-DB4C-4A2A-A92A-D98B030005B2">Set the pins as follows on <span class="+ topic/ph ui-d/uicontrol ph uicontrol">MIV_ESS_C1_0</span>:<ul class="- topic/ul ul" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_MD4_CZN_1BC" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__UL_MD4_CZN_1BC"><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-24B6BADB-1E36-4083-9AFA-E9819F847B33" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-24B6BADB-1E36-4083-9AFA-E9819F847B33">Select UART_RX and SPI_SDI.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-89417C28-EF96-4B1E-9BC7-FDE8308FA50B" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-89417C28-EF96-4B1E-9BC7-FDE8308FA50B">Right-click, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top Level</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-FD064832-A966-407D-8583-640124DA21CB" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-FD064832-A966-407D-8583-640124DA21CB">Select UART_TX, SPI_SCK, SPI_SDO, SPI_SS, and GPIO_OUT[3:0].</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-B6DB1408-2538-4993-BCC2-EFAE75171FA0" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-B6DB1408-2538-4993-BCC2-EFAE75171FA0">Right-click, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Promote to Top Level</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-3B2CE54E-6F33-446F-B9E0-8140301EB627" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-3B2CE54E-6F33-446F-B9E0-8140301EB627">Right-click the SPI_IRQ, GPIO_INT[3:0], and select Mark Unused.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9546AC6C-E48F-418D-8638-3FEE30B4C2E9" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-9546AC6C-E48F-418D-8638-3FEE30B4C2E9">Select GPIO_IN[3:0] and select Tie low.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-2ED69F15-E95C-47D7-94F8-0C03A163A639" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-2ED69F15-E95C-47D7-94F8-0C03A163A639">Right-click on the port "UART_TX", and rename it to "TX".</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-70CE9D66-B5C5-457D-93D3-500622C83C88" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-70CE9D66-B5C5-457D-93D3-500622C83C88">Similarly, rename "UART_RX" to "RX", "SPI_SCK" to "SPISCLKO", "SPI_SDO" to "SPISDO", and "SPI_SDI" to "SPISDI".</li></ul></li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-91030E08-4407-402B-9130-E219611F0ED6" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-91030E08-4407-402B-9130-E219611F0ED6">Right-click the top SmartDesign canvas, and select <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Auto Arrange Layout</span>.</li><li class="- topic/li li" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-ECE77F0D-A5F3-40D1-B97E-8C6139453C82" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__GUID-ECE77F0D-A5F3-40D1-B97E-8C6139453C82">Click <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">File</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Save top</span></span>.</li></ol><p class="- topic/p p" id="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000D33" data-ofbid="GUID-82E73EFD-5B4A-4C95-8B03-3924BDEB6708__ID-00000D33">The IP blocks are successfully connected.</p></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>

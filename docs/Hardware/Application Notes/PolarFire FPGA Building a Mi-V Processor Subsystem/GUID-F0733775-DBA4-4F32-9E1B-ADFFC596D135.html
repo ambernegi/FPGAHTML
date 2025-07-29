@@ -1,0 +1,577 @@
+<!DOCTYPE html><html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us" data-whc_version="26.1">
+    <head><link rel="shortcut icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><link rel="icon" href="oxygen-webhelp\template\resources/images/favicon.ico"/><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="description" content="Before debugging, the board and the serial terminal must be set up. For more information about the board and serial terminal setup, see Board Setup and Serial Terminal Emulation Program (PuTTY) Setup ..."/><meta name="copyright" content="(C) Copyright 2025"/><meta name="generator" content="DITA-OT"/><title>3.9 Debugging the User Application Using SoftConsole</title><!--  Generated with Oxygen version 26.1, build number 2024091616.  --><meta name="wh-path2root" content=""/><meta name="wh-toc-id" content="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135-d680e371"/><meta name="wh-source-relpath" content="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135.xml"/><meta name="wh-out-relpath" content="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135.html"/>
+
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/commons.css?buildId=2024091616"/>
+    <link rel="stylesheet" type="text/css" href="./oxygen-webhelp/app/topic.css?buildId=2024091616"/>
+
+    <script src="./oxygen-webhelp/app/options/properties.js?buildId=20250729055237"></script>
+    <script src="./oxygen-webhelp/app/localization/strings.js?buildId=2024091616"></script>
+    <script src="./oxygen-webhelp/app/search/index/keywords.js?buildId=20250729055237"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/commons.js?buildId=2024091616"></script>
+    <script defer="defer" src="./oxygen-webhelp/app/topic.js?buildId=2024091616"></script>
+<link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/microchip.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/notes.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/mchp-css-overrides.css?buildId=2024091616"/><link rel="stylesheet" type="text/css" href="oxygen-webhelp/template/resources/css/syntax-highlight.css?buildId=2024091616"/>
+
+<!-- OneTrust Cookies Consent Notice start for onlinedocs.microchip.com -->
+<script type="text/javascript" src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/OtAutoBlock.js"></script>
+<script src="https://cdn.cookielaw.org/consent/0194dac3-b686-73e5-b876-eb9241be4496/otSDKStub.js" type="text/javascript" charset="UTF-8" data-domain-script="0194dac3-b686-73e5-b876-eb9241be4496"></script>
+<script type="text/javascript">
+function OptanonWrapper() { }
+</script>
+<!-- OneTrust Cookies Consent Notice end for onlinedocs.microchip.com -->
+ 
+<script src="mchp-context-help.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,300" rel="stylesheet" type="text/css"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML" async="" type="text/javascript"></script>
+<script src="https://assets.adobedtm.com/6a72a357eb48/a636c708c7fe/launch-0b0023397020.min.js"></script><!-- Adobe Analytics -->
+</head>
+
+    <body id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135" class="wh_topic_page frmBody">
+        <a href="#wh_topic_body" class="sr-only sr-only-focusable">
+            Jump to main content
+        </a>
+        
+        
+        
+        
+        <header class="navbar navbar-default wh_header">
+    <div class="container-fluid">
+        <div class="wh_header_flex_container navbar-nav navbar-expand-md navbar-dark">
+            <div class="wh_logo_and_publication_title_container">
+                <div class="wh_logo_and_publication_title">
+                    
+                    <a href="index.html" class=" wh_logo d-none d-sm-block "><img src="oxygen-webhelp\template\resources/images/microchip.png" alt="PolarFire FPGA Building a Mi-V Processor Subsystem Application Note &#xA;    "/></a>
+                    <div class=" wh_publication_title "><a href="index.html">PolarFire FPGA Building a Mi-V Processor Subsystem Application Note 
+    </a></div>
+                    
+                </div>
+                
+                
+            </div>
+
+            <div class="wh_top_menu_and_indexterms_link collapse navbar-collapse" id="wh_top_menu_and_indexterms_link">
+                
+                
+                
+                
+            </div>
+        </div>
+    </div>
+</header>
+        
+        
+         
+        
+        <div class=" wh_search_input navbar-form wh_topic_page_search search " role="form">
+            
+            
+            
+            <form id="searchForm" method="get" role="search" action="search.html"><div class="d-flex justify-contents-around"><div class="flex-grow-1"></div><div class="position-relative flex-grow-1"><input type="search" placeholder="Search " class="wh_search_textfield" id="textToSearch" name="searchQuery" aria-label="Search query" required="required"/><button type="submit" class="wh_search_button" aria-label="Search"><span class="search_input_text">Search</span></button></div><div class="align-self-center flex-grow-1 ml-2"></div></div></form>
+            
+            <div class="mchp-color-stripe-grid-container">
+  <div class="mchp-main-bar mchp-orange-bar"></div>
+  <div class="mchp-main-bar mchp-blue-bar"></div>
+  <div class="mchp-main-bar mchp-green-bar"></div>
+</div>
+            
+        </div>
+        
+        <div class="container-fluid" id="wh_topic_container">
+            <div class="row">
+
+                <nav class="wh_tools d-print-none navbar-expand-md" aria-label="Tools">
+                    
+                    <div data-tooltip-position="bottom" class=" wh_breadcrumb "><ol class="d-print-none"><li><span class="home"><a href="index.html"><span>Home</span></a></span></li><li><div class="topicref" data-id="GUID-C680D538-D263-4D33-B37A-DB0AD0011184"><div class="title"><a href="GUID-C680D538-D263-4D33-B37A-DB0AD0011184.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Building the User Application Using SoftConsole</a></div></div></li><li class="active"><div class="topicref" data-id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135"><div class="title"><a href="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135.html"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.9</ph>
+Debugging the User Application Using SoftConsole</a></div></div></li></ol></div>
+                    
+                    
+                    
+                    <div class="wh_right_tools">
+                        <button class="wh_hide_highlight" aria-label="Toggle search highlights" title="Toggle search highlights"></button>
+                        <button class="webhelp_expand_collapse_sections" data-next-state="collapsed" aria-label="Collapse sections" title="Collapse sections"></button>
+                        
+                        
+                        
+                        
+                        <div class=" wh_print_link print d-none d-md-inline-block "><button onClick="window.print()" title="Print this page" aria-label="Print this page"></button></div>
+                        
+                        <button type="button" id="wh_toc_button" class="custom-toggler navbar-toggler collapsed wh_toggle_button navbar-light" aria-expanded="false" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                    </div>
+                    
+                </nav>
+            </div>
+            
+            <div class="row" style="margin-top: -1em;"><div class="col-lg-9 col-md-9 col-sm-12 offset-lg-3 offset-md-3 text-right border-bottom mb-1"><h2 class="text-dark header_title">
+    </h2></div></div>
+            
+            
+            <div class="wh_content_area">
+                <div class="row">
+                    
+                        <nav id="wh_publication_toc" class="col-lg-3 col-md-3 col-sm-12 d-md-block d-none d-print-none" aria-label="Table of Contents Container">
+                            <div id="wh_publication_toc_content">
+		                        
+                            	<div class=" wh_publication_toc " data-tooltip-position="right"><span class="expand-button-action-labels"><span id="button-expand-action" role="button" aria-label="Expand"></span><span id="button-collapse-action" role="button" aria-label="Collapse"></span><span id="button-pending-action" role="button" aria-label="Pending"></span></span><ul role="tree" aria-label="Table of Contents"><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F-d680e11" class="topicref introduction" data-id="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F-d680e11-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F.html" id="GUID-3BBD5ED6-990D-4690-9B1E-A70B10D06A1F-d680e11-link">Introduction</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C-d680e35" class="topicref" data-id="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C-d680e35-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C.html" id="GUID-0A143AD0-368A-408D-858A-FDAC5EC2644C-d680e35-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">1</ph>
+Design Description</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-EE94C957-B350-409F-8642-12DAB4A9E286-d680e51" class="topicref" data-id="GUID-EE94C957-B350-409F-8642-12DAB4A9E286" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-EE94C957-B350-409F-8642-12DAB4A9E286-d680e51-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-EE94C957-B350-409F-8642-12DAB4A9E286.html" id="GUID-EE94C957-B350-409F-8642-12DAB4A9E286-d680e51-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">2</ph>
+Creating a Mi-V Processor Subsystem</a></div></div></li><li role="treeitem" aria-expanded="true"><div data-tocid="GUID-C680D538-D263-4D33-B37A-DB0AD0011184-d680e299" class="topicref" data-id="GUID-C680D538-D263-4D33-B37A-DB0AD0011184" data-state="expanded"><span role="button" tabindex="0" aria-labelledby="button-collapse-action GUID-C680D538-D263-4D33-B37A-DB0AD0011184-d680e299-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-C680D538-D263-4D33-B37A-DB0AD0011184.html" id="GUID-C680D538-D263-4D33-B37A-DB0AD0011184-d680e299-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3</ph>
+Building the User Application Using SoftConsole</a></div></div><ul role="group" class="navbar-nav nav-list"><li role="treeitem"><div data-tocid="GUID-25CAC333-37B6-4286-84BD-B1D609186830-d680e307" class="topicref" data-id="GUID-25CAC333-37B6-4286-84BD-B1D609186830" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-25CAC333-37B6-4286-84BD-B1D609186830.html" id="GUID-25CAC333-37B6-4286-84BD-B1D609186830-d680e307-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.1</ph>
+Creating a Mi-V SoftConsole Project</a></div></div></li><li role="treeitem"><div data-tocid="GUID-B2BBAE37-85B7-42AD-BAD3-99D783DB13BB-d680e315" class="topicref" data-id="GUID-B2BBAE37-85B7-42AD-BAD3-99D783DB13BB" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-B2BBAE37-85B7-42AD-BAD3-99D783DB13BB.html" id="GUID-B2BBAE37-85B7-42AD-BAD3-99D783DB13BB-d680e315-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.2</ph>
+Downloading the Firmware Drivers</a></div></div></li><li role="treeitem"><div data-tocid="GUID-093789E0-82C7-4A53-81F3-DE5FF84993F4-d680e323" class="topicref" data-id="GUID-093789E0-82C7-4A53-81F3-DE5FF84993F4" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-093789E0-82C7-4A53-81F3-DE5FF84993F4.html" id="GUID-093789E0-82C7-4A53-81F3-DE5FF84993F4-d680e323-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.3</ph>
+Importing the Firmware Drivers</a></div></div></li><li role="treeitem"><div data-tocid="GUID-6E206005-E33A-4A00-B81D-4AEB0B678C6E-d680e331" class="topicref" data-id="GUID-6E206005-E33A-4A00-B81D-4AEB0B678C6E" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-6E206005-E33A-4A00-B81D-4AEB0B678C6E.html" id="GUID-6E206005-E33A-4A00-B81D-4AEB0B678C6E-d680e331-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.4</ph>
+Creating the main.c File</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0E61D50E-3777-4BD0-AB54-924659A209BE-d680e339" class="topicref" data-id="GUID-0E61D50E-3777-4BD0-AB54-924659A209BE" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0E61D50E-3777-4BD0-AB54-924659A209BE.html" id="GUID-0E61D50E-3777-4BD0-AB54-924659A209BE-d680e339-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.5</ph>
+Mapping Firmware Drivers and the Linker Script</a></div></div></li><li role="treeitem"><div data-tocid="GUID-1AF7360F-8A3A-49AC-B5D7-3315098E1D11-d680e347" class="topicref" data-id="GUID-1AF7360F-8A3A-49AC-B5D7-3315098E1D11" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-1AF7360F-8A3A-49AC-B5D7-3315098E1D11.html" id="GUID-1AF7360F-8A3A-49AC-B5D7-3315098E1D11-d680e347-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.6</ph>
+Mapping Memory and Peripheral Addresses</a></div></div></li><li role="treeitem"><div data-tocid="GUID-DFDF2617-3822-40A6-A2F0-0A55E76EE9BD-d680e355" class="topicref" data-id="GUID-DFDF2617-3822-40A6-A2F0-0A55E76EE9BD" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DFDF2617-3822-40A6-A2F0-0A55E76EE9BD.html" id="GUID-DFDF2617-3822-40A6-A2F0-0A55E76EE9BD-d680e355-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.7</ph>
+Setting the UART Baud Rate</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F10170-E9DD-4516-85B3-508C40083504-d680e363" class="topicref" data-id="GUID-98F10170-E9DD-4516-85B3-508C40083504" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F10170-E9DD-4516-85B3-508C40083504.html" id="GUID-98F10170-E9DD-4516-85B3-508C40083504-d680e363-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.8</ph>
+Building the Mi-V Project</a></div></div></li><li role="treeitem" class="active"><div data-tocid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135-d680e371" class="topicref" data-id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135.html" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135-d680e371-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.9</ph>
+Debugging the User Application Using SoftConsole</a></div></div></li><li role="treeitem"><div data-tocid="GUID-22A91B14-4BFD-413A-B911-7E56A8A30063-d680e379" class="topicref" data-id="GUID-22A91B14-4BFD-413A-B911-7E56A8A30063" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-22A91B14-4BFD-413A-B911-7E56A8A30063.html" id="GUID-22A91B14-4BFD-413A-B911-7E56A8A30063-d680e379-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">3.10</ph>
+Debugging the User Application from DDR3 Memory</a></div></div></li></ul></li><li role="treeitem"><div data-tocid="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B-d680e387" class="topicref" data-id="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B.html" id="GUID-DF6ECF02-2E29-468D-BCAC-53B32496269B-d680e387-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">4</ph>
+Appendix 1: Programming the Device using FlashPro Express</a></div></div></li><li role="treeitem"><div data-tocid="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3-d680e395" class="topicref" data-id="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3.html" id="GUID-0EA5B03E-B038-4DC9-806B-1158A81A51D3-d680e395-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">5</ph>
+Appendix 2 - DDR3 Configuration</a></div></div></li><li role="treeitem"><div data-tocid="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F-d680e403" class="topicref" data-id="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F.html" id="GUID-41ABB3E7-30FE-426A-88F7-5FFE9D37AD7F-d680e403-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">6</ph>
+Appendix 3 - References</a></div></div></li><li role="treeitem"><div data-tocid="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B-d680e411" class="topicref" data-id="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B.html" id="GUID-FC347BA2-DF5A-4570-B94B-A90E8059AB4B-d680e411-link"><ph xmlns="http://www.oxygenxml.com/ns/webhelp/toc">7</ph>
+Revision History</a></div></div></li><li role="treeitem"><div data-tocid="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d680e420" class="topicref backmatter" data-id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286" data-state="leaf"><span role="button" class="wh-expand-btn"></span><div class="title"><a href="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286.html" id="GUID-98F6498F-0C2F-4D7F-87F6-A792AFD2A286-d680e420-link">Microchip FPGA Support</a></div></div></li><li role="treeitem" aria-expanded="false"><div data-tocid="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d680e428" class="topicref backmatter backmatter_parent" data-id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B" data-state="not-ready"><span role="button" tabindex="0" aria-labelledby="button-expand-action GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d680e428-link" class="wh-expand-btn"></span><div class="title"><a href="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B.html" id="GUID-0FB3F908-88EE-45CE-94F5-E97AF9049C9B-d680e428-link">Microchip Information</a></div></div></li></ul></div>
+		                        
+                            </div>
+                        </nav>
+                    
+                    
+                    <div class="col-lg-9 col-md-9 col-sm-12" id="wh_topic_body">
+                        <button id="wh_close_publication_toc_button" class="close-toc-button d-none" aria-label="Toggle publishing table of content" aria-controls="wh_publication_toc" aria-expanded="true">
+                            <span class="close-toc-icon-container">
+                                <span class="close-toc-icon"></span>     
+                            </span>
+                        </button>
+                        
+                        
+                        <div class=" wh_topic_content body "><main role="main"><article role="article" aria-labelledby="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-057D56D1-FA83-4F0B-972F-57167D116867"><h1 class="- topic/title title topictitle1" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-057D56D1-FA83-4F0B-972F-57167D116867" style="display:inline-block">3.9 Debugging the User Application Using SoftConsole</h1><a class="feedback" target="_blank" href="https://microchipsupport.force.com/s/newcase?pub_guid=GUID-5CFFA5D2-0480-4AB2-BEA3-8BA574C9A732&amp;pub_lang=en-US&amp;pub_ver=5&amp;pub_type=Application%20Note&amp;bu=fpga&amp;tpc_guid=GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135&amp;cover_title=PolarFire%20FPGA%20Building%20a%20Mi-V%20Processor%20Subsystem%20Application%20Note&amp;tech_support_link=NA&amp;revision_letter=D&amp;source=Webhelp%20Responsive&amp;title=Debugging%20the%20User%20Application%20Using%20SoftConsole">(Ask a Question)</a><div class="- topic/body concept/conbody body conbody"><p class="- topic/p p" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001129" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001129">Before debugging, the board and the serial terminal must be set up. For more information about the board and serial terminal setup, see <a class="- topic/xref xref" href="GUID-64096F65-6A84-4B97-A532-8A57CBF867A3.html"><span><span>Board Setup</span></span></a> and <a class="- topic/xref xref" href="GUID-1BD8BCF9-1049-4D3E-8A1A-EA9C38080389.html"><span><span>Serial Terminal Emulation Program (PuTTY) Setup</span></span></a>.</p><p class="- topic/p p" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-0000112E" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-0000112E">To debug the application, perform the following steps:</p><ol class="- topic/ol ol" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__OL_JPK_ZJV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__OL_JPK_ZJV_PXB"><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-86DD7823-E0A9-48B0-9B2C-CCDAE63DC7F1" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-86DD7823-E0A9-48B0-9B2C-CCDAE63DC7F1">From the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Project Explorer</span>, select the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">MiV_uart_blinky</span> project, and then click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debug</span> icon from the SoftConsole toolbar, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_RL2_BKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_RL2_BKV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-29. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-B0FA2EEF-6198-401B-B8BA-C871EA669979" class="fig--title">Debug Icon</span></span></figcaption><span class="imagecenter"><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_GL1_M24_1BC" src="GUID-B45EC70E-4200-41E4-B152-DD3B640F75BF-high.svg" width="450"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-A93475AC-03F8-461A-A7C0-D890E995230D" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-A93475AC-03F8-461A-A7C0-D890E995230D">In the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Create</span>, <span class="+ topic/ph ui-d/uicontrol ph uicontrol">manage, and run configurations</span> window, double-click<span class="+ topic/ph ui-d/uicontrol ph uicontrol"> GDB OpenOCD Debugging</span> to generate the debug configuration for the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">MiV_uart_blinky</span> project.</li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-8818DD0D-35BC-448C-B6D2-EFB22D505DE1" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-8818DD0D-35BC-448C-B6D2-EFB22D505DE1">Select the generated <span class="+ topic/ph ui-d/uicontrol ph uicontrol">MiV_uart_blinky Debug</span> configuration, and click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Search Project</span> (if by default not available), as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_MC2_JKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_MC2_JKV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-30. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-4B55BDAB-39A5-4D1B-9B65-850FD005E748" class="fig--title">Create, manage, and run configurations Window – Main Tab</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_NC2_JKV_PXB" src="GUID-07BE8009-CBD2-498F-9F94-A5C409CE20CF-high.svg" height="478" width="531"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-B4EAFC6C-072C-473E-BF76-A0196CB9339D" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-B4EAFC6C-072C-473E-BF76-A0196CB9339D">Select the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">MiV_uart_blinky.elf</span> binary from the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Program Selection</span> window, and click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">OK</span>, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_RH1_MKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_RH1_MKV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-31. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-9A9898F3-574D-47D2-82D4-0865FD552061" class="fig--title">MiV_uart_blinky.elf Selection</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_SH1_MKV_PXB" src="GUID-617812F8-3193-43A7-8E16-329AA54783A7-high.png" height="417" width="267"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-51B0A5D1-6338-49E0-98AA-1069D6AC5696" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-51B0A5D1-6338-49E0-98AA-1069D6AC5696">Go to the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debugger</span> tab, and replace the <strong class="+ topic/ph hi-d/b ph b">Config options</strong>, <strong class="+ topic/ph hi-d/b ph b">Executable name</strong>, and <strong class="+ topic/ph hi-d/b ph b">Commands</strong> as follows:<ul class="- topic/ul ul" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__UL_O4G_NKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__UL_O4G_NKV_PXB"><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001150" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001150">Config Options: <span class="+ topic/ph sw-d/filepath ph filepath">--file board/microsemi-riscv.cfg</span></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001153" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001153">Executable name: <span class="+ topic/ph sw-d/filepath ph filepath">${cross_prefix}gdb${cross_suffix}</span></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001156" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001156">Commands:<pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_U4R_4KV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_U4R_4KV_PXB"><code>set mem inaccessible-by-default off</code></pre><pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_EGD_PKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_EGD_PKV_PXB"><code>set arch riscv:rv32</code></pre><pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_ZPL_PKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_ZPL_PKV_PXB"><code>set $target_riscv = 1</code></pre><pre class="+ topic/pre pr-d/codeblock pre codeblock" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_Y25_PKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__CODEBLOCK_Y25_PKV_PXB"><code>set remotetimeout 7</code></pre><figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_FMN_SKV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_FMN_SKV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-32. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-7F96EA33-B7D7-4E5C-8DAC-A0B52A45301A" class="fig--title">Create, manage, and run configurations Window – Debugger Tab</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_GMN_SKV_PXB" src="GUID-D0283E59-D73A-457B-8922-13CA0D52506D-high.png" height="521" width="513"/></span></figure></li></ul></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-74ACD929-A3A0-4500-8249-AD8B5B0891D1" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-74ACD929-A3A0-4500-8249-AD8B5B0891D1">In <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debug Configurations</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol"> Startup</span></span> tab, clear the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Pre-run/Restart reset</span> check box to halt the program at the main () function, and clear the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Enable ARM semihosting</span> check box.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_DVT_BLV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_DVT_BLV_PXB"><figcaption class="- topic/title title figcapcenter"><span class="figtitleprefix fig--title-label">Figure 3-33. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-49E98D33-A7B4-4E3F-8DE0-E9E36AC0B709" class="fig--title">Debug Settings- Startup Tab</span></span></figcaption><div class="imagecenter"><div class="imagecenter break break"><img class="- topic/image image imagecenter break break" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_KFV_NKY_5XB" src="GUID-3F3FAAD8-3636-4601-A883-1E701807F3B8-high.svg" height="364" width="546"/></div></div></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-3B1EA1D6-3F42-4CAD-8B05-56D469D5072A" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-3B1EA1D6-3F42-4CAD-8B05-56D469D5072A">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Apply</span>, and then click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Debug</span>, as shown in the preceding figure.<p class="- topic/p p" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001172" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-00001172">The <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Confirm Perspective Switch</span> dialog opens, as shown in the following figure.</p><figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_NFD_HLV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_NFD_HLV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-34. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-1C13CAF2-6CC2-4B1B-BD25-48F7287A9454" class="fig--title">Confirm Perspective Switch Dialog Box</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_OFD_HLV_PXB" src="GUID-B5A048D9-CBAC-4CF3-A0BC-A4E4FC550C1B-high.png"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-479C612C-1495-477E-ACE0-B2F6FCA6ED96" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-479C612C-1495-477E-ACE0-B2F6FCA6ED96">Click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Yes</span>.<p class="- topic/p p" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-0000117C" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__ID-0000117C">The debugger halts the execution at the first instruction in the <code class="+ topic/ph pr-d/codeph ph codeph">main.c</code> file, as shown in the following figure.</p><figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_ISH_4LV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_ISH_4LV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-35. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-3BBF5E5E-9621-487B-A296-1C1AAD8BE541" class="fig--title">First Instruction in the main.c File</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_JSH_4LV_PXB" src="GUID-17A18BFE-8BC7-4952-A26F-CA225BD31E0D-high.svg"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-5C187236-0AAD-416D-ACAB-12D3370937BD" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-5C187236-0AAD-416D-ACAB-12D3370937BD">On the SoftConsole toolbar, click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Resume</span> icon to resume the application execution, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_W31_SLV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_W31_SLV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-36. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-040C5490-640D-4D3A-AF6F-BB88631186EF" class="fig--title">Resume Application Execution</span></span></figcaption><span class="imagecenter"><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_BSC_R24_1BC" src="GUID-76C9006A-994A-4921-9BDC-76A6F50E3E32-high.svg" width="450"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-3F8898B0-DA98-4C40-9EE4-27239BDA754F" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-3F8898B0-DA98-4C40-9EE4-27239BDA754F">The string <em class="+ topic/ph hi-d/i ph i">Hello World!</em> is printed on the serial terminal, as shown in the following figure. Also, LEDs 4, 5, 6, and 7 on the PolarFire Evaluation Board blink.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_NJ2_TLV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_NJ2_TLV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-37. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-87F06F59-8FD2-42F6-86CB-21968791C1FE" class="fig--title">Hello World in Debug Mode</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_OJ2_TLV_PXB" src="GUID-723CE149-D2A8-417B-AC10-421763E19C96-high.png"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-7A67F222-B64C-4F29-83F0-A2B4AEEFD585" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-7A67F222-B64C-4F29-83F0-A2B4AEEFD585">On the SoftConsole menu, click <span class="+ topic/ph ui-d/menucascade ph menucascade"><span class="+ topic/ph ui-d/uicontrol ph uicontrol">Run</span><abbr title="and then"> &gt; </abbr><span class="+ topic/ph ui-d/uicontrol ph uicontrol"> Suspend</span></span> to suspend the execution of the application.</li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-D6400509-9043-4F19-9E16-ADDBCA279790" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-D6400509-9043-4F19-9E16-ADDBCA279790">Click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Registers</span> tab to view the values of the Mi-V internal registers, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_NBL_PMV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_NBL_PMV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-38. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-A2C63BC4-08AE-4037-9F5A-B9ED6ECE0BDB" class="fig--title">Mi-V Register Values</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_OBL_PMV_PXB" src="GUID-C386D563-3882-442F-8846-B60AEF27DBCC-high.png" height="384" width="313"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-909E242A-1250-4187-AA3D-2125454A50EE" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-909E242A-1250-4187-AA3D-2125454A50EE">Click the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Variables</span> tab to view the values of variables in the source code, as shown in the following figure.<figure class="- topic/fig fig fignone" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_TNX_TMV_PXB" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__FIG_TNX_TMV_PXB"><figcaption class="- topic/title title figcap"><span class="figtitleprefix fig--title-label">Figure 3-39. <span id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-0F0619AC-9DF5-4633-BEEC-2F9B75AF503F" class="fig--title">Variable Values</span></span></figcaption><span class=""><img class="- topic/image image" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__IMAGE_UNX_TMV_PXB" src="GUID-3374E938-19CC-44B0-B27B-7F8D4811D2A6-high.png"/></span></figure></li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-4DB51A85-3E83-459C-BE43-96506A823BE9" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-4DB51A85-3E83-459C-BE43-96506A823BE9">From the SoftConsole toolbar, use the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Step Over</span> option to view the application execution line by line, or use the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Step Into</span> option to execute the instructions inside a function. Use the <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Step Return</span> option to come out the function. You can also add breakpoints in the application source code.</li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-AA2A345A-E7A7-45CD-A326-182620D6139C" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-AA2A345A-E7A7-45CD-A326-182620D6139C">On the SoftConsole toolbar, click <span class="+ topic/ph ui-d/uicontrol ph uicontrol">Terminate</span> to terminate the debugging of the application.</li><li class="- topic/li li" id="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-C3F8FB83-BCE5-4E17-8653-E3632BB457DF" data-ofbid="GUID-F0733775-DBA4-4F32-9E1B-ADFFC596D135__GUID-C3F8FB83-BCE5-4E17-8653-E3632BB457DF">Close PuTTY and SoftConsole.</li></ol></div></article></main></div>
+                        
+                        
+                        
+                        
+                        
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+            
+            
+        </div> 
+        <footer class="wh_footer">
+  <div class=" footer-container mx-auto ">
+    <div class="main">
+  <div class="max">
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-1"/>
+        <span for="section-1" class="accordion-label">
+          <div id="text-5521a8ec2b" class="cmp-text">
+            <p>About</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-overview" class="mchp-link__link" aria-label="Company">Company</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/careers" class="mchp-link__link" aria-label="Careers">Careers</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/contact-us" class="mchp-link__link" aria-label="Contact Us">Contact Us</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center" class="mchp-link__link" aria-label="Media Center">Media Center</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/investors" class="mchp-link__link" aria-label="Investor Relations">Investor Relations</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/corporate-responsibility" class="mchp-link__link" aria-label="Corporate Responsibility">Corporate Responsibility</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-2"/>
+        <span for="section-2" class="accordion-label">
+          <div id="text-ea8a67216c" class="cmp-text">
+            <p>Support</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://forum.microchip.com/" class="mchp-link__link" aria-label="Microchip Forums">Microchip Forums</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.avrfreaks.net/" class="mchp-link__link" aria-label="AVR Freaks">AVR Freaks</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/design-help" class="mchp-link__link" aria-label="Design Help">Design Help</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/technical-support" class="mchp-link__link" aria-label="Technical Support">Technical Support</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchip.com/exportcontroldata/" class="mchp-link__link" aria-label="Export Control Data">Export Control Data</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/support/product-change-notification" class="mchp-link__link" aria-label="PCNs">PCNs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="accordion-list">
+        <input type="checkbox" class="accordion-input" id="section-3"/>
+        <span for="section-3" class="accordion-label">
+          <div id="text-229415b3f9" class="cmp-text">
+            <p>Quick Links</p>
+          </div>
+        </span>
+        <div class="mchp-component-list" style="display: block; max-height: none">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://www.microchipdirect.com/" class="mchp-link__link" aria-label="microchipDIRECT.com">microchipDIRECT.com</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a target="_blank" href="https://secure.microchip.com/mu" class="mchp-link__link" aria-label="Microchip University">Microchip University</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/mymicrochip/" class="mchp-link__link" aria-label="myMicrochip">myMicrochip</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/media-center/blog" class="mchp-link__link" aria-label="Blogs">Blogs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/tools-resources/reference-designs" class="mchp-link__link" aria-label="Reference Designs">Reference Designs</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/products/selection-tools/parametric-search-landing-page" class="mchp-link__link" aria-label="Parametric Search">Parametric Search</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <div class="cmp-image">
+            <img class="cmp-image__image" alt="Microchip Logo" src="oxygen-webhelp/template/resources/images/microchip-logo.png"/>
+          </div>
+        </div>
+        <div>
+          <div id="text-cf91d72ddd" class="cmp-text">
+            <p>Microchip Technology Inc.</p>
+            <p>2355 West Chandler Blvd.</p>
+            <p>Chandler, Arizona, USA</p>
+          </div>
+        </div>
+        <div>
+          <div class="mchp-component-list">
+            <div class="mchp-component-items">
+              <div class="mchp-component-item mchp-component-item--first">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.facebook.com/microchiptechnology/" aria-label="Microchip Facebook" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Facebook" src="oxygen-webhelp/template/resources/images/facebook-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.linkedin.com/company/microchip-technology" aria-label="Microchip LinkedIn" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip LinkedIn" src="oxygen-webhelp/template/resources/images/linkedin-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://x.com/MicrochipTech" aria-label="Microchip Twitter" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Twitter" src="oxygen-webhelp/template/resources/images/twitter-new.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.youtube.com/user/MicrochipTechnology" aria-label="Image Hyperlink" target="_blank">
+                      <img class="cmp-image__image" alt="" src="oxygen-webhelp/template/resources/images/youtube-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.instagram.com/microchiptechnologyinc/" aria-label="Microchip Instagram" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Instagram" src="oxygen-webhelp/template/resources/images/instagram-icon.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="mchp-component-item mchp-component-item--last">
+                <div class="image">
+                  <div class="cmp-image">
+                    <a class="cmp-image__link" href="https://www.weibo.com/microchiptech" aria-label="Microchip Weibo" target="_blank">
+                      <img class="cmp-image__image" alt="Microchip Weibo" src="oxygen-webhelp/template/resources/images/snap.png"/>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <p>
+        © Copyright 1998-<span class="current-year">2024</span> Microchip Technology Inc. All rights reserved.
+        Shanghai ICP Recordal No.09049794
+      </p>
+      <p></p>
+    </div>
+    <div>
+      <div class="legal-privacy-cookie-container">
+        <div class="mchp-component-list">
+          <div class="mchp-component-items">
+            <div class="mchp-component-item mchp-component-item--first">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/website-terms-and-conditions" class="mchp-link__link" aria-label="Terms Of Use">Terms Of Use</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information/privacy-notice" class="mchp-link__link" aria-label="Privacy Notice">Privacy Notice</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+            <div class="mchp-component-item mchp-component-item--last">
+              <div class="link">
+                <div>
+                  <a href="https://www.microchip.com/en-us/about/legal-information" class="mchp-link__link" aria-label="Legal">Legal</a>
+                  <span class="mchp-link__separator"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!-- OneTrust Cookies Settings button start -->
+        <div>
+          <a id="ot-sdk-btn" class="ot-sdk-show-settings">Your Privacy Choices</a>
+          <img src="oxygen-webhelp/template/resources/images/privacyoptions29x14.png" alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip="California Consumer Privacy Act (CCPA) Opt-Out Icon" data-tooltip-position="top-center" class="tooltip-initialized"/>
+        </div>
+        <!-- OneTrust Cookies Settings button end -->
+      </div>
+    </div>
+  </div>
+</div>
+
+<script><!--
+
+  (function () {
+    var currentYear = new Date().getFullYear();
+    document.querySelector('.current-year').textContent = currentYear;
+  })();
+
+--></script>
+
+<script type="text/javascript"><!--
+
+  _satellite.pageBottom();
+
+--></script>
+<!-- Adobe Analytics -->
+<script type="text/javascript" src="mchp-js/prepend.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+<script type="text/javascript" src="mchp-js/onetrust.js"></script>
+<!-- Package for viewing PDFs on mobile devices -->
+
+<script><!--
+
+
+  // wait until jquery is ready
+  var jqInterval = setInterval(function() {
+    if (typeof jQuery !== 'undefined') {
+      clearInterval(jqInterval);
+      // jQuery is ready, run your code here
+      $(document).ready(function() {
+        $(document).ready(function() {
+          function open() {
+              $(".accordion-label").click(function(e) {
+                  e.preventDefault();
+                  if (!mediaQueryMatch.matches) {
+                      e = $(this).next(".mchp-component-list");
+                      var f = $(".accordion-list > .mchp-component-list").not(e);
+                      $(this).hasClass("active") ? ($(this).removeClass("active"),
+                      e.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      })) : (f.slideUp(300, function() {
+                          $(this).css("max-height", "0")
+                      }),
+                      $(".accordion-label").removeClass("active"),
+                      $(this).addClass("active"),
+                      e.slideDown(300, function() {
+                          $(this).css("max-height", "none")
+                      }))
+                  }
+              })
+          }
+          function hide(activeLabel) {
+              if (activeLabel.matches) {
+                  activeLabel = document.getElementsByClassName("accordion-label active");
+                  for (let f = 0; f < activeLabel.length; f++) {
+                    activeLabel[f].classList.remove("active");
+                  }
+                  for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                    accordionList[activeLabel].style.display = "block",
+                    accordionList[activeLabel].style.maxHeight = "none"
+                  }
+              } else {
+                for (activeLabel = 0; activeLabel < accordionList.length; activeLabel++) {
+                  accordionList[activeLabel].style.display = "none",
+                  accordionList[activeLabel].style.maxHeight = "0"
+                }
+              }
+          }
+          var mediaQueryMatch = window.matchMedia("(min-width: 630px)");
+          var accordionList = $(".accordion-list > .mchp-component-list");
+          hide(mediaQueryMatch);
+          setTimeout(function() {
+              $(".legal-privacy-cookie-container .ot-sdk-show-settings")?.text("Your Privacy Choices")
+          }, 1000);
+          $(window).on("load", function() {
+              open()
+          });
+          mediaQueryMatch.addListener(hide)
+        });
+      });
+    }
+  }, 100);
+
+
+--></script>
+  </div>
+</footer>
+        
+        <div id="go2top" class="d-print-none">
+            <span class="oxy-icon oxy-icon-up"></span>
+        </div>
+        
+        <div id="modal_img_large" class="modal">
+            <span class="close oxy-icon oxy-icon-remove"></span>
+            <div id="modal_img_container"></div>
+            <div id="caption"></div>
+        </div>
+        
+        
+        
+    </body>
+</html>
