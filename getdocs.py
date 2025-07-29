@@ -5,9 +5,9 @@ from bs4 import BeautifulSoup
 from datetime import datetime
 import re
 
-VALID_EXTENSIONS = ['.pdf', '.html']
 ROOT_DIR = "docs"
-OUTPUT_FILE = "docs.json"
+OUTPUT_JSON = "docs.json"
+OUTPUT_HTML = os.path.join(ROOT_DIR, "index.html")
 
 def extract_pdf_metadata(file_path):
     try:
@@ -49,17 +49,17 @@ def extract_html_metadata(file_path):
         "version": version
     }
 
-def get_doc_metadata(full_path, rel_path):
+def get_doc_metadata(full_path, rel_path_from_docs):
     ext = os.path.splitext(full_path)[-1].lower()
     format_ = "PDF" if ext == ".pdf" else "HTML"
     updated_on = datetime.fromtimestamp(os.path.getmtime(full_path)).strftime("%Y-%m-%d")
 
     if ext == ".pdf":
         extracted = extract_pdf_metadata(full_path)
-    elif ext == ".html" and os.path.basename(full_path) == "index.html":
+    elif ext == ".html" and os.path.basename(full_path).lower() == "index.html":
         extracted = extract_html_metadata(full_path)
     else:
-        return None  # Skip non-index.html
+        return None
 
     if not extracted:
         return None
@@ -70,11 +70,13 @@ def get_doc_metadata(full_path, rel_path):
         "format": format_,
         "version": extracted["version"],
         "updated_on": updated_on,
-        "path": os.path.join(ROOT_DIR, rel_path).replace("\\", "/")
+        "path": rel_path_from_docs.replace("\\", "/")
     }
 
-def build_structure():
+def build_structure_and_index():
     docs = {"sections": {}}
+    html_links = []
+
     print("📁 Scanning folders...\n")
 
     for dirpath, _, filenames in os.walk(ROOT_DIR):
@@ -87,26 +89,26 @@ def build_structure():
                 continue
 
             full_path = os.path.join(dirpath, file)
-            rel_path = os.path.relpath(full_path, ROOT_DIR)
-            parts = rel_path.split(os.sep)
+            rel_path_from_docs = os.path.relpath(full_path, ROOT_DIR)
+            parts = rel_path_from_docs.split(os.sep)
 
             if len(parts) < 3:
-                print(f"⚠️ Skipped (not deep enough): {rel_path}")
-                continue  # Expecting at least: section/subsection/file
+                print(f"⚠️ Skipped (not deep enough): {rel_path_from_docs}")
+                continue
 
             section = parts[0].capitalize()
             subsection = parts[1].replace("-", " ").replace("_", " ").title()
 
-            print(f"🔍 Processing: {rel_path}...")
+            print(f"🔍 Processing: {rel_path_from_docs}...")
 
-            doc_metadata = get_doc_metadata(full_path, rel_path)
+            doc_metadata = get_doc_metadata(full_path, rel_path_from_docs)
             if not doc_metadata:
                 print(f"   ❌ Skipped or failed: {file}")
                 continue
 
             print(f"   ✅ Title: {doc_metadata['title']}, Version: {doc_metadata['version']}, Format: {doc_metadata['format']}")
 
-            # Build nested structure
+            # JSON structure
             docs["sections"] \
                 .setdefault(section, {}) \
                 .setdefault("subsections", {}) \
@@ -114,10 +116,26 @@ def build_structure():
                 .setdefault("documents", []) \
                 .append(doc_metadata)
 
-    return docs
+            # HTML link structure
+            link_path = doc_metadata["path"]
+            link_title = f"{doc_metadata['title']} (v{doc_metadata['version']})"
+            html_links.append(f'<li><a href="{link_path}" target="_blank">{link_title}</a></li>')
+
+    return docs, html_links
+
+def write_index_html(html_links):
+    with open(OUTPUT_HTML, "w", encoding="utf-8") as f:
+        f.write("<!DOCTYPE html>\n<html>\n<head>\n<title>Document Index</title>\n</head>\n<body>\n")
+        f.write("<h1>Available Documents</h1>\n<ul>\n")
+        f.write("\n".join(html_links))
+        f.write("\n</ul>\n</body>\n</html>")
+    print(f"\n✅ index.html generated at '{OUTPUT_HTML}' with {len(html_links)} entries.")
 
 if __name__ == "__main__":
-    structure = build_structure()
-    with open(OUTPUT_FILE, "w", encoding="utf-8") as f:
+    structure, html_links = build_structure_and_index()
+
+    with open(OUTPUT_JSON, "w", encoding="utf-8") as f:
         json.dump(structure, f, indent=2)
-    print(f"\n✅ Documentation structure exported to '{OUTPUT_FILE}'")
+    print(f"\n✅ Documentation structure exported to '{OUTPUT_JSON}'")
+
+    write_index_html(html_links)

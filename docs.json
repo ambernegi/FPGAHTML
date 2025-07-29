@@ -1,5 +1,21 @@
 {
   "sections": {
+    "Hardware": {
+      "subsections": {
+        "Application Notes": {
+          "documents": [
+            {
+              "title": "PolarFire FPGA Building a Mi-V Processor Subsystem Application Note",
+              "filename": "index.html",
+              "format": "HTML",
+              "version": "1.0",
+              "updated_on": "2025-07-29",
+              "path": "Hardware/Application Notes/PolarFire FPGA Building a Mi-V Processor Subsystem/index.html"
+            }
+          ]
+        }
+      }
+    },
     "Software": {
       "subsections": {
         "User Guides": {
@@ -10,7 +26,7 @@
               "format": "PDF",
               "version": "2024.1",
               "updated_on": "2025-07-29",
-              "path": "docs/Software/User Guides/PDF_Tcl Reference/v2024_1/libero_soc_tcl_cmd_ref_ug.pdf"
+              "path": "Software/User Guides/PDF_Tcl Reference/v2024_1/libero_soc_tcl_cmd_ref_ug.pdf"
             },
             {
               "title": "Libero SoC Tcl Command Reference Guide",
@@ -18,7 +34,7 @@
               "format": "PDF",
               "version": "2024.2",
               "updated_on": "2025-07-28",
-              "path": "docs/Software/User Guides/PDF_Tcl Reference/v2024_2/libero_soc_tcl_cmd_ref_ug.pdf"
+              "path": "Software/User Guides/PDF_Tcl Reference/v2024_2/libero_soc_tcl_cmd_ref_ug.pdf"
             },
             {
               "title": "Libero SoC Tcl Command Reference Guide",
@@ -26,7 +42,7 @@
               "format": "PDF",
               "version": "2025.1",
               "updated_on": "2025-07-28",
-              "path": "docs/Software/User Guides/PDF_Tcl Reference/v2025_1/Libero SoC Tcl Command Reference Guide.pdf"
+              "path": "Software/User Guides/PDF_Tcl Reference/v2025_1/Libero SoC Tcl Command Reference Guide.pdf"
             },
             {
               "title": "Guid-73Ec0Da7-09Fa-4B24-A3A6-18640Ac56Fb1-High",
@@ -34,7 +50,7 @@
               "format": "PDF",
               "version": "1.0",
               "updated_on": "2025-07-23",
-              "path": "docs/Software/User Guides/Tcl Reference Guide/GUID-73EC0DA7-09FA-4B24-A3A6-18640AC56FB1-high.pdf"
+              "path": "Software/User Guides/Tcl Reference Guide/GUID-73EC0DA7-09FA-4B24-A3A6-18640AC56FB1-high.pdf"
             },
             {
               "title": "Guid-8Da5C94F-8C30-4528-B181-C96D7E306841-High",
@@ -42,15 +58,15 @@
               "format": "PDF",
               "version": "1.0",
               "updated_on": "2025-07-23",
-              "path": "docs/Software/User Guides/Tcl Reference Guide/GUID-8DA5C94F-8C30-4528-B181-C96D7E306841-high.pdf"
+              "path": "Software/User Guides/Tcl Reference Guide/GUID-8DA5C94F-8C30-4528-B181-C96D7E306841-high.pdf"
             },
             {
               "title": "Libero SoC Tcl Command Reference Guide",
               "filename": "index.html",
               "format": "HTML",
               "version": "4.45",
-              "updated_on": "2025-07-28",
-              "path": "docs/Software/User Guides/Tcl Reference Guide/index.html"
+              "updated_on": "2025-07-29",
+              "path": "Software/User Guides/Tcl Reference Guide/index.html"
             }
           ]
         }
